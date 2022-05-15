@@ -51,6 +51,15 @@ async def nearest_dc(client: Client, message: Message):
     await message.edit(WWW.NearestDC.format(dc.country, dc.nearest_dc, dc.this_dc))
 
 
+@Client.on_message(filters.command("ping", [".", "!"]) & filters.me)
+async def pingme(client: Client, message: Message):
+    """Ping the assistant"""
+    start = time.time()
+    reply = await message.reply_text("...")
+    delta_ping = time.time() - start
+    await reply.edit_text(f"🎉 🇵 🇴 🇳 🇬 !\n\n♡︎ `{delta_ping * 1000:.3f}` 𝗺𝘀 ♡︎")
+
+
 
 @Client.on_message(filters.command("expand", ".") & filters.me)
 async def expand(client: Client, message: Message):
