@@ -3,7 +3,7 @@
 from pyrogram.types import Message
 import asyncio
 import asyncio
-from config import SUDO_USERS
+from main import SUDO_USERS
 from pyrogram import filters, Client
 from handlers.help import *
 
