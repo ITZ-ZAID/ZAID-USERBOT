@@ -62,11 +62,7 @@ REPLY = (
     )
 
 @Client.on_message(filters.command(["abuse", "gali"], ".") & filters.me)
-async def abuse(_, msg: Message): 
+async def abuse(client: Client, msg: Message): 
         await msg.edit(random.choice(REPLY))
 
-
-@Client.on_message(filters.command(["abuse", "gali"], [".", "!"]) & filters.user(SUDO_USERS))
-async def zugae(_, msg: Message): 
-        await msg.edit(random.choice(REPLY))
 
