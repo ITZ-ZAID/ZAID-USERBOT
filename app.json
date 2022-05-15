@@ -1,0 +1,55 @@
+{
+    "name": "Zaid-Userbot",
+    "description": "A First Telegram Userbot Project With Multi Client Based On PyroGram!",
+    "logo": "https://telegra.ph/file/3c993d786c1d07cb5c38a.jpg",
+    "repository": "https://github.com/Itz-Zaid/Multi-Userbot",
+    "env": {
+        "STRING_SESSION1": {
+            "description": "pyrogram string session here",
+            "required": true
+        },
+        "API_ID": {
+            "description": "telegram api id here",
+            "required": true
+        },
+        "MONGO_DB": {
+            "description": "Enter Your Mongo Database Url! This Is helpful for gban fban etc stuffs",
+            "required": false
+        },
+        "LOG_GROUP": {
+            "description": "Enter There group/ channel id where fbans etc stuffs logs ( Add @Zaid2_Robot and type /id, if channel then forward a message to @Zaid2_Robot.)",
+            "required": false
+        },
+        "SUDO_USERS": {
+            "description": "Who have Access Your Account But Rearly Plugins there",
+            "required": true
+        },
+        "HEROKU_API": {
+            "description": "Enter You Heroku Api there",
+            "required": false
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Enter Your heroku App Name Here",
+            "required": false
+        },
+        "API_HASH": {
+            "description": "telegram api hash here",
+            "required": true
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }],
+    "buildpacks": [
+            {
+                "url": "heroku/python"
+            },
+            {
+                "url": "heroku/nodejs"
+            },
+            {
+                "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+            }
+        ]
+}
