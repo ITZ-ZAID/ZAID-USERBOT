@@ -4,8 +4,8 @@ from pyrogram.types import Message
 import re
 from helpers.SQL.pmstuff import givepermit, checkpermit, blockuser, getwarns, allallowed, allblocked, inwarns, addwarns
 from main import SUDO_USERS as Adminsettings, LOG_GROUP
-ALIVE_PIC = "https://telegra.ph/file/3c993d786c1d07cb5c38a.jpg"
 from handlers.help import *
+from main import ALIVE_PIC
 
 Alive_msg = f"𝐙𝐚𝐢𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐏𝐫𝐨𝐭𝐞𝐜𝐭𝐢𝐨𝐧 🔱 \n\n"
 Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
