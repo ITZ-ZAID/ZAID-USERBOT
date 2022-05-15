@@ -7,7 +7,7 @@ module_list = {}
 
 
 
-@Client.on_message(filters.command('unloadmod', prefixes=prefix) & filters.me)
+@Client.on_message(filters.command('unloadmod', ["."]) & filters.me)
 async def unloadmod(client: Client, message: Message):
     try:
         module_name = message.text.replace(f'{prefix}unloadmod', '')
@@ -23,7 +23,7 @@ async def unloadmod(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.command(['loadmod', "install"], prefixes=prefix) & filters.me)
+@Client.on_message(filters.command(['loadmod', "install"], ["."]) & filters.me)
 async def loadmod(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit("<b>Load module...</b>")
