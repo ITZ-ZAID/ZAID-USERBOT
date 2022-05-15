@@ -7,96 +7,8 @@ from main import SUDO_USERS
 from pyrogram import filters, Client
 from handlers.help import *
 
-@Client.on_message(filters.command(['delspam', 'deletespam']))
-async def statspam(client: Client, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
-    zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
-    quantity = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    quantity = int(quantity)
-    await message.delete()
-    for i in range(quantity):
-        await zaid.delete()
-        msg = await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.1)
-        await msg.delete()
-        await asyncio.sleep(0.1)
 
-
-@Client.on_message(filters.command('spam'))
-async def spam(client: Client, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
-    zaid = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
-    quantity = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    quantity = int(quantity)
-
-    if message.reply_to_message:
-        reply_to_id = message.reply_to_message.message_id
-        for _ in range(quantity):
-            await client.send_message(message.chat.id, spam_text,
-                                      reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.15)
-        return
-
-    for _ in range(quantity):
-        await zaid.delete()
-        await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.15)
-
-
-@Client.on_message(filters.command('fastspam'))
-async def fastspam(client: Client, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
-    zaid = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
-    quantity = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    quantity = int(quantity)
-    
-    if message.reply_to_message:
-        reply_to_id = message.reply_to_message.message_id
-        for _ in range(quantity):
-            await client.send_message(message.chat.id, spam_text,
-                                      reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.002)
-        return
-    
-    for _ in range(quantity):
-        await zaid.delete()
-        await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.002)
-
-
-@Client.on_message(filters.command(['slowspam', "delayspam"]))
-async def slowspam(client: Client, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
-    zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
-    quantity = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    quantity = int(quantity)
-
-    if message.reply_to_message:
-        reply_to_id = message.reply_to_message.message_id
-        for _ in range(quantity):
-            await client.send_message(message.chat.id, spam_text,
-                                      reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.9)
-        return
-
-    for _ in range(quantity):
-        await zaid.delete()
-        msg = await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.9)
-
-
-
-
-
-@Client.on_message(filters.command(["deletespam", "delspam"], ".") & filters.me)
+@Client.on_message(filters.me & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def statspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
     quantity = message.command[1]
@@ -111,7 +23,7 @@ async def statspam(client: Client, message: Message):
         await asyncio.sleep(0.1)
 
 
-@Client.on_message(filters.command("spam", ".") & filters.me)
+@Client.on_message(filters.me & filters.command(["spam", "spamming"], [".", "!", "/"]))
 async def spam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
     quantity = message.command[1]
@@ -132,8 +44,7 @@ async def spam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-
-@Client.on_message(filters.command("fastspam", ".") & filters.me)
+@Client.on_message(filters.me & filters.command(["fastspam"], [".", "!", "/"]))
 async def fastspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
     quantity = message.command[1]
@@ -154,7 +65,8 @@ async def fastspam(client: Client, message: Message):
         await asyncio.sleep(0.002)
 
 
-@Client.on_message(filters.command(["slowspam", "delayspam"], ".") & filters.me)
+
+@Client.on_message(filters.me & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
 async def slowspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
     quantity = message.command[1]
@@ -174,7 +86,11 @@ async def slowspam(client: Client, message: Message):
         msg = await client.send_message(message.chat.id, spam_text)
         await asyncio.sleep(0.9)
 
-@Client.on_message(filters.command(["sspam", "stkspam", "spamstk"], ".") & filters.me)
+
+
+
+
+@Client.on_message(filters.me & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
 async def spam_stick(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
