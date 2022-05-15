@@ -178,7 +178,7 @@ async def fetch_all_fed(client: Client, message: Message):
     return fed_list
 
 add_command_help(
-    "account",
+    "federation",
     [
         [
             ".fadd",
