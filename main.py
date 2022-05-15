@@ -19,6 +19,19 @@ LOG_GROUP = LOG_GROUP
 SUDO_USERS = SUDO_USERS
 DB_URL = DB_URL
 
+
+if not STRING_SESSION1:
+    logging.error("No String Session Found! Friday is Exiting!")
+    quit(1)
+
+if not API_ID:
+    logging.error("No Api-ID Found! Friday is Exiting!")
+    quit(1)
+
+if not API_HASH:
+    logging.error("No ApiHash Found! Friday is Exiting!")
+    quit(1)
+
 if ALIVE_IMG:
     ALIVE_PIC = ALIVE_IMG
 else: 
