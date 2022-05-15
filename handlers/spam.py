@@ -8,7 +8,7 @@ from pyrogram import filters, Client
 from handlers.help import *
 
 
-@Client.on_message(filters.me | filters(SUDO_USERS) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
+@Client.on_message(filters.me | filters.user(SUDO_USERS) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def statspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
     quantity = message.command[1]
