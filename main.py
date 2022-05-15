@@ -75,7 +75,7 @@ MONGO_DBB = os.environ.get("MONGO_DB", None)
 if ALIVE_IMG:
     ALIVE_PIC = ALIVE_IMG
 else: 
-    ALIVE_PIC = ''
+    ALIVE_PIC = 'https://telegra.ph/file/9563b48195f2f1c62cc5e.jpg'
 
 if MONGO_DBB:
     MONGO_DB = MONGO_DBB
