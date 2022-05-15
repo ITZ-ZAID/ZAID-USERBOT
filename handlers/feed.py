@@ -21,24 +21,24 @@ def full_name(user: dict):
 async def get_response_(msg, filter_user: Union[int, str] = 0, timeout: int = 5, mark_read: bool = False):
     if filter_user:
         try:
-            user_ = await Client.get_users(filter_user)
+            user_ = await client.get_users(filter_user)
         except:
             raise "Invalid user."
     for msg_ in range(1, 6):
         msg_id = msg.message_id + msg_
         try:
-            response = await Client.get_messages(msg.chat.id, msg_id)
+            response = await client.get_messages(msg.chat.id, msg_id)
         except:
             raise "No response found."
         if response.reply_to_message.message_id == msg.message_id:
             if filter_user:
                 if response.from_user.id == user_.id:
                     if mark_read:
-                        await Client.send_read_acknowledge(msg.chat.id, response)
+                        await client.send_read_acknowledge(msg.chat.id, response)
                     return response
             else:
                 if mark_read:
-                    await Client.send_read_acknowledge(msg.chat.id, response)
+                    await client.send_read_acknowledge(msg.chat.id, response)
                 return response
         
     raise "No response found in time limit."
