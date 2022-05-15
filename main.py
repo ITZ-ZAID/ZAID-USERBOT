@@ -15,9 +15,8 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 API_ID = 6435225
 API_HASH = "4e984ea35f854762dcde906dce426c2d" 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 LOG_GROUP = os.environ.get("LOG_GROUP", None)
-ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+ALIVE_IMG = os.environ.get("ALIVE_PIC", None)
 STRING_SESSION1 = os.environ.get("STRING_SESSION1", None)
 STRING_SESSION2 = os.environ.get("STRING_SESSION2", None)
 STRING_SESSION3 = os.environ.get("STRING_SESSION3", None)
@@ -71,8 +70,17 @@ STRING_SESSION50 = os.environ.get("STRING_SESSION50", None)
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1669178360").split()}
 DB_URL = os.environ.get("DATABASE_URL", None)
-MONGO_DB = os.environ.get("MONGO_DB", None)
+MONGO_DBB = os.environ.get("MONGO_DB", None)
 
+if ALIVE_IMG:
+    ALIVE_PIC = ALIVE_IMG
+else: 
+    ALIVE_PIC = ''
+
+if MONGO_DBB:
+    MONGO_DB = MONGO_DBB
+else: 
+    MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 if LOG_GROUP:
     Owner = LOG_GROUP
