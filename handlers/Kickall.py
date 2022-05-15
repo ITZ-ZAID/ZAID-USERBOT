@@ -27,7 +27,7 @@ async def kickall_hide(client: Client, message: Message):
             pass
 
 
-@Client.on_message(filters.command("kickall_withbot", prefixes=prefix) & filters.me)
+@Client.on_message(filters.command("kickall_withbot", ["."]) & filters.me)
 async def tagall(client: Client, message: Message):
     await message.delete()
     chat_id = message.chat.id
