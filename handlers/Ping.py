@@ -4,7 +4,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from config import SUDO_USERS 
 
-@dynamic.on_message(filters.command("ping", ".") & filters.me)
+@Client.on_message(filters.command("ping", ".") & filters.me)
 async def ping(client: Client, msg: Message):
     st = time.time()
     et = time.time()
