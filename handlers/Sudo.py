@@ -3,9 +3,11 @@
 from pyrogram.types import Message
 import asyncio
 from pyrogram import filters, Client
-from config import SUDO_USERS
+from config import SUDO_USERS as SUDO_USER
+from main import *
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
+
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def delspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
     quantity = message.command[1]
@@ -20,7 +22,7 @@ async def delspam(client: Client, message: Message):
         await asyncio.sleep(0.1)
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["spam", "spamming"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["spam", "spamming"], [".", "!", "/"]))
 async def suspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
     quantity = message.command[1]
@@ -41,7 +43,7 @@ async def suspam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["fastspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["fastspam"], [".", "!", "/"]))
 async def spspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
     quantity = message.command[1]
@@ -63,7 +65,7 @@ async def spspam(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
 async def sperm(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
     quantity = message.command[1]
@@ -89,7 +91,7 @@ async def sperm(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
 async def pussy(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
@@ -118,4 +120,152 @@ async def pussy(client: Client, message: Message):
                 await asyncio.sleep(0.10)
 
 
+
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["alive", "awake"], [".", "!", "/"]))
+async def alive(client: Client, e: Message):
+    ids = 0
+    try:
+        if bot:
+            ids += 1
+        if bot1:
+            ids += 1
+        if bot2:
+            ids += 1
+        if bot3:
+            ids += 1
+        if bot4:
+            ids += 1
+        if bot5:
+            ids += 1
+        if bot6:
+            ids += 1
+        if bot7:
+            ids += 1
+        if bot8:
+            ids += 1
+        if bot9:
+            ids += 1
+        if bot:
+            ids += 1
+        if bot11:
+            ids += 1
+        if bot12:
+            ids += 1
+        if bot13:
+            ids += 1
+        if bot14:
+            ids += 1
+        if bot15:
+            ids += 1
+        if bot16:
+            ids += 1
+        if bot17:
+            ids += 1
+        if bot18:
+            ids += 1
+        if bot19:
+            ids += 1
+        if bot20:
+            ids += 1
+        if bot21:
+            ids += 1
+        if bot22:
+            ids += 1
+        if bot23:
+            ids += 1
+        if bot24:
+            ids += 1
+        if bot25:
+            ids += 1
+        if bot26:
+            ids += 1
+        if bot27:
+            ids += 1
+        if bot28:
+            ids += 1
+        if bot29:
+            ids += 1
+        if bot30:
+            ids += 1
+        if bot31:
+            ids += 1
+        if bot32:
+            ids += 1
+        if bot33:
+            ids += 1
+        if bot34:
+            ids += 1
+        if bot35:
+            ids += 1
+        if bot36:
+            ids += 1
+        if bot37:
+            ids += 1
+        if bot38:
+            ids += 1
+        if bot39:
+            ids += 1
+        if bot40:
+            ids += 1
+        if bot41:
+            ids += 1
+        if bot42:
+            ids += 1
+        if bot43:
+            ids += 1
+        if bot44:
+            ids += 1
+        if bot45:
+            ids += 1
+        if bot46:
+            ids += 1
+        if bot47:
+            ids += 1
+        if bot48:
+            ids += 1
+        if bot49:
+            ids += 1
+        if bot50:
+            ids += 1
+        Alive_msg = f"𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐬 𝐎𝐧 𝐅𝐢𝐫𝐞 🔥 \n\n"
+        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
+        Alive_msg += f"► Vᴇʀsɪᴏɴ : `Beta.0.1` \n"
+        Alive_msg += f"► ᴘʏʀᴏ ᴠᴇʀsɪᴏɴ : `{pyro_vr}` \n"
+        Alive_msg += f"► Aᴄᴛɪᴠᴇ IDs : `{ids}` \n"
+        Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ.](https://t.me/Superior_Support) \n"
+        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
+        await e.reply_photo(
+        photo=ALIVE_PIC,
+        caption=Alive_msg,
+        reply_markup=InlineKeyboardMarkup(
+                [[
+                    InlineKeyboardButton(
+                        "• 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/Superior_Bots")
+                ], [
+                    InlineKeyboardButton(
+                        "• 𝐑𝐞𝐩𝐨 •", url="https://github.com/ITZ-ZAID/ZAID-USERBOT")
+                ]],
+        ),
+    ) 
+    except Exception as lol:         
+        Alive_msg = f"𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐬 𝐎𝐧 𝐅𝐢𝐫𝐞 🔥 \n\n"
+        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
+        Alive_msg += f"► ᴠᴇʀsɪᴏɴ : `Beta.0.1` \n"
+        Alive_msg += f"► Pʏʀᴏ ᴠᴇʀsɪᴏɴ : `1.4.15` \n"
+        Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ](https://t.me/Superior_Support) \n"
+        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
+        await e.reply_photo(
+        photo=ALIVE_PIC,
+        caption=Alive_msg,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("• 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/Superior_Bots"),
+                ],
+                [
+                    InlineKeyboardButton("• 𝐑𝐞𝐩𝐨 •", url="https://github.com/Itz-Zaid/Zaid-Userbot"),
+                ],
+            ],
+        ),
+    ) 
 
