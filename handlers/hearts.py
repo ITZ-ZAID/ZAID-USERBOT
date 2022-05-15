@@ -1,7 +1,7 @@
 
 
 from pyrogram import Client, filters
-from plugins.settings.main_settings import module_list, file_list
+from pyrogram.types import *
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 import asyncio
 import random
