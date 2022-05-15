@@ -1,12 +1,208 @@
 {
     "name": "Zaid-Userbot",
     "description": "A First Telegram Userbot Project With Multi Client Based On PyroGram!",
-    "logo": "https://telegra.ph/file/3c993d786c1d07cb5c38a.jpg",
-    "repository": "https://github.com/Itz-Zaid/Multi-Userbot",
+    "logo": "https://telegra.ph/file/9563b48195f2f1c62cc5e.jpg",
+    "repository": "https://github.com/Itz-Zaid/Zaid-Userbot",
     "env": {
         "STRING_SESSION1": {
             "description": "pyrogram string session here",
             "required": true
+        },
+        "STRING_SESSION2": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION3": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION4": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION5": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION6": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION7": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION8": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION9": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION10": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION11": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION12": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION13": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION14": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION15": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION16": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION17": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION18": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION19": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION20": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION21": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION22": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION23": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION24": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION25": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION26": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION27": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION28": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION29": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION30": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION31": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION32": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION33": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION34": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION35": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION36": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION37": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION38": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION39": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION40": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION41": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION42": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION43": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION44": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION45": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION46": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION47": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION48": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION49": {
+            "description": "pyrogram string session here",
+            "required": false
+        },
+        "STRING_SESSION50": {
+            "description": "pyrogram string session here",
+            "required": false
         },
         "API_ID": {
             "description": "telegram api id here",
