@@ -87,6 +87,7 @@ async def f_stat(client: Client, message: Message):
 @Client.on_message(filters.command(["fbanstat", "fbannedstat"], ["."]) & filters.me)
 async def fban_stat(client: Client, message: Message):
     """check fban details"""
+    reply = message.reply_to_message
     input_ = message.input_str if not reply else reply.from_user.id
     reply_ = message.reply_to_message
     if input_:
