@@ -234,18 +234,7 @@ async def awake(client: Client, e: Message):
         Alive_msg += f"► Aᴄᴛɪᴠᴇ IDs : `{ids}` \n"
         Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ.](https://t.me/Superior_Support) \n"
         Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
-        await e.reply_text(
-        caption=Alive_msg,
-        reply_markup=InlineKeyboardMarkup(
-                [[
-                    InlineKeyboardButton(
-                        "• 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/Superior_Bots")
-                ], [
-                    InlineKeyboardButton(
-                        "• 𝐑𝐞𝐩𝐨 •", url="https://github.com/ITZ-ZAID/ZAID-USERBOT")
-                ]],
-        ),
-    ) 
+        await e.reply_text(photo=ALIVE_PIC, caption=Alive_msg)
     except Exception as lol:         
         Alive_msg = f"𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐬 𝐎𝐧 𝐅𝐢𝐫𝐞 🔥 \n\n"
         Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
@@ -253,17 +242,6 @@ async def awake(client: Client, e: Message):
         Alive_msg += f"► Pʏʀᴏ ᴠᴇʀsɪᴏɴ : `1.4.15` \n"
         Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ](https://t.me/Superior_Support) \n"
         Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
-        await e.reply_text(
-        caption=Alive_msg,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("• 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/Superior_Bots"),
-                ],
-                [
-                    InlineKeyboardButton("• 𝐑𝐞𝐩𝐨 •", url="https://github.com/Itz-Zaid/Zaid-Userbot"),
-                ],
-            ],
-        ),
-    ) 
+        await e.reply_photo(photo=ALIVE_PIC, caption=Alive_msg)
+
 
