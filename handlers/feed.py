@@ -1,6 +1,7 @@
 from pyrogram import filters, Client
 from pyrogram.errors import YouBlockedUser
 from typing import Union
+from pyrogram.types import *
 from pyrogram.raw.functions.account import ReportPeer
 from pyrogram.raw.types import (
     InputPeerUserFromMessage,
