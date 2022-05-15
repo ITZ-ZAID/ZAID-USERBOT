@@ -1,0 +1,12 @@
+version: "1.0"
+services:
+  worker:
+    build: .
+    environment:
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      SUDO_USERS: $SUDO_USERS
+      STRING_SESSION1: $STRING_SESSION1
+      HEROKU_APP_NAME: $HEROKU_APP_NAME
+      HEROKU_API_KEY: $HEROKU_API_KEY
+      ALIVE_PIC: $ALIVE_PIC
