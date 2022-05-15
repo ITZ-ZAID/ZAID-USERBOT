@@ -6,7 +6,6 @@ import asyncio
 from pyrogram import filters, Client
 from handlers.help import *
 from main import *
-from config import *
 
 @Client.on_message(filters.me & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def statspam(client: Client, message: Message):
