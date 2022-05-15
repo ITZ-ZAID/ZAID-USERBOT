@@ -24,7 +24,7 @@ async def unloadmod(client: Client, message: Message):
 
 
 @Client.on_message(filters.command(['loadmod', "install"], prefixes=prefix) & filters.me)
-async def loadmod(client, message):
+async def loadmod(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit("<b>Load module...</b>")
         link = message.command[1]
