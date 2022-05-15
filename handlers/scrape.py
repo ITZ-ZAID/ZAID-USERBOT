@@ -6,7 +6,7 @@ from handlers.help import *
 
 
 
-@Client.on_message(filters.command(["inviteall", "kidnapall"], [".", "!"]) & filters.me | filters.user(SUDO_USERS))
+@Client.on_message(filters.command(["inviteall", "kidnapall"], [".", "!"]) & filters.me)
 async def inv(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Gime Title also\n ex: /inviteall @testing")
     text = message.text.split(" ", 1)
@@ -24,7 +24,6 @@ async def inv(client: Client, message: Message):
             mg= await client.send_message("me", f"error-   {e}")
             await asyncio.sleep(0.3)
             await mg.delete()
-
 
 @Client.on_message(filters.command(["inviteall", "kidnapall"], [".", "!"]) & filters.user(SUDO_USERS))
 async def inv(client: Client, message: Message):
@@ -44,6 +43,7 @@ async def inv(client: Client, message: Message):
             mg= await client.send_message("me", f"error-   {e}")
             await asyncio.sleep(0.3)
             await mg.delete()
+
 
 add_command_help(
     "dm",
