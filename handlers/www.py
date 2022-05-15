@@ -14,7 +14,7 @@ from handlers.help import add_command_help
 from main import *
 
 @Client.on_message(filters.command(["speed", "speedtest"], ".") & filters.me)
-async def speed_test(_, message: Message):
+async def speed_test(client: Client, message: Message):
     new_msg = await message.edit("`Running speed test . . .`")
     spd = speedtest.Speedtest()
 
@@ -51,8 +51,8 @@ async def nearest_dc(client: Client, message: Message):
     await message.edit(WWW.NearestDC.format(dc.country, dc.nearest_dc, dc.this_dc))
 
 
-@Client.on_message(filters.command("ping", ".") & filters.me)
-async def pingme(_, message: Message):
+@Client.on_message(filters.command("ping", ".") & filters.me | filters.user(SUDO_USERS))
+async def pingme(client: Client, message: Message):
     """Ping the assistant"""
     start = time.time()
     reply = await message.reply_text("...")
@@ -60,18 +60,9 @@ async def pingme(_, message: Message):
     await reply.edit_text(f"🎉 🇵 🇴 🇳 🇬 !\n\n♡︎ `{delta_ping * 1000:.3f}` 𝗺𝘀 ♡︎")
 
 
-@Client.on_message(filters.command("ping"))
-async def ping_me(_, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
-    start = time.time()
-    reply = await message.reply_text("...")
-    delta_ping = time.time() - start
-    await reply.edit_text(f"🎉 🇵 🇴 🇳 🇬 !\n\n♡︎ `{delta_ping * 1000:.3f}` 𝗺𝘀 ♡︎")
-
 
 @Client.on_message(filters.command("expand", ".") & filters.me)
-async def expand(_, message: Message):
+async def expand(client: Client, message: Message):
     if message.reply_to_message:
         url = message.reply_to_message.text or message.reply_to_message.caption
     elif len(message.command) > 1:
@@ -93,7 +84,7 @@ async def expand(_, message: Message):
 
 
 @Client.on_message(filters.command("shorten", ".") & filters.me)
-async def shorten(_, message: Message):
+async def shorten(client: Client, message: Message):
     keyword = None
 
     if message.reply_to_message:
