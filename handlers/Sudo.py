@@ -2,6 +2,7 @@
 
 from pyrogram.types import Message
 import asyncio
+import time
 from pyrogram import filters, Client
 from config import SUDO_USERS as SUDO_USER
 from main import *
@@ -245,3 +246,31 @@ async def awake(client: Client, e: Message):
         await e.reply_photo(photo=ALIVE_PIC, caption=Alive_msg)
 
 
+@Client.on_message(filters.command("ping", [".", "!"]) & filters.user(SUDO_USER))
+async def pingme(client: Client, message: Message):
+    start = time.time()
+    reply = await message.reply_text("...")
+    delta_ping = time.time() - start
+    await reply.edit_text(f"🎉 🇵 🇴 🇳 🇬 !\n\n♡︎ `{delta_ping * 1000:.3f}` 𝗺𝘀 ♡︎")
+
+
+
+
+@Client.on_message(filters.command(["broadcast", "br", "chatbroadcast"], [".", "!", "."]) & filters.user(SUDO_USER))
+async def chat_broadcast(c: Client, m: Message):
+    if m.reply_to_message:
+        msg = m.reply_to_message.text.markdown
+    else:
+        await m.reply_text("Reply to a message to broadcast it")
+        return
+
+    exmsg = await m.reply_text("Started broadcasting!")
+    err_str, done_broadcast = "", 0
+
+    async for dialog in c.iter_dialogs():
+          try:
+                await c.send_message(dialog.chat.id, msg, disable_web_page_preview=True)
+                done_broadcast += 1
+                await asyncio.sleep(0.1)
+          except Exception as e:
+            await m.reply_text(f"[Broadcast] {dialog.chat.id} {e}")

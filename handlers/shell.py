@@ -4,15 +4,14 @@ from time import perf_counter
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from main import *
 
 
-@Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.me | filters.user(SUDO_USERS))
-async def shell(client: Client, zaid: Message):
-    message = await client.reply_text("<b>Specify the command in message text</b>")
+
+@Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.me)
+async def shell(client: Client, message: Message):
     if len(message.command) < 2:
-        return
-    cmd_text = zaid.text.split(maxsplit=1)[1]
+        return await message.edit("<b>Specify the command in message text</b>")
+    cmd_text = message.text.split(maxsplit=1)[1]
     cmd_obj = Popen(
         cmd_text,
         shell=True,
@@ -39,5 +38,4 @@ async def shell(client: Client, zaid: Message):
         text += f"<b>Completed in {round(stop_time - start_time, 5)} seconds with code {cmd_obj.returncode}</b>"
     await message.edit(text)
     cmd_obj.kill()
-
 
