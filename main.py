@@ -13,22 +13,19 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-API_ID = 6435225
-API_HASH = "4e984ea35f854762dcde906dce426c2d" 
-LOG_GROUP = os.environ.get("LOG_GROUP", None)
-ALIVE_IMG = os.environ.get("ALIVE_PIC", None)
-
+API_ID = API_ID
+API_HASH = API_HASH 
+LOG_GROUP = LOG_GROUP
 SUDO_USERS = SUDO_USERS
-DB_URL = os.environ.get("DATABASE_URL", None)
-MONGO_DBB = os.environ.get("MONGO_DB", None)
+DB_URL = DB_URL
 
 if ALIVE_IMG:
     ALIVE_PIC = ALIVE_IMG
 else: 
     ALIVE_PIC = 'https://telegra.ph/file/9563b48195f2f1c62cc5e.jpg'
 
-if MONGO_DBB:
-    MONGO_DB = MONGO_DBB
+if MONGO_DB:
+    MONGO_DB = MONGO_DB
 else: 
     MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
