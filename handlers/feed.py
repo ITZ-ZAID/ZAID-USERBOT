@@ -66,8 +66,8 @@ async def f_stat(client: Client, message: Message):
     bot_ = "MissRose_bot"
     try:
         async with client.conversation(bot_) as conv:
-            await conv.send_message(f"!fstat {user_id}")
-            response = await conv.get_response(mark_read=True, filters=filters.edited)
+            await client.send_message(f"!fstat {user_id}")
+            response = await client.get_response(mark_read=True, filters=filters.edited)
     except YouBlockedUser:
         await message.err("Unblock @missrose_bot first...", del_in=5)
         return
