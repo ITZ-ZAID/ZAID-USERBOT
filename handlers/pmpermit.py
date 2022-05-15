@@ -7,14 +7,14 @@ from main import SUDO_USERS as Adminsettings, LOG_GROUP
 ALIVE_PIC = "https://telegra.ph/file/3c993d786c1d07cb5c38a.jpg"
 from handlers.help import *
 
-Alive_msg = f"𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐏𝐫𝐨𝐭𝐞𝐜𝐭𝐢𝐨𝐧. 🔥 \n\n"
+Alive_msg = f"𝐙𝐚𝐢𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐏𝐫𝐨𝐭𝐞𝐜𝐭𝐢𝐨𝐧 🔱 \n\n"
 Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
-Alive_msg += f"► Sᴘᴀᴍʙᴏᴛ ᴠᴇʀsɪᴏɴ : `Beta.0.1` \n"
+Alive_msg += f"► ᴠᴇʀsɪᴏɴ : `Beta.0.1` \n"
 Alive_msg += f"► ᴘʏʀᴏ ᴠᴇʀsɪᴏɴ : `1.4.15` \n"
-Alive_msg += f"► Rᴇᴘᴏ : [Gɪᴛʜᴜʙ](https://GitHub.com/Itz-Zaid/Spam-Bot) \n"
+Alive_msg += f"► Rᴇᴘᴏ : [Gɪᴛʜᴜʙ](https://GitHub.com/Itz-Zaid/ZAID-USERBOT) \n"
 Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ.](https://t.me/Superior_Support) \n"
 Alive_msg += f"► Cʜᴀɴɴᴇʟ : [Jᴏɪɴ.](https://t.me/Superior_Bots) \n"
-Alive_msg += f"► Nᴏᴛᴇ : Dᴏɴ'ᴛ Sᴘᴀᴍ Hᴇʀᴇ Eʟꜱᴇ Gᴇᴛ Bʟᴏᴄᴋᴇᴅ Pʟᴢ Wᴀɪᴛ Mʏ Mᴀꜱᴛᴇʀ Wɪʟʟ Rᴇꜱᴘᴏɴꜱᴇ Yᴏᴜ Sᴏᴏɴ \n"
+Alive_msg += f"► **Nᴏᴛᴇ** : Dᴏɴ'ᴛ Sᴘᴀᴍ Hᴇʀᴇ Eʟꜱᴇ Gᴇᴛ Bʟᴏᴄᴋᴇᴅ Pʟᴢ Wᴀɪᴛ Mʏ Mᴀꜱᴛᴇʀ Wɪʟʟ Rᴇꜱᴘᴏɴꜱᴇ Yᴏᴜ Sᴏᴏɴ \n"
 Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
 
 @Client.on_message(~filters.me & filters.private & ~filters.bot & filters.incoming , group = 69)
