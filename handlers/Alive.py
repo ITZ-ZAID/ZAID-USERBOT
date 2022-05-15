@@ -7,7 +7,7 @@ from main import ALIVE_PIC
  
 
  
-@Client.on_message(filters.command(["alive", "awake"], ".") & filters.me | filters.user(SUDO_USERS))
+@Client.on_message(filters.command(["alive", "awake"], [".", "!", "/"]) & filters.me | filters.user(SUDO_USERS))
 async def alive(client: Client, e: Message):
     ids = 0
     try:
