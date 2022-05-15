@@ -122,7 +122,9 @@ Zaid@Windows~ $ python3 main.py
 - Seden Userbot
 - Friday
 - Nana
--xyz ⚡
+- Fox 🦊
+- pyrogram
+- xyz ⚡
 
 #
 
