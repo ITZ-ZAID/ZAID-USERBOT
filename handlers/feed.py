@@ -44,14 +44,14 @@ async def get_response_(msg, filter_user: Union[int, str] = 0, timeout: int = 5,
     raise "No response found in time limit."
 
 @Client.on_message(filters.command(["fstats", "fstat"], ["."]) & filters.me)
-async def f_stat(client: Client, message: Message):
+async def f_stat(message: Message):
     """Fstat of user"""
     reply = message.reply_to_message
     user_ = message.input_str if not reply else reply.from_user.id
     if not user_:
         user_ = message.from_user.id
     try:
-        get_u = await client.get_users(user_)
+        get_u = await Client.get_users(user_)
         user_name = full_name(get_u)
         user_id = get_u.id
         await message.edit(
@@ -65,9 +65,9 @@ async def f_stat(client: Client, message: Message):
         user_id = user_
     bot_ = "MissRose_bot"
     try:
-        async with client.conversation(bot_) as conv:
-            await client.send_message(f"!fstat {user_id}")
-            response = await client.get_response(mark_read=True, filters=filters.edited)
+        async with Client.conversation(bot_) as conv:
+            await conv.send_message(f"!fstat {user_id}")
+            response = await Client.get_response(mark_read=True, filters=filters.edited)
     except YouBlockedUser:
         await message.err("Unblock @missrose_bot first...", del_in=5)
         return
