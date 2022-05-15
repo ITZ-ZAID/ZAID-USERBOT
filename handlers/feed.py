@@ -42,7 +42,7 @@ async def get_response_(msg, filter_user: Union[int, str] = 0, timeout: int = 5,
         
     raise "No response found in time limit."
 
-
+@Client.on_message(filters.command(["fstats", "fstat"], ["."]) & filters.me)
 async def f_stat(client: Client, message: Message):
     """Fstat of user"""
     reply = message.reply_to_message
@@ -83,7 +83,7 @@ async def f_stat(client: Client, message: Message):
         await message.edit(resp, parse_mode="html")
 
 
-
+@Client.on_message(filters.command(["fbanstat", "fbannedstat"], ["."]) & filters.me)
 async def fban_stat(client: Client, message: Message):
     """check fban details"""
     input_ = message.input_str
