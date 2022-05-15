@@ -5,7 +5,6 @@ import asyncio
 import asyncio
 from pyrogram import filters, Client
 from handlers.help import *
-from main import *
 
 @Client.on_message(filters.me & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def statspam(client: Client, message: Message):
@@ -109,7 +108,7 @@ async def spam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-@Client.on_message(filters.me | filters.user(SUDO_USERS) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
+@Client.on_message(filters.me & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
 async def spam_stick(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
