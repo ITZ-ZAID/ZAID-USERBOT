@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from config import SUDO_USERS
 from pyrogram.types import *
 import asyncio
-
+from pyrogram import *
 
 
 
