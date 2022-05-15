@@ -7,7 +7,7 @@ import asyncio
 
 
 @Client.on_message(filters.command(["spamban", "spaminfo"], ["."]) & filters.me)
-async def spamban(client, message):
+async def spamban(client: Client, message: Message):
     zaid = await message.reply_text("Checking your account for Spamban...")
     await client.unblock_user("spambot")
     await client.send_message("spambot", "/start")
