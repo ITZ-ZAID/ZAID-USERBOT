@@ -5,7 +5,7 @@ from time import perf_counter
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import SUDO_USERS
-
+import asyncio
 
 @Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.user(SUDO_USERS))
 async def shell(client: Client, message: Message):
