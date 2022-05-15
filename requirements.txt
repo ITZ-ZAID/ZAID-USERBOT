@@ -1,5 +1,5 @@
 aiohttp
-pyrogram==2.0.8
+pyrogram==1.4.15
 requests
 dnspython
 tgcrypto
