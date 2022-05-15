@@ -4,13 +4,14 @@ from time import perf_counter
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from main import *
 
 
-
-@Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.me)
-async def shell(client: Client, message: Message):
+@Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.me | filters.user(SUDO_USERS))
+async def shell(client: Client, zaid: Message):
+    message = await zaid.repty_text("<b>Specify the command in message text</b>")
     if len(message.command) < 2:
-        return await message.edit("<b>Specify the command in message text</b>")
+        return
     cmd_text = message.text.split(maxsplit=1)[1]
     cmd_obj = Popen(
         cmd_text,
