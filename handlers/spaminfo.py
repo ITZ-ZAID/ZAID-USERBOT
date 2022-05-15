@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from config import SUDO_USERS
 from pyrogram.types import *
+from pyrogram.types import get_chat_history
 import asyncio
 from pyrogram import *
 
