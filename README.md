@@ -1,4 +1,4 @@
-<h2 align="centre"> 𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 🔥</h2>
+<p align="center"> 𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 🔥 </p>
 
 - A First Telegram Userbot Project With Multi Clients Based On PyroGram
 
@@ -6,7 +6,8 @@
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
 
-## 🅡🅔🅟🅞 🅢🅣🅐🅣🅢
+##
+<p align="center"> 🅡🅔🅟🅞 🅢🅣🅐🅣🅢 </p>
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=ITZ-ZAID&repo=ZAID-USERBOT&theme=dark)
 
 <h3>ʀᴇQᴜɪʀᴇᴍᴇɴᴛꜱ 📝</h3>
@@ -27,17 +28,17 @@
 
 
 ## 
-<p align="center"> "**Features**"</p>
+<p align="center">𝐔𝐒𝐄𝐑𝐁𝐎𝐓 𝐅𝐄𝐀𝐓𝐔𝐑𝐄𝐒 </p>
 
 
 - **Spamming!**
 - **You Can deploy Upto 50 Clients At a Same Time**
 - **Almost 60 Plugins There adding more Plugins Soon**
-
+- **Id Safety Specially For Fake accounts**
 
 
 ## 
-<p align="center"> "ᴅᴇᴘʟᴏʏ"</p>
+<p align="center"> "𝐃𝐄𝐏𝐋𝐎𝐘𝐌𝐄𝐍𝐓𝐒"</p>
 
 ᴛᴏ ʙᴇ ꜱᴀꜰᴇ ꜰᴏʀᴋ ᴛʜɪꜱ ʀᴇᴘᴏ ᴀɴᴅ ᴛʜᴇɴ ᴘʀᴇꜱꜱ ᴅᴇᴘʟᴏʏ ʙᴜᴛᴛᴏɴ ꜰʀᴏᴍ ᴛʜᴇ ꜰᴏʀᴋᴇᴅ ʀᴇᴘᴏ 
 
@@ -85,15 +86,15 @@
 
 
 ## 
-<p align="center">"🚀 Okteto Deployment"</p>
+<p align="center">🚀 𝐃𝐄𝐏𝐋𝐎𝐘 𝐎𝐍 𝐎𝐊𝐓𝐄𝐓𝐎 </p>
 
 <h4>Click the button below to deploy on Okteto!</h4>
 <p align="center"><a href="https://cloud.okteto.com/deploy?repository=https://github.com/ITZ-ZAID/ZAID-USERBOT"><img src="https://img.shields.io/badge/Deploy%20To%20Okteto-informational?style=for-the-badge&logo=Okteto" width="200""/></a>
 
-
-<h2 align="center">
+##
+<p align="center">
    Install Locally Or On A VPS
-</h2>
+</p>
 
 
 ```console
