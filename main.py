@@ -13,72 +13,19 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-API_ID = 6435225
-API_HASH = "4e984ea35f854762dcde906dce426c2d" 
-LOG_GROUP = os.environ.get("LOG_GROUP", None)
-ALIVE_IMG = os.environ.get("ALIVE_PIC", None)
-STRING_SESSION1 = os.environ.get("STRING_SESSION1", None)
-STRING_SESSION2 = os.environ.get("STRING_SESSION2", None)
-STRING_SESSION3 = os.environ.get("STRING_SESSION3", None)
-STRING_SESSION4 = os.environ.get("STRING_SESSION4", None)
-STRING_SESSION5 = os.environ.get("STRING_SESSION5", None)
-STRING_SESSION6 = os.environ.get("STRING_SESSION6", None)
-STRING_SESSION7 = os.environ.get("STRING_SESSION7", None)
-STRING_SESSION8 = os.environ.get("STRING_SESSION8", None)
-STRING_SESSION9 = os.environ.get("STRING_SESSION9", None)
-STRING_SESSION10 = os.environ.get("STRING_SESSION11", None) 
-STRING_SESSION11 = os.environ.get("STRING_SESSION11", None)
-STRING_SESSION12 = os.environ.get("STRING_SESSION12", None)
-STRING_SESSION13 = os.environ.get("STRING_SESSION13", None)
-STRING_SESSION14 = os.environ.get("STRING_SESSION14", None)
-STRING_SESSION15 = os.environ.get("STRING_SESSION15", None)
-STRING_SESSION16 = os.environ.get("STRING_SESSION16", None)
-STRING_SESSION17 = os.environ.get("STRING_SESSION17", None)
-STRING_SESSION18 = os.environ.get("STRING_SESSION18", None)
-STRING_SESSION19 = os.environ.get("STRING_SESSION19", None)
-STRING_SESSION20 = os.environ.get("STRING_SESSION20", None)
-STRING_SESSION21 = os.environ.get("STRING_SESSION21", None)
-STRING_SESSION22 = os.environ.get("STRING_SESSION22", None)
-STRING_SESSION23 = os.environ.get("STRING_SESSION23", None)
-STRING_SESSION24 = os.environ.get("STRING_SESSION24", None)
-STRING_SESSION25 = os.environ.get("STRING_SESSION25", None)
-STRING_SESSION26 = os.environ.get("STRING_SESSION26", None)
-STRING_SESSION27 = os.environ.get("STRING_SESSION27", None)
-STRING_SESSION28 = os.environ.get("STRING_SESSION28", None)
-STRING_SESSION29 = os.environ.get("STRING_SESSION29", None)
-STRING_SESSION30 = os.environ.get("STRING_SESSION30", None)
-STRING_SESSION31 = os.environ.get("STRING_SESSION31", None)
-STRING_SESSION32 = os.environ.get("STRING_SESSION32", None)
-STRING_SESSION33 = os.environ.get("STRING_SESSION33", None)
-STRING_SESSION34 = os.environ.get("STRING_SESSION34", None)
-STRING_SESSION35 = os.environ.get("STRING_SESSION35", None)
-STRING_SESSION36 = os.environ.get("STRING_SESSION36", None)
-STRING_SESSION37 = os.environ.get("STRING_SESSION37", None)
-STRING_SESSION38 = os.environ.get("STRING_SESSION38", None)
-STRING_SESSION39 = os.environ.get("STRING_SESSION39", None)
-STRING_SESSION40 = os.environ.get("STRING_SESSION40", None)
-STRING_SESSION41 = os.environ.get("STRING_SESSION41", None)
-STRING_SESSION42 = os.environ.get("STRING_SESSION42", None)
-STRING_SESSION43 = os.environ.get("STRING_SESSION43", None)
-STRING_SESSION44 = os.environ.get("STRING_SESSION44", None)
-STRING_SESSION45 = os.environ.get("STRING_SESSION45", None)
-STRING_SESSION46 = os.environ.get("STRING_SESSION46", None)
-STRING_SESSION47 = os.environ.get("STRING_SESSION47", None)
-STRING_SESSION48 = os.environ.get("STRING_SESSION48", None)
-STRING_SESSION49 = os.environ.get("STRING_SESSION49", None)
-STRING_SESSION50 = os.environ.get("STRING_SESSION50", None) 
-
+API_ID = API_ID
+API_HASH = API_HASH 
+LOG_GROUP = LOG_GROUP
 SUDO_USERS = SUDO_USERS
-DB_URL = os.environ.get("DATABASE_URL", None)
-MONGO_DBB = os.environ.get("MONGO_DB", None)
+DB_URL = DB_URL
 
 if ALIVE_IMG:
     ALIVE_PIC = ALIVE_IMG
 else: 
     ALIVE_PIC = 'https://telegra.ph/file/9563b48195f2f1c62cc5e.jpg'
 
-if MONGO_DBB:
-    MONGO_DB = MONGO_DBB
+if MONGO_DB:
+    MONGO_DB = MONGO_DB
 else: 
     MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 

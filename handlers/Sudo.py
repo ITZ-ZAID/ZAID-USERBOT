@@ -274,3 +274,35 @@ async def chat_broadcast(c: Client, m: Message):
                 await asyncio.sleep(0.1)
           except Exception as e:
             await m.reply_text(f"[Broadcast] {dialog.chat.id} {e}")
+
+
+
+
+@Client.on_message(filters.command('join', [".", "!"]) & filters.user(SUDO_USER))
+async def fuck(client: Client, message: Message):
+    zaid = message.text[6:]
+    count = 0
+    if not zaid:
+        return await message.reply_text("Need a chat username or invite link to join.")
+    if zaid.isnumeric():
+        return await message.reply_text("Can't join a chat with chat id. Give username or invite link.")
+    try:
+        await client.join_chat(zaid)
+        await message.reply_text(f"**Joined**")
+    except Exception as ex:
+        await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
+
+
+@Client.on_message(filters.command('leave', [".", "!"]) & filters.user(SUDO_USER))
+async def leftfuck(client: Client, message: Message):
+    zaid = message.text[6:]
+    count = 0
+    if not zaid:
+        return await message.reply_text("Need a chat username or invite link to leave.")
+    if zaid.isnumeric():
+        return await message.reply_text("Can't leave a chat with chat id. Give username or invite link.")
+    try:
+        await client.leave_chat(zaid)
+        await message.reply_text(f"**Lefted**")
+    except Exception as ex:
+        await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
