@@ -8,6 +8,7 @@ from config import SUDO_USERS
 async def ping(client: Client, msg: Message):
     st = time.time()
     et = time.time()
+    
     mention = msg.from_user.mention
     uptime = f"\n`{round((et - st), 3)} ms`"
     textt = """
@@ -20,7 +21,7 @@ async def ping(client: Client, msg: Message):
 ┊ ┊ ┊ ⛦『P‌๏‌и‌ɠ‌』 
 ┊ ┊ ┊︎✫ ˚♡ ⋆˚ ⋆｡ ❀
 ┊ ┊ ┊
-┊ ┊ ┊𓆩𝙈𝙎--≻{} ﮩ٨ـﮩﮩ٨ـ𓆪
+┊ ┊ ┊𓆩𝙈𝙎--≻{delta_ping * 1000:.3f} ﮩ٨ـﮩﮩ٨ـ𓆪
 ┊ ┊ ✯
 ┊ ✬ ˚•˚✩
 ┊⍣ •°
