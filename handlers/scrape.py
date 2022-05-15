@@ -1,7 +1,6 @@
 from pyrogram import Client , filters
 import asyncio
 from pyrogram.types import Message
-from main import SUDO_USERS
 from handlers.help import *
 
 
