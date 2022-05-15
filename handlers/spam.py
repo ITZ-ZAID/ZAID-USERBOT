@@ -91,8 +91,7 @@ async def slowspam(client: Client, message: Message):
 
 
 @Client.on_message(filters.me & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
-async def spam_stick(client: Client, umm: Message):
-    message = await  client.reply_text("Processing")
+async def spam_stick(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
         return
