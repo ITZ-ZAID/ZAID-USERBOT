@@ -3,11 +3,11 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from config import SUDO_USERS
 
-
-@Client.on_message(filters.command('kickall', ["."]) & filters.me)
+@Client.on_message(filters.command('kickall', ["."]) & filters.me | filters.user(SUDO_USERS))
 async def kickall(client: Client, message: Message):
-    await message.edit("kick all chat members!")
+    await message.reply_text("kick all chat members!")
     member = client.get_chat_members(message.chat.id)
     async for alls in member:
         try:
