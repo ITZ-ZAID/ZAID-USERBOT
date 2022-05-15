@@ -68,7 +68,7 @@ STRING_SESSION48 = os.environ.get("STRING_SESSION48", None)
 STRING_SESSION49 = os.environ.get("STRING_SESSION49", None)
 STRING_SESSION50 = os.environ.get("STRING_SESSION50", None) 
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1669178360").split()}
+SUDO_USERS = SUDO_USERS
 DB_URL = os.environ.get("DATABASE_URL", None)
 MONGO_DBB = os.environ.get("MONGO_DB", None)
 
