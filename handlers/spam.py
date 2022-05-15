@@ -3,13 +3,11 @@
 from pyrogram.types import Message
 import asyncio
 import asyncio
-from main import SUDO_USERS
 from pyrogram import filters, Client
 from handlers.help import *
 
 
 @Client.on_message(filters.me & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
 async def statspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
     quantity = message.command[1]
@@ -46,7 +44,6 @@ async def sspam(client: Client, message: Message):
 
 
 @Client.on_message(filters.me & filters.command(["fastspam"], [".", "!", "/"]))
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["fastspam"], [".", "!", "/"]))
 async def fastspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
     quantity = message.command[1]
@@ -69,7 +66,6 @@ async def fastspam(client: Client, message: Message):
 
 
 @Client.on_message(filters.me & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
 async def slowspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
     quantity = message.command[1]
@@ -113,8 +109,7 @@ async def spam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-@Client.on_message(filters.me & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
+@Client.on_message(filters.me | filters.user(SUDO_USERS) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
 async def spam_stick(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
@@ -124,7 +119,7 @@ async def spam_stick(client: Client, message: Message):
         return
     else:
         i=0
-        times = umm.command[1]
+        times = message.command[1]
         if message.chat.type in ["supergroup", "group"]:
             for i in range(int(times)):
                 sticker=message.reply_to_message.sticker.file_id
