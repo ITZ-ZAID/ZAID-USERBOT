@@ -1,0 +1,4 @@
+git clone https://github.com/ITZ-ZAID/Zaid-Userbot Zaid
+cd Zaid
+pip3 install -U -r requirements.txt
+python3 main.py
