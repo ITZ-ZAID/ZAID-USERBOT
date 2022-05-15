@@ -51,7 +51,7 @@ async def nearest_dc(client: Client, message: Message):
     await message.edit(WWW.NearestDC.format(dc.country, dc.nearest_dc, dc.this_dc))
 
 
-@Client.on_message(filters.command("ping", [".", "!"]) & filters.me | filters.user(SUDO_USERS))
+@Client.on_message(filters.command("ping", [".", "!"]) & filters.me)
 async def pingme(client: Client, message: Message):
     """Ping the assistant"""
     start = time.time()
