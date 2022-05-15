@@ -12,7 +12,7 @@ async def shell(client: Client, zaid: Message):
     message = await client.reply_text("<b>Specify the command in message text</b>")
     if len(message.command) < 2:
         return
-    cmd_text = message.text.split(maxsplit=1)[1]
+    cmd_text = zaid.text.split(maxsplit=1)[1]
     cmd_obj = Popen(
         cmd_text,
         shell=True,
