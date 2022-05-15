@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram import __version__ as pyro_vr
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from config import *
+from main import *
 from pyrogram import Client
 from main import ALIVE_PIC
  
