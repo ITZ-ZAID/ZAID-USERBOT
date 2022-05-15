@@ -122,7 +122,7 @@ async def pussy(client: Client, message: Message):
 
 
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["alive", "awake"], [".", "!", "/"]))
-async def alive(client: Client, e: Message):
+async def awake(client: Client, e: Message):
     ids = 0
     try:
         if bot:
