@@ -91,7 +91,8 @@ async def slowspam(client: Client, message: Message):
 
 
 @Client.on_message(filters.me & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
-async def spam_stick(client: Client, message: Message):
+async def spam_stick(client: Client, umm: Message):
+    message = await  client.reply_text("Processing")
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
         return
@@ -100,7 +101,7 @@ async def spam_stick(client: Client, message: Message):
         return
     else:
         i=0
-        times = message.command[1]
+        times = umm.command[1]
         if message.chat.type in ["supergroup", "group"]:
             for i in range(int(times)):
                 sticker=message.reply_to_message.sticker.file_id
@@ -110,7 +111,7 @@ async def spam_stick(client: Client, message: Message):
                 )
                 await asyncio.sleep(0.10)
 
-        if message.chat.type == "private":
+        if umm.chat.type == "private":
             for i in range(int(times)):
                 sticker=message.reply_to_message.sticker.file_id
                 await client.send_sticker(
