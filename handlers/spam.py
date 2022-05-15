@@ -70,7 +70,7 @@ async def fastspam(client: Client, message: Message):
 
 
 @Client.on_message(filters.me & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
 async def slowspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
     quantity = message.command[1]
