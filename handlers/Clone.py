@@ -14,7 +14,7 @@ BIO = os.environ.get("BIO", None)
 
 
 @Client.on_message(filters.command('clone', ["."]) & filters.me)
-async def clone(client: Clone, message: Message):
+async def clone(client: Client, message: Message):
   text = get_text(message)
   op = await edit_or_reply(message, "`Cloning`")
   userk = get_user(message, text)[0]
