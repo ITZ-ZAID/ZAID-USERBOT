@@ -5,8 +5,8 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from main import SUDO_USERS
 
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["kickall", "banall"], [".", "!"]))
 @Client.on_message(filters.command('kickall', ["."]) & filters.me)
-
 async def kickall(client: Client, message: Message):
     await message.reply_text("kick all chat members!")
     member = client.get_chat_members(message.chat.id)
