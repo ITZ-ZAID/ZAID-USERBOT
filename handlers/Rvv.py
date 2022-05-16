@@ -13,7 +13,7 @@ from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
 from handlers.cache.data import RAID
 
 
-@Client.on_message( ~filters.me & filters.incoming)
+@Client.on_message( ~filters.group & filters.private & filters.incoming)
 async def jaana(client: Client, message: Message):
     if not message:
         return
