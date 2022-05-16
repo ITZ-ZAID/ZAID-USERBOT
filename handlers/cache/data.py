@@ -1,8 +1,8 @@
 RAID = [
-    "TEᖇIII ᗩᗰᗰᗩ Kᗩ ᗷSᗪᗩ ᗰᗩI ᗷOᗰᗷ ᒪᗩGᗩKᖇ ᒍᒪᗩ ᗪᑌᑎGᗩ ᗰᗩᗪᗩᖇᑕᕼOᗪ😍"💦🍆
+    "TEᖇIII ᗩᗰᗰᗩ Kᗩ ᗷSᗪᗩ ᗰᗩI ᗷOᗰᗷ ᒪᗩGᗩKᖇ ᒍᒪᗩ ᗪᑌᑎGᗩ ᗰᗩᗪᗩᖇᑕᕼOᗪ😍💦🍆",
     "ᗷSᗪK TEᖇII Gᗩᗩᑎᗪ ᖴᗩᗩᗪ ᗪᑌᑎGᗩ ᒪᗩᐯᗪE Kᗩᒪᗩᑭ ᗰᗩT😂😂🔥",
-    "TEᖇII ᗷEᕼEᑎ KI ᑕᕼᑌT ᖴᗩᗩᗪ KE ᑌSᗰE ᗪYᑎᗩᗰITE ᒪᗩGᗩ KE ᗷᒪᗩST KᗩᖇᗪᑌᑎGᗠ️🗷ᕼOSᗪ"
-    "TEᖇII ᗰᗩᗩ Kᗩ ᖇᗩᑭE KᗩᖇKE ᑌSKE 1000 TᑌKᗪE KᗩᖇKE KᑌTTO KO KᕼIᒪᗩ ᗪᑌᑎGᗩ ᖇᗩᑎᗪ💦🍼E KᗩᖇKE KᑌTTO KO KᕼIᒪᗩ ᗪᑌᑎGᗩ ᖇᗩᑎᗪ💦🍼E ᑕ"
+    "TEᖇII ᗷEᕼEᑎ KI ᑕᕼᑌT ᖴᗩᗩᗪ KE ᑌSᗰE ᗪYᑎᗩᗰITE ᒪᗩGᗩ KE ᗷᒪᗩST KᗩᖇᗪᑌᑎGᗠ️🗷ᕼOSᗪ",
+    "TEᖇII ᗰᗩᗩ Kᗩ ᖇᗩᑭE KᗩᖇKE ᑌSKE 1000 TᑌKᗪE KᗩᖇKE KᑌTTO KO KᕼIᒪᗩ ᗪᑌᑎGᗩ ᖇᗩᑎᗪ💦🍼E KᗩᖇKE KᑌTTO KO KᕼIᒪᗩ ᗪᑌᑎGᗩ ᖇᗩᑎᗪ💦🍼E ᑕ",
     "Teᖇii ᗰᗩ ki ᑕᕼᑌ T ᗰᗩ ᒍᗩᗷ ᒍᗩᗷ ᗰ ᖇᗩ ᒪᗩᐯᗪᗩ ᒍᗩᗩ ᗩ ᕼᗩ ᕼ ᗩᗷ teᖇii ᗰᗩᗩ ᗷ ᕼ ᕼ ᕼ ᕼ ᕼ ᑌ ᕼ ᕼ ᕼ ᕼᗩ ᕼᗩ ᗷsᗪk💦👻🍆🍑",
     "Teᖇii ᗰᗩᗩ ki ᑕᕼᑌ t ᖴᗩᗩᗪ ᗪ ᗷsᗪk ᗩᗷ Kᗩ ᒪᗩᑭᗩ t ᗷetᗩ ᗷEᕼe ᑎ ᑕᕼ oᗪ ᑎ e ki tᗩyᗩᖇi kᗩᖇ ᖇᗩᕼᗩ ᕼᑌ☠️💦🍆🍑🔥",
     "ᗷᕼ ᗷᕼ ᗪ ᗪ ᑭ EE ᗪ ᗪEK ᖇᗩᕼᗩ G ᒪᗩᗪ ᗩ ᗩ ᖇ ᗷ ᗷ ᕼᗩ ᕼᗩ ᗩᗩ ᑎᗪ ᖴᗩᗩᗪ Kᖇ ᖇᗩ Kᕼᕼᕼegᗩ Tᖇiii ᗰᗩᗪᗩᖇᑕᕼ oᗪ🔥🔥👻😈",
@@ -14,7 +14,7 @@ RAID = [
     "Teᖇi ᗷEᕼE ᑎ KO ᖇ ᘔ ᗪEK ᕼ ᕼ ᕼᑌ ᑭ oᖇᖇ. ᑕ oᗰ ᑭ E ᖇ ᘔ ᘔ ᗩᗩ ᒪ ᑭ ᒪ ᒪ ᒪ ᗩ ᒪᑌᑎᗪ Ek Sᗩtᕼ ᒪ ETI ᕼᗩ 😂💦👻😂💦👻,
     "TEᖇII ᗰᗩᗩ Kᗩ ᗷSᗪᗩ ᗩᗷ ᑕᕼᑌᗪ GᗩYᗩ TOᕼ Kᗩᒪᗩᑭ ᖇᗩᕼᗩ ᖇᑎᗪI Kᗩ ᗷᗩᑕᕘᕼᗩ😈"
     "TEᖇII ᗰᗩᗩ KI ᑕᕼᑌT ᖴᗩᗩᗪ KE ᗷᗩᑕᕼᕼE ᑎIKᗩᒪ ᗪᑌᑎGᗩ SᗩᗩᖇE ᗷSᗪK😂😘👻",
-    "TEᖇE Gᗩᗩᑎᗪ ᗰᗩI 10 ᖴEET Kᗩ Gᗩᖇᗩᗰ ᖇOᗪ ᗪᗩᗩᒪᗪᑌᑎGᗩ ᗷSᗪK ᖴIᖇ ᗰᑌᕼ SE ᕆ"ᗩGEGᗩ
+    "TEᖇE Gᗩᗩᑎᗪ ᗰᗩI 10 ᖴEET Kᗩ Gᗩᖇᗩᗰ ᖇOᗪ ᗪᗩᗩᒪᗪᑌᑎGᗩ ᗷSᗪK ᖴIᖇ ᗰᑌᕼ SE ᕆᗩGEGᗩ",
     "Teᖇii ᗷEᕼE ᑎ Ki Kᗩᗩ ᒪ i ᑕᕼᑌ t ᗰᗩ ᗰ ᗰ ᖇᗩ ᒪᑌᑎᗪ ᗪᗩᗩᒪ KE ᖇ ᘔ ᗷᗩᑕᕼᕼᗩ ᑭᗩ ᗪᗩ ᗪᗩ Kᗩᖇ ᑌᑎ gᗩ😂🍆💦",
     "ᗩᒍ EE ᗷ ᗷᗩᗩ ᕼᗩ ᗷ ᗪ ᗪᗪ ᗩᑌᖇ ᑌ ᗰEᖇᗩ ᗷᗷ ᗩ ᗩᑌᖇ ᗩᗩ ᒪᗩ ᗪ ᑎ ᑎ o ᒪᗩ gtᗩ ᕼᗩ ᗩ ᗩise kᗩise sᗩᗰᗩ ᒍ ᑎᗩᕼ ᖇᗩᕼᗩ ᖇᗩᕼᗩ 😂👻😈",
     "TEᖇII ᗰᗩᗩ KO ᑕᕼ oᗪkᖇ T ᑌᒍᕼ E ᑭᗩ ᗪᗩ kiy ᖴ ᖴᖴ teᖇii ᗷEᕼE ᑎ Ko ᑕᕼ ᗪ ᖇ ᑌ SK ᗷᗩᑕᕼᕼᗩ ᑭᗩ ᑭᗩ ᗪᗩ kiyᗩ💦🍆👻",
