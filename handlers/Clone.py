@@ -4,7 +4,7 @@
 import os
 from pyrogram import *
 from pyrogram.types import *
-from main_startup.helpers.basic import edit_or_reply, get_text, get_user
+from helpers.basic import edit_or_reply, get_text, get_user
 
 
 OWNER = os.environ.get("OWNER", None)
