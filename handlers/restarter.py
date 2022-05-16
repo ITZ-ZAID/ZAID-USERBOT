@@ -4,6 +4,7 @@ import wget
 import shutil
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from main import SUDO_USERS
 
 
 async def restart(message: Message, restart_type):
@@ -37,12 +38,13 @@ async def restart(message: Message, restart_type):
 
 # Restart
 @Client.on_message(filters.command("restart", ["."]) & filters.me)
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["restart", "reboot"], [".", "!"]))
 async def restart_get(client, message):
     try:
-        await message.edit("**Restarting userbot...**")
+        zaid = await message.reply_text("**Restarting userbot...**")
         await restart(message, restart_type="restart")
     except:
-        await message.edit("**An error occured...**")
+        await zaid.edit_text("**An error occured...**")
 
 
 # Update
