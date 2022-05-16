@@ -305,8 +305,6 @@ START_TIME = datetime.now()
 
 if bot1:
     bot1.start()
-    bot1.join_chat("Superior_Bots")
-    bot1.join_chat("Superior_Support")
 if bot2:
     bot2.start()
     bot2.join_chat("Superior_Bots")
