@@ -9,7 +9,7 @@ from helpers.basic import edit_or_reply, get_text
 
 
 @Client.on_message(filters.command('trump', ["."]) & filters.me)
-async def trump_tweet(client: Clieng, message: Message):     
+async def trump_tweet(client: Client, message: Message):     
     text = get_text(message)
     if not text:
         await message.edit(f"**Trump :** ``What Should I Tweet For You ?``")
