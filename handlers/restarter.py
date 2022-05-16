@@ -39,7 +39,7 @@ async def restart(message: Message, restart_type):
 # Restart
 @Client.on_message(filters.command("restart", ["."]) & filters.me)
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["restart", "reboot"], [".", "!"]))
-async def restart_get(client, message):
+async def restart_get(client: Client, message: Message):
     try:
         zaid = await message.reply_text("**Restarting userbot...**")
         await restart(message, restart_type="restart")
@@ -49,7 +49,7 @@ async def restart_get(client, message):
 
 # Update
 @Client.on_message(filters.command('update', ["."]) & filters.me)
-async def update(client, message):
+async def update(client: Client, message: Message):
     try:
         await message.edit('**Updating...**')
         link = "https://github.com/ITZ-ZAID/ZAID-USERBOT/archive/refs/heads/main.zip"
