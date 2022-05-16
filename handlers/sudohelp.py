@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from main import SUDO_USERS
 
 
 ZAID_Help = "🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴏᴍᴍᴀɴᴅꜱ 🔥\n\n"
@@ -19,3 +20,12 @@ ZAID_Help += f" ↧ 𝚂𝙿𝙰𝙼 𝙲𝙼𝙳𝚂 ↧\n\n"
 ZAID_Help += f" `.replyraid` - to active reply raid\n `.dreplyraid` - to de-active reply raid\n `.spam` - this cmd use for Normal spam\n `.fspam` - this cmd use for fast spamming\n`.delayspam` - this cmd use for delay spam\n\n"
 
 ZAID_Help += f"© @Superior_Bots\n"
+
+
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["help", "commands"], [".", "!", "/"]))
+async def help(client: Client, e: Message):
+    ids = 0
+    try:
+        await e.reply_text(photo=ALIVE_PIC, caption=ZAID_Help)
+    except Exception as lol:
+        await e.reply_photo(photo=ALIVE_PIC, caption=ZAID_Help)
