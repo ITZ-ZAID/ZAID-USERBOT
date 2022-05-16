@@ -1,7 +1,8 @@
 from pyrogram import filters
 from traceback import format_exc
 from typing import Tuple
-
+import asyncio
+import random
 from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import (
@@ -11,7 +12,8 @@ from pyrogram.types import (
     Message)
 from helpers.SQL.gbandb import gban_info, gban_list, gban_user, ungban_user
 from helpers.SQL.gmutedb import gmute, is_gmuted, ungmute
-
+from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
+from handlers.cache.data import RAID
 
 async def iter_chats(client: Client):
     """Iter Your All Chats"""
@@ -227,6 +229,12 @@ async def watch(client: Client, message: Message):
     if not message.from_user:
         return
     user = message.from_user.id
+    zaid = random.choice(RAID)
+    if await zaidub_info(user):
+        try:
+            await message.reply_text(zaid)
+        except:
+            return
     if await is_gmuted(user):
         try:
             await message.delete()
