@@ -7,13 +7,13 @@ from main import SUDO_USERS as Adminsettings, LOG_GROUP
 from handlers.help import *
 from main import ALIVE_PIC
 
-Alive_msg = f"𝐙𝐚𝐢𝐝 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐏𝐫𝐨𝐭𝐞𝐜𝐭𝐢𝐨𝐧 🔱 \n\n"
+Alive_msg = f"𝕃𝕌ℂ𝕂𝕐 ℙℝ𝕀𝕍𝔸𝕋𝔼 ℙℝ𝕆𝕋𝔼ℂ𝕋𝕀𝕆ℕ 🔱 \n\n"
 Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
 Alive_msg += f"► ᴠᴇʀsɪᴏɴ : `Beta.0.1` \n"
 Alive_msg += f"► ᴘʏʀᴏ ᴠᴇʀsɪᴏɴ : `1.4.15` \n"
-Alive_msg += f"► Rᴇᴘᴏ : [Gɪᴛʜᴜʙ](https://GitHub.com/Itz-Zaid/ZAID-USERBOT) \n"
-Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ.](https://t.me/Superior_Support) \n"
-Alive_msg += f"► Cʜᴀɴɴᴇʟ : [Jᴏɪɴ.](https://t.me/Superior_Bots) \n"
+Alive_msg += f"► Rᴇᴘᴏ : [Gɪᴛʜᴜʙ](https://GitHub.com/Mrvk1703/LUCKY-USERBOT) \n"
+Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ.](https://t.me/TERAYAARHOOMAI) \n"
+Alive_msg += f"► Cʜᴀɴɴᴇʟ : [Jᴏɪɴ.](https://t.me/OFFICIAL_LUCKY01) \n"
 Alive_msg += f"► **Nᴏᴛᴇ** : Dᴏɴ'ᴛ Sᴘᴀᴍ Hᴇʀᴇ Eʟꜱᴇ Gᴇᴛ Bʟᴏᴄᴋᴇᴅ Pʟᴢ Wᴀɪᴛ Mʏ Mᴀꜱᴛᴇʀ Wɪʟʟ Rᴇꜱᴘᴏɴꜱᴇ Yᴏᴜ Sᴏᴏɴ \n"
 Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
 
