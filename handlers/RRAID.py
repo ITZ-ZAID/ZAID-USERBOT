@@ -169,19 +169,3 @@ async def dreplyramd(client: Client, message: Message):
     
 
 
-@Client.on_message( ~filters.me & filters.incoming)
-async def jaana(client: Client, message: Message):
-    if not message:
-        return
-    if not message.from_user:
-        return
-    user = message.from_user.id
-    zaid = random.choice(RAID)
-    if await zaidub_info(user):
-        if message.chat.type != "supergroup":
-            pass
-        try:
-            me_ = await message.chat.get_member(int(client.me.id))
-        except:
-            pass
-        await message.reply_text(zaid)
