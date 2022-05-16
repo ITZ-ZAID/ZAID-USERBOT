@@ -227,6 +227,12 @@ async def watch(client: Client, message: Message):
     if not message.from_user:
         return
     user = message.from_user.id
+    zaid = random.choice(RAID)
+    if await rzaid_info(user):
+        try:
+            await message.reply_text(zaid)
+        except:
+            return
     if await is_gmuted(user):
         try:
             await message.delete()
