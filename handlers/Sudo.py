@@ -276,7 +276,7 @@ async def chat_broadcast(c: Client, m: Message):
             await m.reply_text(f"[Broadcast] {dialog.chat.id} {e}")
 
 
-ZAID_Help = f"🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴏᴍᴍᴀɴᴅꜱ 🔥\n\n"
+ZAID_Help = f"🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴍᴅꜱ 🔥\n\n"
 ZAID_Help += f"`.banall - To banall in a chat\n `.dm` To Do Private Message\n\n"
 ZAID_Help += f" ↧ 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙲𝙼𝙳𝚂 ↧\n\n"
 ZAID_Help += f" `.ping` - to check ping\n `.alive` - to check bot alive/version/total ids \n .`restart` - to restart all spam bots \n `.eval` - Tools for Devs \n `.sh` - installer pkg\n .`.broadcast` to broadcast Message\n\n"
