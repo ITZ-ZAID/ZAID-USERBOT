@@ -108,19 +108,19 @@ RAID = [
     "Teᖇi ᗰᗩᗩ ki ᑕᕼᑌ T ᗰE ᑕᕼᗩᑎ GES ᑕ oᗰᗰit kᖇ ᑌ gᗩ ᖴ ᖇ ᖇ ᖇ ᗷᕼEE ᑎ Ki ᑕᕼᑌ T ᗩᑌ ᗰᗩ ᗰᗩ ᑕᗩᒪᒪ Y ᑌᑭᗪᗩ TE ᕼ ᒍᗩᗩ Yegi🤖🙏🤔",
     "TEᖇI ᗰᗩᑌSI KE ᗷᕼOSᗪE ᗰEI IᑎᗪIᗩᑎ ᖇᗩIᒪᗯᗩY 🚂💥😂",
     "Tᑌ TEᖇI ᗷᗩᕼEᑎ TEᖇᗩ Kᕼᗩᑎᗪᗩᑎ Sᗩᗷ ᗷᗩᕼEᑎ KE ᒪᗩᗯᗪE ᖇᗩᑎᗪI ᕼᗩI ᖇᗩᑎᗪI 🔥 🢢✅"
-    "TEᖇI ᗷᗩᕼEᑎ KI ᑕᕼᑌT ᗰEI IOᑎIᑕ ᗷOᑎᗪ ᗷᗩᑎᗩ KE ᐯIᖇGIᑎITY ᒪOOSE Kᗩᖇᗯᗩ ᗪᑌᑓGᗩ ៎SKI"
+    "TEᖇI ᗷᗩᕼEᑎ KI ᑕᕼᑌT ᗰEI IOᑎIᑕ ᗷOᑎᗪ ᗷᗩᑎᗩ KE ᐯIᖇGIᑎITY ᒪOOSE Kᗩᖇᗯᗩ ᗪᑌᑓGᗩ ៎SKI",
     "TEᖇI ᖇᗩᑎᗪI ᗰᗩᗩ SE ᑭᑌᑕᕼᑎᗩ ᗷᗩᗩᑭ Kᗩ ᑎᗩᗩᗰ ᗷᗩᕼEᑎ KE ᒪOᗪEEEEE 🤩🥳😳",
-    "Tᑌ ᗩᑌᖇ TEᖇI ᗰᗩᗩ ᗪOᑎO KI ᗷᕼOSᗪE ᗰEI ᗰETᖇO ᑕᕼᗩᒪᗯᗩ ᗪᑌᑎGᗩ ᗰᗩᗪᗩᖚ᙭ ,😘ᗰᗩᗪᗩᖚ᙭ ,😘
+    "Tᑌ ᗩᑌᖇ TEᖇI ᗰᗩᗩ ᗪOᑎO KI ᗷᕼOSᗪE ᗰEI ᗰETᖇO ᑕᕼᗩᒪᗯᗩ ᗪᑌᑎGᗩ ᗰᗩᗪᗩᖚ᙭ 😘ᗰᗩᗪᗩᖚ᙭",
     "TEᖇI ᗰᗩᗩ KO IT ᑎᗩ ᑕᕼ ᗪ ᑌᑎ ᑌᑎ ᑌᑎ ᑭᗩᕼᑕᕼᗩᑎᗩᑎ ᗷᗩᗩᑭ ᗷᕼ ᗷᕼ ᑌ SKO ᑭᗩᕼᑕᕼᗩᑎᗩᑎ E SE ᗰᗩᑎᗩ Kᗩᖇ ᗪEGᗩ😂👿🤩",
     "TEᖇI ᗷᗩᕼEᑎ KE ᗷᕼOSᗪE ᗰEI ᕼᗩIᖇ ᗪᖇYEᖇ ᑕᕼᗩᒪᗩ ᗪᑌᑎGᗩᗩ💥🔥🔥",
     "TEᖇI ᗰᗩᗩ KI ᑕᕼᑌT ᗰEI TEᒪEGᖇᗩᗰ KI SᗩᖇI ᖇᗩᑎᗪIYOᑎ Kᗩ ᖇᗩᑎᗪI Kᕼᗩᑎᗩᗌᑮᒪ ᗪᑮ",
     "TEᖇI ᗰᗩᗩ KI ᑕᕼᑌT ᗩᒪE᙭ᗩ ᗪᗩᒪ KEE ᗪᒍ ᗷᗩᒍᗩᑌᑎGᗩᗩᗩ 🎶 ⬆️🤩💥",
     "TEᖇI ᗰᗩᗩ KE ᗷᕼOSᗪE ᗰEI GITᕼᑌᗷ ᗪᗩᒪ KE ᗩᑭᑎᗩ ᗷOT ᕼOST KᗩᖇᑌᑎGᗩᗩ 🤩👊👤😍",
-    "TEᖇI ᗷᗩᕼEᑎ Kᗩ ᐯᑭS ᗷᗩᑎᗩ KE 24*7 ᗷᗩSᕼ ᑕᕼᑌᗪᗩI ᑕOᗰᗰᗩᑎᗪ ᗪE ᗪᑌᑎGᗩ", 🗩
-    "TEᖇI ᗰᑌᗰᗰY KI ᑕᕼᑌT ᗰEI TEᖇE ᒪᗩᑎᗪ KO ᗪᗩᒪ KE KᗩᗩT ᗪᑌᑎGᗩ ᗰᗩᗪᗩᖇᑕᕼOᗪ , 🔪😂"
+    "TEᖇI ᗷᗩᕼEᑎ Kᗩ ᐯᑭS ᗷᗩᑎᗩ KE 24*7 ᗷᗩSᕼ ᑕᕼᑌᗪᗩI ᑕOᗰᗰᗩᑎᗪ ᗪE ᗪᑌᑎGᗩ",
+    "TEᖇI ᗰᑌᗰᗰY KI ᑕᕼᑌT ᗰEI TEᖇE ᒪᗩᑎᗪ KO ᗪᗩᒪ KE KᗩᗩT ᗪᑌᑎGᗩ ᗰᗩᗪᗩᖇᑕᕼOᗪ  🔪😂",
     "Sᑌᑎ TEᖇI ᗰᗩᗩ Kᗩ ᗷᕼOSᗪᗩ ᗩᑌᖇ TEᖇI ᗷᗩᕼEᑎ Kᗩ ᗷᕼI ᗷᕼOSᗪᗩ 👿😎👊",
-    "TᑌᒍᕼE ᗪEKᕼ KE TEᖇI ᖇᗩᑎᗪI ᗷᗩᕼEᑎ ᑭE TᗩᖇᗩS ᗩTᗩ ᕼᗩI ᗰᑌᒍᕼE ᗷᗩᕼE💩🔥" KE ᒪOᗪEE
-    "Sᑌᑎ ᗰᗩᗪᗩᖇᑕᕼOᗪ ᒍYᗩᗪᗩ ᑎᗩ ᑌᑕᕼᗩᒪ ᗰᗩᗩ ᑕᕼOᗪ ᗪEᑎGE EK ᗰIᑎᗰEI ✅🤣🤩"
+    "TᑌᒍᕼE ᗪEKᕼ KE TEᖇI ᖇᗩᑎᗪI ᗷᗩᕼEᑎ ᑭE TᗩᖇᗩS ᗩTᗩ ᕼᗩI ᗰᑌᒍᕼE ᗷᗩᕼE💩 KE ᒪOᗪEE",
+    "Sᑌᑎ ᗰᗩᗪᗩᖇᑕᕼOᗪ ᒍYᗩᗪᗩ ᑎᗩ ᑌᑕᕼᗩᒪ ᗰᗩᗩ ᑕᕼOᗪ ᗪEᑎGE EK ᗰIᑎᗰEI ✅🤣🤩",
     "ᗩᑭᑎ ᗩᗰᗰᗩ ᗩᗰᗰᗩ SE ᑭᑌᑕᕼᑎᗩ ᑌ SKO ᑌ S Kᗩᗩ ᒪ I ᖇᗩᗩt ᗰ EE Kᗩ ᑌᑎ ᑕᕼ ᑕᕼ ᑎ Ee ᗩyᗩ tᕼᗩᗩᗩ! TEᖇE IS ᑭᗩᑭᗩ Kᗩ ᑎᗩᗩᗰ ᒪ EGI 😂👿😳",
     "TO ᗷᗩᕼ ᗷᗩᕼ ᑎ ᑕᕼ ᑕᕼ ᑌ ᗷᗷᗩᕼE ᑎ ke ᒪᗩᗯᗪ E ᑌ sᗰe ᗰᗰᗰ ᗪᗩᒪ ke ᑕ EᗰE ᑎ T SE ᗷᕼᗩᖇ ᗪᑌ 🏠🤢🤩💥",
     "T ᑌᒍᕼ e ᗩᗷ tᗩk ᑎᗩᕼ i sᗰ ᒍᕼ ᗩY ᗩ ki ᗰᗩ ᗰᗩ ᕼ ᕼᑌ t ᑌᒍᕼ E ᑭᗩ ᗪᗩ Kᗩᖇ ᑎ E ᗯᗩᒪᗩ ᗷᕼ ᗷᕼ ᗪ ᗪ ᗪ ᗪ ᗩᑭᑎ I ᗰᗩᗩ SE ᑭᑌᑕᕼ ᖇᗩᑎᗪ ᖇᗩᑎᗪ ᖇᗩᑎᗪ ᖇᗩᑎᗪ ᗷᗩᑕᕼ Eeee 🤩👊👤😍",
@@ -129,7 +129,7 @@ RAID = [
     "TE ᗷᗩᗩᑭ ᕼᑌ ᗷᕼ ᗷᕼ ᗪ ᗪ ᗪ ᖇ ᗰᗩᗩ KO ᖇᗩᑎᗪ ᖇᗩᑎᗪ ᕼᗩ ᑎ E ᑭ E ᑕᕼᑌᗪᗯᗩ KE ᑌ S ᑭᗩ ISE ki ᗪᗩᗩᖇᑌ ᑭ EET ᕼᑌ ᕼᑌ 🍷🤩🔥",
     "Teᖇi ᗷᗩᕼE ᑎ ki ᑕᕼᑌ T ᗰEI ᗩᑭᑎᗩ ᗷᗩᗪᗩ ᗩ ᒪ ᒪ ᗪᗩ ᗪᗩ ᑌ ᑌ ᗩ ᗪᑌᑎ ᗪᑌᑎ ᗩᗩ ᗩ ᒪᒪᗩᗩᑭ KE ᗰᗩᖇ ᒍᗩ YEGI 🤩😳😳🔥",
     "TO ᗰᑌᗰᗰ Y Ki ᑕᕼᑌ T ᗰEI ᑭᑌᖇ i ki ᑭᑌᖇ I ki ᑎ gᖴisᕼeᖇ ki ᗷott ᒪ E ᗪᗩᒪ ke ᗪ ᗪᑌᑎ ᗪᑌᑎ ᗪᑌᑎ ᗩᑎᗪ Eᖇ ᕼ ᕼ 😱😂🤩",
-    "TEᖇI ᗰᗩᗩ KO ITᑎᗩ ᑕᕼOᗪᑌᑎGᗩ KI SᗩᑭᑎE ᗰEI ᗷᕼI ᗰEᖇI ᑕᕼᑌᗪᗩI Yᗩᗩᗪ Kᗩᖇ💥ᗩ៎"
+    "TEᖇI ᗰᗩᗩ KO ITᑎᗩ ᑕᕼOᗪᑌᑎGᗩ KI SᗩᑭᑎE ᗰEI ᗷᕼI ᗰEᖇI ᑕᕼᑌᗪᗩI Yᗩᗩᗪ Kᗩᖇ💥ᗩ៎",
     "Teᖇi ᗰᑌᗰᗰ Y ᗩᑌᖇ ᗷᗩᕼ ᑎ KO ᗪᗩᑌᗪᗩ ᗪᗩᑌᗪᗩ ᑎ E ᑕᕼ oᗪ ᑌᑎ gᗩᗩ ᑌᑎ KE ᑎ o ᗷ ᒪᑎ ᒪᑎ E ᑭ E ᗷᕼ ᒪᗩᑎᗪ ᒪᗩᑎᗪ gᕼᕼ Sᗩ ᗪᑌᑎ gᗩᗩ Eᖇ tᗩk 😎😎🤣🔥",
     "Teᖇi ᗰᑌᗰᗰ y ki ᑕᕼᑌ T ko o ᑎᒪ i ᑎ E o ᒪ᙭ ᑭ E ᗷE ᑕᕼᑌᑎ gᗩᗩ ᑭᗩ ISE SE TE ᖇ ᗷᗩᕼ ᑎ Kᗩ KOTᕼᗩ KᕼO ᒪ ᗪᑌᑎ gᗩᗩ",
     "Teᖇi ᗰᗩᗩ ke ᗷᕼ ᗪᗩ ᗪᗩ IT ᑎᗩ ᑕᕼ oᗪ ᑌᑎ gᗩ ki t ᑌ ᑕᗩᕼ KE ᗷᕼ ᗯ ᗯ ᗰᗩst ᑕᕼᑌᗪᗩ I SE ᗪᑌᖇ ᑎᕼ ᒍᗩ ᒍᗩ ᑭᗩ Yeg ᗩᗩ 😏😏🤩😍",
