@@ -267,7 +267,7 @@ RAID = [
     "ᖇᗩᑎᗪI KE ᗷᗩᑕᕼE",
     "TEᖇᗩ ᗰᗩᗩ ᗰEᖇI ᖴᗩᑎ",
     "TEᖇI SE᙭Y ᗷᗩᕼEᑎ KI ᑕᕼᑌT Oᑭ",
-    "TEᖇI ᗰᗩᗩ Kᗩᗩ ᗷᕼOSᗪᗩ ᗰEE ᗷᖇOᗯᑎ SᑌGᗩᖇ ᗪᗩᒪ KE ᑕᕼOᗪᑌ",
+    "TEᖇI ᗰᗩᗩ Kᗩᗩ ᗷᕼOSᗪᗩ ᗰEE ᗷᖇOᗯᑎ SᑌGᗩᖇ ᗪᗩᒪ KE ᑕᕼOᗪᑌk",
 ]
 
     
