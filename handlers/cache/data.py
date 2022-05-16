@@ -41,7 +41,7 @@ RAID = [
     "😈😈👅👅👅👅👅💩💩💩💩👻👻👻👻👻👻👻☠️🤑🤑🤑🤑🎃🎃🎃🎃🎃🥵🥵🥵🥵🥵 \ ᑎ Teeee ᖇᖇᖇ iiiiiiiiii ᗰᗩᗩᗩᗩᗩᗩ ᗩeseee ᑕᕼ oᗪi ki teᖇiiiiiiiiii ᗰᗩᗩᗩᗩ ᗩESE ᕼ ᖇᗩᑎ g ᗷ ᖇᗩᗩᗩ ᑎ gi ᕼ ᕼ g g g g ᑎ ᑎ ᕼ ᕼ g g g ᖇᗩᗩᗩ ᑎ ᑎ ᕼ ᕼ ᗩᗷ g Tᖇiiiiiii ᗩᑌᖇ ᗷ ᕼᗩ ᑎ Ki ᗷᗩᗩᗩᗩᖇ ᗩᗷᗷᗷᗷᗷᗷ ᗩᗷᗷᗷᗷᗷᗷ ᗪee ᑭᗩ K ᑭ E ᒪ EG ᗰᗩᗩᗪᗩᖇᑕᕼ ᗰᗩᗩᗪᗩᖇᑕᕼ ᗩ ᗩᗰᗷᕼᗩᗩ ᒪ KE Sᗩᗰᗷᕼᗩᗩ ᒪ Sᗩktᗩᗩᗩᗩᗩ ᕼᗩ ᕼᗩ iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiooooo 🤤🤤🤤🤤👅👅👅👅👅",
     "ᗷᗩᗩᗩᗩᗩᑭ seeee ᑭᗩᗩᑎ gᗩᗩᗩᗩᗩᗩ Eeeee ᒪ ᒪ ᗩᗩᗩᗩ ᗰᗩᗩᗩᗩᗩᗪᗩᗩᗩᖇᑕᕼ oᗪ \ ᑎ ᑕᕼᗩ kkee ᗪEK ᗩᗩᗩᗷᕼ ᗩᗩᗩᗷᕼ teᖇiiiiiiiii ᗰᗩᗩᗩᗩᗩᗩᗩ Keise ᑕᕼᑌᗪ Eegiiiii ᗷsᗪk ᖇᗩᑎᗪ E \ \ 🤤🤤🤤🤤🤤🤤🤤🤤🤤🤤🤤🤘🤘🤘🤘🤘🤘🤘",
     "Teᖇiiiiiiiii ᗰᗩᗩᗩᗩᗩᗩ ke ᗷᕼ ᗷᕼ ᗩᗪᗩᗪ ᗰEI ᑎ ᗪᗩᑎᗪᗩᗩᗩ ᗪᗩᗩᗩᗩᒪ Keee Kᕼᗩᗩᗩᗪᗩᗩᗩ kᖇ ᗪᑌᑎ gᗩ \ ᑎ ᗰᗩᗩᗩᗩᗩᗪᗩᗩᗩᖇᑕᕼ oᗪ \ ᑎ😋🤤🤤🤤🤤🤤✈️✈️✈️🤤🤤🤤",
-    "Tee ᖇᖇᖇ iiii ᗰᗩᗩᗩᗩ Keee ᑭᕼᗩᗩᗩ Tee ᗷᕼᕼoosᗩᗩᗪe \ ᑎ kᗩᗩᗩᗩ sᕼiiiiiiiiiiiiiii ᕼᗩᗩᗩ ᕼᗩᗩᗩ ᕼᗩᗩᗩ ᕼᗩᗩᗩ ᗪ Kkee \ \",
+    "Tee ᖇᖇᖇ iiii ᗰᗩᗩᗩᗩ Keee ᑭᕼᗩᗩᗩ Tee ᗷᕼᕼoosᗩᗩᗪe \n kᗩᗩᗩᗩ sᕼiiiiiiiiiiiiiii ᕼᗩᗩᗩ ᕼᗩᗩᗩ ᕼᗩᗩᗩ ᕼᗩᗩᗩ ᗪ Kkee",
     "ᖇᗩᗩᗩᗩᑎᗪᗪᗪIIIIIIIII KEEEEE ᑭIᒪᒪᒪᒪᒪᒪEE ᗰᗩᗩᗩᗩᗩᗪᗩᗩᗩᖇᑕᕼOᗪ😋😁",
     "𝗔𝗡𝗗𝗜 𝗕𝗔𝗡𝗗𝗜 𝗦𝗔𝗡𝗗𝗜 𝗠𝗔𝗔𝗗𝗔𝗥𝗖𝗛𝗢𝗗 \ ᑎ𝗧𝗘𝗥𝗜 𝗠𝗔𝗔 𝗕𝗘𝗛𝗔𝗡 𝗣𝗜𝗞𝗔𝗖𝗛𝗨 𝗣𝗘𝗟𝗘 𝗞𝗥𝗞𝗘 𝗥𝗔𝗡𝗗𝗜 \ \",
     "ᗰᑌᗰᗰ YYYY KOOOOOO ᗷ ᒪᒪᒪᒪ TE ᒪᒪ ᒪ gᗩᗩᗩᗩ keeeee ᖇᗩ KKKK ᒪ Gᗩᗩᗩᗩᗩᗩ Keeeee ᗰᗩᗩᗩᗩᖇᑎ Eeee ᑎᕼ i ᗪEETI ᐯ ᐯ \ \ \",
