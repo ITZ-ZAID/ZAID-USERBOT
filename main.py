@@ -307,8 +307,6 @@ if bot1:
     bot1.start()
 if bot2:
     bot2.start()
-    bot2.join_chat("Superior_Bots")
-    bot2.join_chat("Superior_Support")
 if bot3:
     bot3.start()
     bot3.join_chat("Superior_Bots")
