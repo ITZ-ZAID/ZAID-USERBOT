@@ -22,7 +22,6 @@ telegraph==1.4.1
 sqlalchemy==1.3.23
 motor
 pymongo 
-psycopg2
 psutil
 heroku3
 gitpython
