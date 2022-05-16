@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from main import SUDO_USERS
+from main import SUDO_USERS, ALIVE_PIC
 
 
 ZAID_Help = "🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴏᴍᴍᴀɴᴅꜱ 🔥\n\n"
