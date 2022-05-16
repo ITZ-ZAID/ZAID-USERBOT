@@ -14,7 +14,6 @@ from handlers.cache.data import RAID
 from main import SUDO_USERS
 
 
-@Client.on_message(~filters.me & filters.private & ~filters.bot & filters.incoming , group = 69)
 async def jaana(client: Client, message: Message):
     if not message:
         return
