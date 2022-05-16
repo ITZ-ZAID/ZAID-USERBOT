@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from main import SUDO_USERS, ALIVE_PIC
 
 
-ZAID_Help = "🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴏᴍᴍᴀɴᴅꜱ 🔥\n\n"
+ZAID_Help = f"🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴏᴍᴍᴀɴᴅꜱ 🔥\n\n"
  
 ZAID_Help += f"`.banall - To banall in a chat\n `.dm` To Do Private Message\n\n"
 
