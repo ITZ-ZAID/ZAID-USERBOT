@@ -36,7 +36,7 @@ BOTINLINE_AVAIABLE = False
 
 def mulaisql() -> scoped_session:
     global DB_AVAILABLE
-    engine = create_engine(DB_URI, client_encoding="utf8")
+    engine = create_engine(DB_URL, client_encoding="utf8")
     BASE.metadata.bind = engine
     try:
         BASE.metadata.create_all(engine)
