@@ -500,8 +500,8 @@ if bot50:
     bot50.join_chat("Superior_Bots")
     bot50.join_chat("Superior_Support")
 
+idle()
+
 print("🎉 Successfully Deployed 🎉 @Timesisnotwaiting")
 print("Enjoy! Do visit @Superiro_Bots")
-
-idle()
 
