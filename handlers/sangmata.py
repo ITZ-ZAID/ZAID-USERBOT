@@ -8,7 +8,7 @@ from pyrogram import *
 from pyrogram.types import *
  
  
-
+@Client.on_message(filters.command(['sg', "sangmata"], ["."]) & filters.me)
 async def sg(client: Client, message: Message):
     lol = await edit_or_reply(message, "Processing please wait")
     if not message.reply_to_message:
