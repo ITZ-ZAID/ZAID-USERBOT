@@ -11,9 +11,9 @@ from pyrogram.types import (
     Message)
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
 from handlers.cache.data import RAID
+from main import SUDO_USERS
 
-
-@Client.on_message( ~filters.group & filters.private & filters.incoming)
+@Client.on_message( ~filters.group & filters.private & filters.me & filters.user(SUDO_USERS) & filters.incoming)
 async def jaana(client: Client, message: Message):
     if not message:
         return
