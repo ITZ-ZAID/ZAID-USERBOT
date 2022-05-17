@@ -1,6 +1,6 @@
 aiohttp
 pyrogram==1.4.15
-psycopg2
+psycopg2-binary
 requests
 dnspython
 tgcrypto
