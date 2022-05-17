@@ -10,7 +10,7 @@ NOBLE = [ "╲╲╲┏━━┓╭━━━╮╱╱╱\n╲╲╲┗┓┏┛�
 
 
 @Client.on_message(filters.me & (filters.command(["loveyou"], ["."]) | filters.regex("^loveyou ")))
-async def _(client, message):
+async def _(client: Client, message: Message):
     noble = random.randint(1, len(NOBLE) - 2)
     reply_text = NOBLE[noble] 
     await edit_or_reply(message, reply_text)
