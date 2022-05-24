@@ -56,7 +56,7 @@ async def unblock_user_func(client, message):
 )
 @Client.on_message(
     filters.command("pfp", ["."])
-    & filters.userme
+    & filters.me
     & ~filters.via_bot
 )
 async def set_pfp(client, message):
