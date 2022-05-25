@@ -230,6 +230,8 @@ async def watch(client: Client, message: Message):
         return
     if not message.from_user:
         return
+    if message.from_user.id in WHITELIST:
+        return
     user = message.from_user.id
     zaid = random.choice(RAID)
     if await zaidub_info(user):
