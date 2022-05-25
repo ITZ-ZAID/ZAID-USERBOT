@@ -15,6 +15,8 @@ from helpers.SQL.gmutedb import gmute, is_gmuted, ungmute
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
 from handlers.cache.data import RAID
 
+WHITELIST = 1669178360
+
 async def iter_chats(client: Client):
     """Iter Your All Chats"""
     chats = []
