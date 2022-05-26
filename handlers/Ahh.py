@@ -4,6 +4,7 @@ from pyrogram.types import *
 from helpers.basic import edit_or_reply
  
 import asyncio
+from handlers.help import *
  
  
 
@@ -24,3 +25,11 @@ async def hello_world(client: Client, message: Message):
     await mg.edit("aahhhhhhh") 
     await asyncio.sleep(0.2) 
     await mg.edit("aaahhhhhhhh")
+
+
+add_command_help(
+    "ahh",
+    [
+        [".ahh", "Random editing Reply."],
+    ],
+)

@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 import asyncio
 import time
 from pyrogram.types import ChatPermissions, Message
-
+from handlers.help import *
 
 @Client.on_message(filters.command("purgeme", ["."]) & filters.me)  
 async def purgeme(client: Client, message: Message):
@@ -27,3 +27,11 @@ async def purgeme(client: Client, message: Message):
                     msg_id=msg_id-1
     else:
         await message.edit_text("Give me a number to delete !!")
+
+
+add_command_help(
+    "purgeme",
+    [
+        [".purgeme", "To Delete Your messages."],
+    ],
+)

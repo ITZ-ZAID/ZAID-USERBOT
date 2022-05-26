@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 import asyncio
 import time
 from pyrogram.types import ChatPermissions, Message
+from handlers.help import *
 
 
 @Client.on_message(filters.group & filters.command(["setchatphoto", "setgpic"], ["."]) & filters.me)  
@@ -19,3 +20,11 @@ async def set_chat_photo(client: Client, message: Message):
             return
     else:
         await message.edit_text("Reply to a photo to set it !")
+
+
+add_command_help(
+    "setchatphoto",
+    [
+        [".setchatphoto", "Reply to a image To set Your Group Chat Pic."],
+    ],
+)

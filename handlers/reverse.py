@@ -13,7 +13,7 @@ from pyrogram.types import Message
 from typing import Tuple, Optional
 
 from helpers.PyroHelpers import ReplyCheck
-
+from handlers.help import *
 
 screen_shot = "handlers/cache/"
 
@@ -128,7 +128,7 @@ async def tracemoe_rs(client: Client, message: Message):
         if message_.video:
             nama = "video_{}-{}.mp4".format(message.reply_to_message.video.date, message.reply_to_message.video.file_size)
             await client.download_media(message.reply_to_message.video, file_name="nana/downloads/" + nama)
-            dis_loc = "nana/downloads/" + nama
+            dis_loc = "handlers/cache/" + nama
             img_file = os.path.join(screen_shot, "grs.jpg")
             await take_screen_shot(dis_loc, 0, img_file)
             if not os.path.lexists(img_file):
@@ -169,3 +169,18 @@ async def tracemoe_rs(client: Client, message: Message):
         await asyncio.sleep(5)
         await message.delete()
         return
+
+add_command_help(
+    "reverse",
+    [
+        [".reverse", "Reply to a image ."],
+    ],
+)
+
+
+add_command_help(
+    "areverse",
+    [
+        [".areverse", "Reply to a message ."],
+    ],
+)

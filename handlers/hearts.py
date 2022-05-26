@@ -5,7 +5,7 @@ from pyrogram.types import *
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 import asyncio
 import random
-
+from handlers.help import *
 
 
 
@@ -78,11 +78,7 @@ async def phase4(message):
 @Client.on_message(filters.command(["hearts", "magic", "love"], ["."]) & filters.me)
 async def hearts(client: Client, message: Message):
     await phase1(message)
-    await phase2(message)
-    await phase3(message)
-    await phase4(message)
     await asyncio.sleep(SLEEP * 3)
-
     await message.edit("**❤️ I**")
     await asyncio.sleep(0.5)
     await message.edit("**❤️ I love**")
@@ -90,5 +86,13 @@ async def hearts(client: Client, message: Message):
     await message.edit("**❤️ I love you**")
     await asyncio.sleep(3)
     await message.edit("**❤️ I love you <3**")
+
+
+add_command_help(
+    "hearts",
+    [
+        [".love", "To Propose Someone."],
+    ],
+)
 
 

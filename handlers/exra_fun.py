@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from helpers.basic import edit_or_reply, get_text
 import requests
 import re
-
+from handlers.help import *
 
 @Client.on_message(filters.command('wink', ["."]) & filters.me)
 async def wink(client: Client, message: Message):
@@ -45,3 +45,20 @@ async def pikachu(client: Client, message: Message):
        await client.send_photo(message.chat.id, image_s)
        return
     await message.delete()
+
+
+add_command_help(
+    "extra fun",
+    [
+        [".wink", "To Get A Winking Gifs."],
+        [".hug", "To get A Hug Gifs anime."],
+        [
+            ".pat",
+            "To get a pat gifs",
+        ],
+        [
+            ".pikachu",
+            "to get a Pikachu Gifs",
+        ],
+    ],
+)

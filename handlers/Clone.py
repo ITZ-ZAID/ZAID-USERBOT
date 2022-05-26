@@ -1,14 +1,12 @@
-#~ Ported from Friday[Telethon]
-#~ ©FridayUB
-
 import os
 from pyrogram import *
+from handlers.help import *
 from pyrogram.types import *
 from helpers.basic import edit_or_reply, get_text, get_user
 
 
 OWNER = os.environ.get("OWNER", None)
-BIO = os.environ.get("BIO", None)
+BIO = os.environ.get("BIO", "Lҽɠҽɳԃαɾყ Oϝ #Zαιԃ UʂҽɾႦσƚ")
 
 
 
@@ -51,3 +49,12 @@ async def revert(client: Client, message: Message):
  photos = await client.get_profile_photos("me")
  await client.delete_profile_photos(photos[0].file_id)
  await message.edit("`I am back!`")
+
+
+add_command_help(
+    "cloner",
+    [
+        [".clone", "To Clone someone Profile."],
+        [".revert", "To Get Your Account Back."],
+    ],
+)

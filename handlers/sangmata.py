@@ -6,7 +6,7 @@ from helpers.basic import edit_or_reply
 from pyrogram.errors import RPCError
 from pyrogram import * 
 from pyrogram.types import *
- 
+from handlers.help import *
  
 @Client.on_message(filters.command(['sg', "sangmata"], ["."]) & filters.me)
 async def sg(client: Client, message: Message):
@@ -32,3 +32,11 @@ async def sg(client: Client, message: Message):
         else:
             await lol.delete()
             await opt.copy(chat)
+
+
+add_command_help(
+    "sangmata",
+    [
+        [".sg", "Reply to a user to find name history."],
+    ],
+)

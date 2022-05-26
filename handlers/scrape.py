@@ -27,7 +27,7 @@ async def inv(client: Client, message: Message):
 
 
 add_command_help(
-    "dm",
+    "inviteall",
     [
         [".inviteall", "To Invite Members to your Chat."],
         ["/inviteall", "To Invite Members to Your Chat (Sudo User)."],

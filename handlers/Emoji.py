@@ -2,6 +2,7 @@
 
 from pyrogram import *
 from pyrogram.types import *
+from handlers.help import *
 
 from helpers.basic import edit_or_reply, get_text
 
@@ -174,3 +175,12 @@ async def cmoji(client: Client, message: Message):
         else:
             result += a
     await op.edit(result)
+
+
+add_command_help(
+    "emoji",
+    [
+        [".emoji", "To Make Your Custom Emoji With Reply."],
+        [".cmoji", "make A Message with Emoji."],
+    ],
+)

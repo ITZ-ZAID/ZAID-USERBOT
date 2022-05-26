@@ -5,7 +5,7 @@ import requests
 from pyrogram import Client, filters
 from pyrogram.types import *
 from helpers.basic import edit_or_reply
-
+from handlers.help import *
 
 async def s_paste(message, extension="txt"):
     siteurl = "https://spaceb.in/api/v1/documents/"
@@ -49,3 +49,11 @@ async def open_file(client: Client, m: Message):
     else:
         await edit_or_reply(m, "Reply to a File to open it!")
         os.remove(f)
+
+
+add_command_help(
+    "spacebin",
+    [
+        [".open", "Reply To a Document To Paste in Spacebin."],
+    ],
+)
