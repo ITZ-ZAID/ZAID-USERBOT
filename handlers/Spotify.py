@@ -61,7 +61,7 @@ async def pause(bot: Client, message: Message):
         return
 
 
-@UserBot.on_message(filters.command(["splay", "play"], ".") & (filters.me))
+@Client.on_message(filters.command(["splay", "play"], ".") & (filters.me))
 async def play(bot: Client, message: Message):
     play = await spotify.play()
     if play:
