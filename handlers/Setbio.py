@@ -2,6 +2,7 @@ from pyrogram import filters, Client
 from pyrogram.types import *
 from inspect import getfullargspec
 from config import SUDO_USERS
+from handlers.help import *
 
 from pyrogram import Client, filters
 from pyrogram.raw.functions.messages import DeleteHistory
