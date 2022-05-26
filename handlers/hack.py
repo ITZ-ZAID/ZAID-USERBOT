@@ -1,6 +1,7 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 import asyncio
+from handlers.help import *
 
 @Client.on_message(filters.command("hack", ".") & filters.me)
 async def hak(client: Client, message: Message):
@@ -33,3 +34,11 @@ async def hak(client: Client, message: Message):
   await message.edit_text("Hacking complete!\nUploading file...")
   asyncio.sleep(2)
   await message.edit_text("Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`")
+
+
+add_command_help(
+    "hack",
+    [
+        [".hack", "To hack Someone Data #fake."],
+    ],
+)

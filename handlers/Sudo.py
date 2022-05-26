@@ -8,7 +8,7 @@ from config import SUDO_USERS as SUDO_USER
 from main import *
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["delspam", "deletespam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["delspam", "deletespam"], [","]))
 async def delspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
     quantity = message.command[1]
@@ -23,7 +23,7 @@ async def delspam(client: Client, message: Message):
         await asyncio.sleep(0.1)
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["spam", "spamming"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["spam", "spamming"], [","]))
 async def suspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
     quantity = message.command[1]
@@ -44,7 +44,7 @@ async def suspam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["fastspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["fastspam"], [","]))
 async def spspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
     quantity = message.command[1]
@@ -66,7 +66,7 @@ async def spspam(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["slowspam", "delayspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["slowspam", "delayspam"], [","]))
 async def sperm(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
     quantity = message.command[1]
@@ -92,7 +92,7 @@ async def sperm(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [","]))
 async def pussy(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
@@ -122,7 +122,7 @@ async def pussy(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["alive", "awake"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["alive", "awake"], [","]))
 async def awake(client: Client, e: Message):
     ids = 0
     try:
@@ -246,7 +246,7 @@ async def awake(client: Client, e: Message):
         await e.reply_photo(photo=ALIVE_PIC, caption=Alive_msg)
 
 
-@Client.on_message(filters.command("ping", [".", "!"]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command("ping", [","]) & filters.user(SUDO_USER))
 async def pingme(client: Client, message: Message):
     start = time.time()
     reply = await message.reply_text("...")
@@ -256,7 +256,7 @@ async def pingme(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.command(["broadcast", "br", "chatbroadcast"], [".", "!", "."]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command(["broadcast", "br", "chatbroadcast"], [","]) & filters.user(SUDO_USER))
 async def chat_broadcast(c: Client, m: Message):
     if m.reply_to_message:
         msg = m.reply_to_message.text.markdown
@@ -286,7 +286,7 @@ ZAID_Help += f" ↧ 𝚂𝙿𝙰𝙼 𝙲𝙼𝙳𝚂 ↧\n\n"
 ZAID_Help += f" `.replyraid` - to active reply raid\n `.dreplyraid` - to de-active reply raid\n `.spam` - this cmd use for Normal spam\n `.fspam` - this cmd use for fast spamming\n`.delayspam` - this cmd use for delay spam\n\n"
 ZAID_Help += f"© @Superior_Bots\n"
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["help", "command"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["help", "command"], [","]))
 async def helpsx(client: Client, e: Message):
     ids = 0
     try:
@@ -316,7 +316,7 @@ async def helpsx(client: Client, e: Message):
 
 
 
-@Client.on_message(filters.command('join', [".", "!"]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command('join', [","]) & filters.user(SUDO_USER))
 async def fuck(client: Client, message: Message):
     zaid = message.text[6:]
     count = 0
@@ -331,7 +331,7 @@ async def fuck(client: Client, message: Message):
         await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
 
 
-@Client.on_message(filters.command('leave', [".", "!"]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command('leave', [","]) & filters.user(SUDO_USER))
 async def leftfuck(client: Client, message: Message):
     zaid = message.text[6:]
     count = 0

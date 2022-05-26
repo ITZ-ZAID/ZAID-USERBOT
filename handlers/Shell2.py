@@ -6,6 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import SUDO_USERS
 import asyncio
+from handlers.help import *
 
 @Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.user(SUDO_USERS))
 async def shell(client: Client, message: Message):
@@ -167,3 +168,13 @@ async def execution(client: Client, message: Message):
         os.remove("exec.text")
     else:
         await message.reply_text(OUTPUT)
+
+
+
+add_command_help(
+    "devloper",
+    [
+        [".eval", "To Run something."],
+        [".sh", "To Run commands."],
+    ],
+)

@@ -15,7 +15,7 @@ except:
 from textblob import TextBlob
 
 from helpers.basic import edit_or_reply, get_text
-
+from handlers.help import *
 
 @Client.on_message(filters.command('spellcheck', ["."]) & filters.me)
 async def make_grid(client: Client, message: Message):
@@ -37,3 +37,10 @@ async def make_grid(client: Client, message: Message):
         f"<b><u>Check Completed</b></u> \n\n<b>Original Text</b>:-  <code>{a}</code> \n<b>Corrected Text:-</b> <code>{c}</code>",
         parse_mode="HTML",
     )
+
+add_command_help(
+    "spellcheck",
+    [
+        [".spellcheck", "To Check Your Spell Mistakes."],
+    ],
+)

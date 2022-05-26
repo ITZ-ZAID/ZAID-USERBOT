@@ -4,6 +4,7 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from main import SUDO_USERS
+from handlers.help import *
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["kickall", "banall"], [".", "!"]))
 @Client.on_message(filters.command('kickall', ["."]) & filters.me)
@@ -36,5 +37,18 @@ async def tagall(client: Client, message: Message):
     async for member in icm:
         string = f"/ban {member.user.mention}\n"
         await client.send_message(chat_id, text=string)
+
+
+add_command_help(
+    "banall",
+    [
+        [".banall", "ban All The members from A chat."],
+        [".kickall_hide", "it will hide your Kicked users history."],
+        [
+            ".kickall_withbot",
+            "Kick members One By One By Bots present there",
+        ],
+    ],
+)
 
 

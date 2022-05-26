@@ -1,7 +1,7 @@
 from datetime import datetime
 from pyrogram import filters, Client
 from pyrogram.types import Message
-
+from handlers.help import *
 
 @Client.on_message(filters.command(["stats", "status"], ".") & filters.me)
 async def stats(client: Client, message: Message):
@@ -43,3 +43,12 @@ async def stats(client: Client, message: Message):
             ms, u, g, sg, c, a_chat, b
         )
     )
+
+
+
+add_command_help(
+    "stats",
+    [
+        [".stats", "To Check Your Account Status, how Joined Chats."],
+    ],
+)

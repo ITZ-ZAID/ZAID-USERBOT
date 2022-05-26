@@ -5,7 +5,7 @@ import requests
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from helpers.basic import edit_or_reply, get_text
-
+from handlers.help import *
 
 
 @Client.on_message(filters.command('trump', ["."]) & filters.me)
@@ -51,3 +51,11 @@ async def custom_tweet(client: Client, message: Message):
     await message.edit(f"**{starky}** : Wait I Am Tweeting Your Texts")
     await client.send_photo(message.chat.id, tweet, caption=starkxd)
     await message.delete()
+
+add_command_help(
+    "twitter",
+    [
+        [".trump", "make a Quote by Trump."],
+        [".ctweet", "Twitte by Ur values."],
+    ],
+)

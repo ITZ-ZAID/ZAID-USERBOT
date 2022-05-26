@@ -54,10 +54,10 @@ async def nearest_dc(client: Client, message: Message):
 @Client.on_message(filters.command("ping", [".", "!"]) & filters.me)
 async def pingme(client: Client, message: Message):
     """Ping the assistant"""
-    start = time.time()
-    reply = await message.reply_text("...")
-    delta_ping = time.time() - start
-    await reply.edit_text(f"🎉 🇵 🇴 🇳 🇬 !\n\n♡︎ `{delta_ping * 1000:.3f}` 𝗺𝘀 ♡︎")
+    get = await client.get_me()
+    mention = get.first_name
+    reply = await message.edit("...")
+    await reply.edit(f"🎉 🇵 🇴 🇳 🇬 !\n\n My Master {mention}")
 
 
 

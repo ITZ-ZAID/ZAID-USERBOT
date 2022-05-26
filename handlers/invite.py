@@ -1,6 +1,7 @@
 from pyrogram import filters, Client
 from pyrogram.types import Message
 import asyncio
+from handlers.help import *
 
 @Client.on_message(filters.me & filters.command("invite", ["."]))
 async def inviteee(client: Client, message: Message):
@@ -16,3 +17,11 @@ async def inviteee(client: Client, message: Message):
         await mg.edit(f"`Unable To Add Users! \nTraceBack : {e}`")
         return
     await mg.edit(f"`Sucessfully Added {len(user_list)} To This Group / Channel!`")
+
+
+add_command_help(
+    "invite",
+    [
+        [".invite", "Usage: \n /invite @Username of User."],
+    ],
+)

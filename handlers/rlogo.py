@@ -2,7 +2,7 @@ import os
 import wget
 import random
 
-
+from handlers.help import *
 from pyrogram import Client, filters
 from pyrogram.types import *
 from helpers.basic import edit_or_reply, get_text
@@ -62,3 +62,10 @@ async def rlogo(client: Client, message: Message):
     await event.delete()
     if os.path.exists(file_name):
         os.remove(file_name)
+
+add_command_help(
+    "randomlogo",
+    [
+        [".rlogo", "To make a random logo."],
+    ],
+)

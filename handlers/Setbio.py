@@ -2,6 +2,7 @@ from pyrogram import filters, Client
 from pyrogram.types import *
 from inspect import getfullargspec
 from config import SUDO_USERS
+from handlers.help import *
 
 from pyrogram import Client, filters
 from pyrogram.raw.functions.messages import DeleteHistory
@@ -102,5 +103,14 @@ async def eor(msg: Message, **kwargs):
     )
     spec = getfullargspec(func.__wrapped__).args
     return await func(**{k: v for k, v in kwargs.items() if k in spec}) 
+
+
+add_command_help(
+    "setbio",
+    [
+        [".bio", "Your Bio Message."],
+        [".pfp", "To set Your Profile Pic"],
+    ],
+)
 
 

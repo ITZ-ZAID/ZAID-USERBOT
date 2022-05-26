@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 import asyncio
 import time
 from pyrogram.types import Message
-
+from handlers.help import *
 
 
 @Client.on_message(filters.command("invitelink", ["."]) & filters.me)
@@ -15,3 +15,11 @@ async def invite_link(client: Client, message: Message):
         except Exception as e:
                 print(e)
                 await message.reply_text("denied permission")
+
+
+add_command_help(
+    "invitelink",
+    [
+        [".invitelink", "To Get Your Chat Link."],
+    ],
+)

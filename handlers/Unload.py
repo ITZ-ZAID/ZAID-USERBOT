@@ -4,10 +4,10 @@ from handlers.restarter import restart
 import os
 module_list = {}
 
+from handlers.help import *
 
 
-
-@Client.on_message(filters.command('unloadmod', ["."]) & filters.me)
+@Client.on_message(filters.command(['unloadmod', "uninstall"], ["."]) & filters.me)
 async def unloadmod(client: Client, message: Message):
     try:
         module_name = message.text.replace(f'{prefix}unloadmod', '')
@@ -39,3 +39,12 @@ async def loadmod(client: Client, message: Message):
             f"<b>**The module has been loaded successfully.**\nRestart..."
         )
         await restart(message, restart_type="restart")
+
+
+add_command_help(
+    "modules",
+    [
+        [".uninstall", "To Uninstall A module\n Usage: .uninstall name"],
+        [".install", "To install A modules usage:.install reply to plugin file"],
+    ],
+)

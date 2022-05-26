@@ -4,26 +4,8 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 from helpers.parser import mention_html, mention_markdown
+from handlers.help import *
 
-__MODULE__ = "Admin List"
-__HELP__ = """
-This module meant for check admins/bots or report someone, not for spamming groups.
-Please note spam admin will give you instant banned. Don't play with this command if you understand what it cost!
-
-──「 **Admin list** 」──
--> `admins`
--> `adminlist`
-For get admin list in spesific chat or current chat
-
-──「 **Report admin** 」──
--> `reportadmin`
--> `reportadmins`
-To report someone or report your message to all admins
-
-──「 **Bot list** 」──
--> `botlist`
-Check all bots in spesific chat or current chat
-"""
 
 
 @Client.on_message(filters.me & filters.command(["admins", "adminlist"], ["."]))
@@ -151,7 +133,7 @@ async def tag_all_users(client: Client, message: Message):
         await client.send_message(message.chat.id, text, parse_mode="html")
 
 
-@Client.on_message(filters.me & filters.command(["botlist"], ["."]))
+@Client.on_message(filters.me & filters.command(["botlist", "bots"], ["."]))
 async def get_list_bots(client: Client, message: Message):
     replyid = None
     if len(message.text.split()) >= 2:
@@ -182,3 +164,26 @@ async def get_list_bots(client: Client, message: Message):
         await client.send_message(message.chat.id, teks, reply_to_message_id=replyid)
     else:
         await message.edit(teks)
+
+
+
+add_command_help(
+    "adminlist",
+    [
+        [".admins", "Get chats Admins list."],
+        [".kickdel", "To Kick deleted Accounts."],
+        [
+            ".everyone `or` .tagall",
+            "to mention Everyone ",
+        ],
+        [
+            ".botlist",
+            "To get Chats Bots list",
+        ],
+    ],
+)
+
+
+
+
+        
