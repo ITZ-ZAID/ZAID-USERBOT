@@ -4,6 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from main import *
 from pyrogram import Client
 from main import ALIVE_PIC
+from handlers.help import *
  
 
  
