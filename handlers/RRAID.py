@@ -11,6 +11,7 @@ Don't kang Without Creadits
 from pyrogram import filters
 from traceback import format_exc
 from typing import Tuple
+from handlers.help import *
 import random
 from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
@@ -168,6 +169,13 @@ async def dreplyramd(client: Client, message: Message):
     await runzaid(userz.id)
     ungbanned = f"**De-activated Replyraid Raid [{userz.first_name}](tg://user?id={userz.id})"
     await Zaid.edit(ungbanned)
-    
 
 
+
+add_command_help(
+    "replyraid",
+    [
+        [".replyraid", "Reply To User\n To Raid on Someone."],
+        [".dreplyraid", "To Disable ReplyRaid."],
+    ],
+)
