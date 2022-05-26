@@ -9,7 +9,7 @@ python-dotenv
 APScheduler==3.7.0
 ptable
 prettytable
-spotipy
+spotipy==2.19.0
 yourls
 speedtest-cli==2.1.3
 humanize
