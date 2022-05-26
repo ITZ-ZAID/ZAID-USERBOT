@@ -154,3 +154,13 @@ async def alive(client: Client, e: Message):
             ],
         ),
     ) 
+
+add_command_help(
+    "alive",
+    [
+        [
+            ".alive",
+            "This Command for check your bot working or nt",
+        ]
+    ],
+)
