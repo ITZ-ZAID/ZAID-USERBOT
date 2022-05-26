@@ -294,3 +294,17 @@ async def gbroadcast(client: Client, message: Message):
     await msg_.edit(
         f"`Message Sucessfully Send To {chat_len-failed} Chats! Failed In {failed} Chats.`"
     )
+
+
+
+
+add_command_help(
+    "global",
+    [
+        [".gmute", "To mute someone Globally."],
+        [".ungmute", "To Unmute someone Globally."],
+        [".gban", "To Ban someone Globally."],
+        [".ungmute", "To Unban someone Globally."],
+        [".gcast", "To message Globally."],
+    ],
+)
