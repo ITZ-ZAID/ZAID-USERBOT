@@ -16,7 +16,6 @@ from helpers.SQL.gmutedb import gmute, is_gmuted, ungmute
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
 from handlers.cache.data import RAID
 
-WHITELIST = 1669178360
 
 async def iter_chats(client: Client):
     """Iter Your All Chats"""
@@ -230,8 +229,6 @@ async def watch(client: Client, message: Message):
     if not message:
         return
     if not message.from_user:
-        return
-    if message.from_user.id in WHITELIST:
         return
     user = message.from_user.id
     zaid = random.choice(RAID)
