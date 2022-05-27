@@ -16,7 +16,7 @@ humanize
 youtube-search-python
 yt-dlp 
 wget==3.2
-urllib3==1.25.9
+urllib3
 numpy
 Pillow
 telegraph==1.4.1
