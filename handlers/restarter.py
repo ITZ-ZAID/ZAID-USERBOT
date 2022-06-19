@@ -19,7 +19,7 @@ async def restart(message: Message, restart_type):
                 "python3",
                 "./main.py",
                 f"{message.chat.id}",
-                f"{message.id}",
+                f"{message.from_user.id}",
                 f"{text}",
             ],
         )
@@ -30,7 +30,7 @@ async def restart(message: Message, restart_type):
                 "python",
                 "./main.py",
                 f"{message.chat.id}",
-                f"{message.id}",
+                f"{message.from_user.id}",
                 f"{text}",
             ],
         )
