@@ -40,7 +40,8 @@ else:
 if MONGO_DB:
     MONGO_DB = MONGO_DB
 else: 
-    MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    MONGO_DB = None
+    print("Mongo Database Url not found!")
 
 if LOG_GROUP:
     Owner = LOG_GROUP

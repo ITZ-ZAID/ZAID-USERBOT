@@ -4,7 +4,7 @@
 
 - A First Telegram Userbot Project With Multi Clients Based On PyroGram
 
-<p align="center"><a href="https://t.me/Superior_Bots"><img src="https://telegra.ph/file/9563b48195f2f1c62cc5e.jpg" width="300"></a></p>
+<p align="center"><a href="https://t.me/TheUpdatesChannel"><img src="https://telegra.ph/file/723d8ef9fb7e721135221.jpg" width="300"></a></p>
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
 
@@ -25,7 +25,7 @@
 
 <p align="center">𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧</p>
 
-<p align="center"><a href="https://t.me/StringSession_GeneratorBot"> <img src="https://img.shields.io/badge/String%20Session-black?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://replit.com/@Itz-zaid/Generator"> <img src="https://img.shields.io/badge/String%20Session-black?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
 
 
 #
@@ -48,7 +48,7 @@
 
 [ꜰᴏʀᴋ ᴅᴇᴘʟᴏʏ ɪꜱ ʜɪɢʜʟʏ ʀᴇᴄᴏᴍᴍᴇɴᴅᴇᴅ](https://telegra.ph/file/5bcf79f948ca06030640c.mp4)
 
-<p align="center"><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20Multi%20Client-red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://zaid.vercel.app/"> <img src="https://img.shields.io/badge/Deploy%20Multi%20Client-red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/ITZ-ZAID/ZAID-USERBOT/tree/master"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
  
@@ -99,19 +99,21 @@
 <p align="center"><a href="https://railway.app/new/template?template=https://github.com/ITS-ZAID/Railway-Deploy&envs=STRING_SESSION5,STRING_SESSION4,STRING_SESSION3,STRING_SESSION2,STRING_SESSION1,DATABASE_URL,API_ID,API_HASH,SUDO_USERS,MONGO_DB"> <img src="https://img.shields.io/badge/Deploy%20To%20Railway-black?style=for-the-badge&logo=railway" width="220" height="38.45"/></a></p>
 
 ```console
-Zaid@Windows~ $ git clone https://github.com/ITZ-ZAID/ZAID-USERBOT
-Zaid@Windows~ $ cd ZAID-USERBOT
-Zaid@Windows~ $ pip3 install -U-r requirements.txt
-Zaid@Windows~ $ nano main.py
+Zaid@Debian~ $ apt-get -y update
+Zaid@Debian~ $ apt-get -y install git gcc python3-dev
+Zaid@Debian~ $ git clone https://github.com/ITZ-ZAID/ZAID-USERBOT
+Zaid@Debian~ $ cd ZAID-USERBOT
+Zaid@Debian~ $ pip3 install -U-r requirements.txt
+Zaid@Debian~ $ nano config.py
 ```
 
 <h3 align="center">
-    Edit <b>.main.py</b> with your own values and Run Bot
+    Edit <b>config.py</b> with your own values and Run Bot
 </h3>
 
 ```console
-Zaid@Windows~ $ screen
-Zaid@Windows~ $ python3 main.py
+Zaid@Debian~ $ screen
+Zaid@Debian~ $ python3 main.py
 ```
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
