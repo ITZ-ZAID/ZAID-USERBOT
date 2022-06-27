@@ -84,6 +84,33 @@ async def oahgfg(xspam: Client, e: Message):
 async def hello(client: Client, message: Message):
     await client.send_photo(message.chat.id, ALIVE_PIC, caption=Zaid)
 
+from handlers.cache.data import RAID, GROUPS
+
+
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["spam", "spamming"], [".", "!", "/"]))
+async def skkkspam(client: Client, message: Message):
+    sex  = await message.reply_text("⚡ Usage:\n /spam 10 Kkkk ")
+    quantity = message.command[1]
+    spam_text = ' '.join(message.command[2:])
+    quantity = int(quantity)
+
+    if int(message.chat.id) in GROUPS:
+        await sex.edit("<b>Sorry Kid!! You Can't Spam In My Creator Groups</b>") 
+        return
+
+    if message.reply_to_message:
+        reply_to_id = message.reply_to_message.message_id
+        for _ in range(quantity):
+            await client.send_message(message.chat.id, spam_text,
+                                      reply_to_message_id=reply_to_id)
+            await asyncio.sleep(0.15)
+        return
+
+    for _ in range(quantity):
+        await sex .delete()
+        await client.send_message(message.chat.id, spam_text)
+        await asyncio.sleep(0.15)
+
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["raid"], ["."]))
