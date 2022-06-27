@@ -13,12 +13,13 @@ from random import choice
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from handlers.cache.data import *
+from config import SUDO_USERS
 
 
 usage = f"** ❌ Wrong Usage ❌** \n Type `.help delayspam`"
 
 
-
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["fspam", "fastspam"], [".", "!"]))
 @Client.on_message(filters.me & filters.command(["fspam", "fastspam"], ["."]))
 async def spam(xspam: Client, e: Message):
     warn = await e.reply_text("**Note:** Don't Blame to @ZaidUserBot If IDs Get ban -!")
