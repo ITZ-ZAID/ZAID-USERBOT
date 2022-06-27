@@ -40,8 +40,7 @@ else:
 if MONGO_DB:
     MONGO_DB = MONGO_DB
 else: 
-    MONGO_DB = None
-    print("Mongo Database Url not found!")
+    MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 if LOG_GROUP:
     Owner = LOG_GROUP
@@ -460,4 +459,3 @@ idle()
 
 print("🎉 Successfully Deployed 🎉 @Timesisnotwaiting")
 print("Enjoy! Do visit @Superiro_Bots")
-
