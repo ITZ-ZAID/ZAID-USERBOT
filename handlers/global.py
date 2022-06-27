@@ -282,7 +282,7 @@ async def give_glist(client: Client, message: Message):
     await edit_or_send_as_file(oof, glist, client, "GbanList", "Gban-List")
 
 
-@Client.on_message(filters.me & filters.command("gcasst", ["."]))
+@Client.on_message(filters.me & filters.command("gcast", ["."]))
 async def gbroadcast(client: Client, message: Message):
     msg_ = await message.edit_text("`Processing..`")
     failed = 0
