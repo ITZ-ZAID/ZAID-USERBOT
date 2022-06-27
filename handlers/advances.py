@@ -86,7 +86,7 @@ async def hello(client: Client, message: Message):
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["join"], [".", "!", "/"]))
-async def join(client: Client, message: Message):
+async def jhoin(client: Client, message: Message):
     zaid = message.text[6:]
     count = 0
     if not zaid:
