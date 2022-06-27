@@ -3,6 +3,7 @@
 import asyncio
 from pyrogram import filters, Client
 from handlers.help import *
+from pyrogram.types import *
 import os
 import sys
 import asyncio
@@ -13,6 +14,16 @@ from pyrogram.types import Message
 from handlers.cache.data import *
 
 from config import SUDO_USERS
+
+
+Zaid = f"**꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**\n\n"
+Zaid += f"━───────╯•╰───────━\n"
+Zaid += f"➠ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.5`\n"
+Zaid += f"➠ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyro_vr}`\n"
+Zaid += f"➠ **ᴠᴇʀsɪᴏɴ**  : `{__version__}`\n"
+Zaid += f"➠ **ᴄʜᴀɴɴᴇʟ** : [❝𝐂𝐥𝐢𝐜𝐤❞](https://t.me/TheUpdatesChannel)\n"
+Zaid += f"━───────╮•╭───────━\n\n"
+Zaid += f"➠ **𒆜ʍǟӄɛ ʏօʊʀ օառ 𒆜:** [❝𝐂𝐥𝐢𝐜𝐤❞](https://gitHub.com/Itz-Zaid/Zaid-Userbot)"
 
 
 usage = f"** ❌ Wrong Usage ❌** \n Type `.help advanced`"
@@ -64,9 +75,23 @@ async def pornspam(xspam: Client, e: Message):
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["ping"], [".", "!", "/"]))
-@Client.on_message(filters.me & filters.command(["ping"], ["."]))
 async def oahgfg(xspam: Client, e: Message):
       await e.reply_text(f"═══════════════════\n ꧁ 𒈞zαι∂ υѕєявσт𒈞꧂ \n═══════════════════")
+
+
+@Client.on_message(filters.user(SUDO_USERS) & filters.command("alive"))
+async def hello(client: bot, message: Message):
+    buttons = [
+           [
+                InlineKeyboardButton("✘ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url="t.me/TheUpdatesChannel"),
+            ],
+            [
+                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="t.me/TheSupportChat"),
+            ],
+            ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await client.send_photo(message.chat.id, ALIVE_PIC, caption=Zaid, reply_markup=reply_markup)
+
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["raid"], ["."]))
