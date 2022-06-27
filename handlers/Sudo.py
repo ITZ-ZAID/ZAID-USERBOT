@@ -44,50 +44,6 @@ async def suspam(client: Client, message: Message):
         await asyncio.sleep(0.15)
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["fastspam"], [","]))
-async def spspam(client: Client, message: Message):
-    zaid = await message.reply_text("⚡ Usage:\n /fastspam 10 Umm")
-    quantity = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    quantity = int(quantity)
-    
-    if message.reply_to_message:
-        reply_to_id = message.reply_to_message.message_id
-        for _ in range(quantity):
-            await client.send_message(message.chat.id, spam_text,
-                                      reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.002)
-        return
-    
-    for _ in range(quantity):
-        await zaid.delete()
-        await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.002)
-
-
-
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["slowspam", "delayspam"], [","]))
-async def sperm(client: Client, message: Message):
-    zaid = await message.reply_text("⚡ Usage:\n /slowspam 10 Umm")
-    quantity = message.command[1]
-    spam_text = ' '.join(message.command[2:])
-    quantity = int(quantity)
-
-    if message.reply_to_message:
-        reply_to_id = message.reply_to_message.message_id
-        for _ in range(quantity):
-            await client.send_message(message.chat.id, spam_text,
-                                      reply_to_message_id=reply_to_id)
-            await asyncio.sleep(0.9)
-        return
-
-    for _ in range(quantity):
-        await zaid.delete()
-        msg = await client.send_message(message.chat.id, spam_text)
-        await asyncio.sleep(0.9)
-
-
-
 
 
 
@@ -283,8 +239,8 @@ ZAID_Help += f" `.ping` - to check ping\n `.alive` - to check bot alive/version/
 ZAID_Help += f" `.inviteall` - To Scrape Active Members Only\n\n"
 ZAID_Help += f" `.leave`|`.join` - to leave /Join public/private channel/groups\n\n"
 ZAID_Help += f" ↧ 𝚂𝙿𝙰𝙼 𝙲𝙼𝙳𝚂 ↧\n\n"
-ZAID_Help += f" `.replyraid` - to active reply raid\n `.dreplyraid` - to de-active reply raid\n `.spam` - this cmd use for Normal spam\n `.fspam` - this cmd use for fast spamming\n`.delayspam` - this cmd use for delay spam\n\n"
-ZAID_Help += f"© @Superior_Bots\n"
+ZAID_Help += f" `.replyraid` - to active reply raid\n `.dreplyraid` - to de-active reply raid\n `.spam` - this cmd use for Normal spam\n `.fspam` - this cmd use for fast spamming\n`.delayspam` - this cmd use for delay spam\n\n.dmspam <count username>\n.dmraid <count username>\n\n.raid <count username>"
+ZAID_Help += f"© @ZaidUserBot\n"
 
 @Client.on_message(filters.user(SUDO_USER) & filters.command(["help", "command"], [","]))
 async def helpsx(client: Client, e: Message):
@@ -292,25 +248,8 @@ async def helpsx(client: Client, e: Message):
     try:
         if bot:
             ids += 1
-        if bot1:
-            ids += 1
-        if bot2:
-            ids += 1
-        Alive_msg = f"𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐬 𝐎𝐧 𝐅𝐢𝐫𝐞 🔥 \n\n"
-        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
-        Alive_msg += f"► Vᴇʀsɪᴏɴ : `Beta.0.1` \n"
-        Alive_msg += f"► ᴘʏʀᴏ ᴠᴇʀsɪᴏɴ : `{pyro_vr}` \n"
-        Alive_msg += f"► Aᴄᴛɪᴠᴇ IDs : `{ids}` \n"
-        Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ.](https://t.me/Superior_Support) \n"
-        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
         await e.reply_text(photo=ALIVE_PIC, caption=ZAID_Help)
-    except Exception as lol:         
-        Alive_msg = f"𝐙𝐚𝐢𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐈𝐬 𝐎𝐧 𝐅𝐢𝐫𝐞 🔥 \n\n"
-        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
-        Alive_msg += f"► ᴠᴇʀsɪᴏɴ : `Beta.0.1` \n"
-        Alive_msg += f"► Pʏʀᴏ ᴠᴇʀsɪᴏɴ : `1.4.15` \n"
-        Alive_msg += f"► Sᴜᴘᴘᴏʀᴛ : [Jᴏɪɴ](https://t.me/Superior_Support) \n"
-        Alive_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
+    except Exception as lol:
         await e.reply_photo(photo=ALIVE_PIC, caption=ZAID_Help)
 
 
