@@ -82,16 +82,7 @@ async def oahgfg(xspam: Client, e: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command("alive"), [".", "!"])
 async def hello(client: Client, message: Message):
-    buttons = [
-           [
-                InlineKeyboardButton("✘ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url="t.me/TheUpdatesChannel"),
-            ],
-            [
-                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="t.me/TheSupportChat"),
-            ],
-            ]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    await client.send_photo(message.chat.id, ALIVE_PIC, caption=Zaid, reply_markup=reply_markup)
+    await client.send_photo(message.chat.id, ALIVE_PIC, caption=Zaid)
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], [".", "!", "/"]))
