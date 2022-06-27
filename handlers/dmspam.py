@@ -9,7 +9,7 @@ from random import choice
 OWNER_ID = 1669178360
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from data import *
+from handlers.cache.data import *
 from config import SUDO_USERS
 
 Usage = f"**❌ Wrong Usage ❌** \n Type: `.help dmspam`"
