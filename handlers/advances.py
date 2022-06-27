@@ -40,7 +40,7 @@ async def delayspam(xspam: Client, e: Message):
            await xspam.send_message(e.chat.id, msg)
            await asyncio.sleep(sleeptime)
     else:
-        await xspam.reply(usage)
+        await e.reply_text("Usage: .delayspam time count message")
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["pornspam"], [".", "!", "/"]))
@@ -120,7 +120,7 @@ async def raid(xspam: Client, e: Message):
                     await xspam.send_message(e.chat.id, msg)
                     await asyncio.sleep(0.10)
       else:
-          await xspam.reply(usage)
+          await e.reply_text("Usage: .raid count username")
 
 
 add_command_help(
