@@ -1,13 +1,11 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from main import SUDO_USERS
+from config import SUDO_USERS
 from handlers.help import *
 
-
+@Client.on_message(filters.command("join", ".") & filters.user(SUDO_USERS))
 @Client.on_message(filters.command("join", ".") & filters.me)
 async def join(client: Client, message: Message):
-    if message.from_user.id not in SUDO_USERS:
-        return
     zaid = message.text[6:]
     count = 0
     if not zaid:
@@ -20,7 +18,7 @@ async def join(client: Client, message: Message):
     except Exception as ex:
         await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
 
-
+@Client.on_message(filters.command("leave", ".") & filters.user(SUDO_USERS))
 @Client.on_message(filters.command("leave", ".") & filters.me)
 async def leave(client: Client, message: Message):
     zaid = message.text[6:]
