@@ -53,6 +53,10 @@ async def help(_, e: Message):
                 await e.reply(owner_help)
             elif helping.lower() == "replyraid":
                 await e.reply(rraid_help)
+            elif helping.lower() == "inviteall":
+                await e.reply(invite_help)
+            elif helping.lower() == "broadcast":
+                await e.reply(cast_help)
             else:
                 await e.reply(help_menu)
         else:
@@ -60,6 +64,7 @@ async def help(_, e: Message):
 
 
 spam_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Spam Cmds •**
 
 ✘**spam**: Spams a message for given counter (no Count limit)
@@ -89,10 +94,12 @@ syntax:
 
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 
 dm_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 ✘**• Dm Cmds •**
 
 **Warning⚠️:**This Plugin Can a Abuse And Harassment With A User!
@@ -108,26 +115,58 @@ command:
 ‣ .dmraid <count> <username or user id>
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 
 join_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Join Cmds •**
 
 ‣.join <private/public Chat invite link or username>
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 leave_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Leave Cmds •**
 
 ‣ `.leave` <group Username or chat user id>
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+"""
+
+
+cast_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+**✘ Broadcast Cmds •**
+✘ **Broadcast**: To Broadcast a message Globally.
+
+‣ `.broadcast` <Reply to a message>
+
+**꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+"""
+
+invite_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+**✘ inviteall Cmds •**
+**Warning ⚠️:** inviting stuffs affect ur id do it own risk
+
+**Inviteall:**To inviteall only active members.
+Specially designed for inviting active members.
+
+‣ `.inviteall` <group Username or chat user id>
+
+**꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 userbot_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Userbot Cmds •**
 
 ‣ .ping : To check Ping 
@@ -137,9 +176,11 @@ userbot_help = f"""
 ‣ .restart : To Restart Your Spam Bots
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 rraid_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ ReplyRaid Cmds •**
 
 **Warning ⚠️:** This Plugin Can a Abuse And Harassment With A User!
@@ -149,9 +190,11 @@ command:
 
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 owner_help = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **Profile:** Profile And Other Cmds
 commands:
 
@@ -160,9 +203,11 @@ commands:
 3) .setpic <reply to media>
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 help_menu = f"""
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 ✘**There are following categories**
 
 ‣`owner` : Get all owner commands and its usage
@@ -172,11 +217,13 @@ help_menu = f"""
 ‣`leave` : Get leave commands and its usage
 ‣`userbot` : Get all userbot commands
 ‣`replyraid` : Get all replyraids commands
+‣`inviteall` : Get all replyraids commands
 
 ✘**Type** .help <category> **to get all syntax in that category and its usage**
 ✘**Example**: `.help replyraid`
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["delayspam"], [".", "!", "/"]))
