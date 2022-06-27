@@ -62,7 +62,7 @@ async def pornspam(xspam: Client, e: Message):
               await xspam.send_video(e.chat.id, prn, caption=kkk)
               await asyncio.sleep(0.4)
 
-@Client.on_message(filters.user(SUDO_USERS & filters.command(["raid"], [".", "!", "/"]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["raid"], ["."]))
 async def raid(xspam: Client, e: Message):  
       Zaid = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
