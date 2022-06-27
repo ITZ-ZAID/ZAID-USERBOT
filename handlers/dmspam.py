@@ -20,7 +20,7 @@ async def dmraid(xspam: Client, e: Message):
       """ Module: Dm Raid """
       Zaid = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
       if len(Zaid) == 2:
-          ok = await xspam.get_users(Rizoel[1])
+          ok = await xspam.get_users(Zaid[1])
           id = ok.id
           if int(id) in VERIFIED_USERS:
                 text = f"Chal Chal baap Ko mat sikha"
