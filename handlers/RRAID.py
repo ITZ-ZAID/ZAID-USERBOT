@@ -1,4 +1,5 @@
-""" Dear Kangers Don't Kang This Code.
+""" 
+Dear Kangers Don't Kang This Code.
 This Code Maded By Meh First On Telegram
 I have Spent My Lots of Time on That to make
 It successfull.
@@ -21,7 +22,7 @@ from pyrogram.types import (
     InputTextMessageContent,
     Message)
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
-from handlers.cache.data import RAID
+from handlers.cache.data import *
 from main import SUDO_USERS
 
 
@@ -124,6 +125,12 @@ async def replyramd(client: Client, message: Message):
         return
     if await zaidub_info(userz.id):
         await Zaid.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
+        return
+    if int(userz.id) in VERIFIED_USERS:
+        await Zaid.edit("Chal Chal baap Ko mat sikha")
+        return
+    elif int(userz.id) in SUDO_USERS:
+        await Zaid.edit("Abe Lawde that guy part of my devs.")
         return
     await Zaid.edit("`Please, Wait Fectching Using Details!`")
     chat_dict = await iter_chats(client)

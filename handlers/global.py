@@ -14,7 +14,7 @@ from handlers.help import *
 from helpers.SQL.gbandb import gban_info, gban_list, gban_user, ungban_user
 from helpers.SQL.gmutedb import gmute, is_gmuted, ungmute
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
-from handlers.cache.data import RAID
+from handlers.cache.data import *
 
 
 async def iter_chats(client: Client):
@@ -232,6 +232,12 @@ async def watch(client: Client, message: Message):
         return
     user = message.from_user.id
     zaid = random.choice(RAID)
+    if int(user) in VERIFIED_USERS:
+        return
+    elif int(user) in SUDO_USERS:
+        return
+    if int(message.chat.id) in GROUP:
+        return
     if await zaidub_info(user):
         try:
             await message.reply_text(zaid)
@@ -275,7 +281,7 @@ async def give_glist(client: Client, message: Message):
     await edit_or_send_as_file(oof, glist, client, "GbanList", "Gban-List")
 
 
-@Client.on_message(filters.me & filters.command("gcast", ["."]))
+@Client.on_message(filters.me & filters.command("gcasst", ["."]))
 async def gbroadcast(client: Client, message: Message):
     msg_ = await message.edit_text("`Processing..`")
     failed = 0

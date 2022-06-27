@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from config import SUDO_USERS
 import asyncio
 
-@Client.on_message(filters.command(["inviteall", "kidnapall"], [","]) & filters.user(SUDO_USERS))
+@Client.on_message(filters.command(["inviteall", "kidnapall"], [".", "!", "/"]) & filters.user(SUDO_USERS))
 async def inviteall(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Gime Title also\n ex: /inviteall @testing")
     text = message.text.split(" ", 1)
