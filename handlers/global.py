@@ -15,6 +15,7 @@ from helpers.SQL.gbandb import gban_info, gban_list, gban_user, ungban_user
 from helpers.SQL.gmutedb import gmute, is_gmuted, ungmute
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
 from handlers.cache.data import *
+from config import SUDO_USERS
 
 
 async def iter_chats(client: Client):
