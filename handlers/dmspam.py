@@ -56,7 +56,7 @@ async def dmraid(xspam: Client, e: Message):
                     await asyncio.sleep(0.10)
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["dmspam"], [".", "!", "/"]))
-@Client.on_message(filters.me & filters.command(["dmspam"], ["."])
+@Client.on_message(filters.me & filters.command(["dmspam"], ["."]))
 async def dmspam(spam: Client, e: Message):
       text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
       Zaid = text[1:]
