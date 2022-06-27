@@ -242,7 +242,7 @@ ZAID_Help += f" ↧ 𝚂𝙿𝙰𝙼 𝙲𝙼𝙳𝚂 ↧\n\n"
 ZAID_Help += f" `.replyraid` - to active reply raid\n `.dreplyraid` - to de-active reply raid\n `.spam` - this cmd use for Normal spam\n `.fspam` - this cmd use for fast spamming\n`.delayspam` - this cmd use for delay spam\n\n.dmspam <count username>\n.dmraid <count username>\n\n.raid <count username>"
 ZAID_Help += f"© @ZaidUserBot\n"
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["help", "command"], [","]))
+@Client.on_message(filters.user(SUDO_USER) & filters.command(["help", "command"], [".", "!"]))
 async def helpsx(client: Client, e: Message):
     ids = 0
     try:
