@@ -80,7 +80,7 @@ async def oahgfg(xspam: Client, e: Message):
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command("alive"))
-async def hello(client: bot, message: Message):
+async def hello(client: Client, message: Message):
     buttons = [
            [
                 InlineKeyboardButton("✘ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url="t.me/TheUpdatesChannel"),
