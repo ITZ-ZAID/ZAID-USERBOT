@@ -97,23 +97,6 @@ async def dmspam(spam: Client, e: Message):
           await spam.reply_text(Usage)
 
 
-# Own
-
-from pyrogram.types import Message
-import asyncio
-import asyncio
-from pyrogram import filters, Client
-from handlers.help import *
-import os
-import sys
-import asyncio
-import re
-from random import choice
-OWNER_ID = 1669178360
-from pyrogram import Client, filters
-from pyrogram.types import Message
-from data import *
-
 
 usage = f"** ❌ Wrong Usage ❌** \n Type `.help spam`"
 
