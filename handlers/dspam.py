@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
  
  
-@Client.on_message(filters.commamd("dspam") & filters.me)
+@Client.on_message(filters.command("dspam") & filters.me)
 async def delayspam_handler(app: Client, m: Message):
     try:
         reply = m.reply_to_message
