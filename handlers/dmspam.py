@@ -14,8 +14,8 @@ from config import SUDO_USERS
 
 Usage = f"**❌ Wrong Usage ❌** \n Type: `.help dmspam`"
 
-
-@Client.on_message(filters.me & filters.command(["dmraid"], prefixes=HNDLR))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["dmraid"], ["."]))
+@Client.on_message(filters.me & filters.command(["dmraid"], ["."]))
 async def dmraid(xspam: Client, e: Message):
       """ Module: Dm Raid """
       Zaid = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
