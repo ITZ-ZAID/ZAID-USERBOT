@@ -1,6 +1,5 @@
-
-#from Rexoma SpamBot
-#©By Rizoel
+#from Rexoma and Rizoel SpamBot
+#© By Itz-zaid
 import asyncio
 from pyrogram import filters, Client
 from handlers.help import *
@@ -69,15 +68,15 @@ spam_help = f"""
 
 ✘**spam**: Spams a message for given counter (no Count limit)
 syntax:
-‣ .spam <count> <message to spam> 
+‣ .spam {count} {message to spam}
 
 ✘**delayspam**: Delay spam a text for given counter after given time.
 syntax:
-‣ .delayspam <delay time(seconds)> <count> <message to spam> 
+‣ .delayspam {delay time(seconds)} {count} {message to spam}
 
 ✘**Fast Spam**: Fast Spam a message for given counter (no Count limit)
 syntax:
-‣ .fspam <count> <message to spam>
+‣ .fspam {count} {message to spam}
  
 
 ✘**pornspam**: Porn Spam for given counter.
@@ -86,11 +85,11 @@ syntax:
 
 ✘**raid:** Activates raid on any individual user for given range.
 syntax:
-‣ .raid <count> <username or user id>
+‣ .raid {count} {username or user id}
 
 ✘ **Hang:** Hang Message Spam
 syntax:
-‣ .hang <counts>
+‣ .hang {counts}
 
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
@@ -105,14 +104,14 @@ dm_help = f"""
 **Warning⚠️:**This Plugin Can a Abuse And Harassment With A User!
 ✘**Dm:** Dm to any individual using spam bots
 command:
-‣ .dm <username or user id> <message>
+‣ .dm {username or user id> <message}
 
 ✘ **Dm Spam:** Spam in Dm of Any individual Users
 command:
-‣ .dmspam <username or user id> <count>  <message to spam>
+‣ .dmspam {username or user id} {count}  {message to spam}
 
 ✘**Dm Raid:** raid in Dm of Any individual Users
-‣ .dmraid <count> <username or user id>
+‣ .dmraid {count} {username or user id}
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -123,7 +122,7 @@ join_help = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Join Cmds •**
 
-‣.join <private/public Chat invite link or username>
+‣.join {private/public Chat invite link or username}
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -133,7 +132,7 @@ leave_help = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Leave Cmds •**
 
-‣ `.leave` <group Username or chat user id>
+‣ `.leave` {group Username or chat user id}
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -145,7 +144,7 @@ cast_help = f"""
 **✘ Broadcast Cmds •**
 ✘ **Broadcast**: To Broadcast a message Globally.
 
-‣ `.broadcast` <Reply to a message>
+‣ `.broadcast` {Reply to a message}
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -159,7 +158,7 @@ invite_help = f"""
 **Inviteall:**To inviteall only active members.
 Specially designed for inviting active members.
 
-‣ `.inviteall` <group Username or chat user id>
+‣ `.inviteall` {group Username or chat user id}
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -173,7 +172,7 @@ userbot_help = f"""
 
 ‣ .alive : To check Bot Awake or not
 
-‣ .restart : To Restart Your Spam Bots
+‣ .restart : To Restart Your Bots
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -185,8 +184,8 @@ rraid_help = f"""
 
 **Warning ⚠️:** This Plugin Can a Abuse And Harassment With A User!
 command:
-  ‣`.replyraid` <userid To activate replyraid (abusive words)>
-  ‣`.dreplyraid` <userid To deactivate replyraid (abusive words)>
+  ‣`.replyraid` {userid To activate replyraid (abusive words)}
+  ‣`.dreplyraid` {userid To deactivate replyraid (abusive words)}
 
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
@@ -198,9 +197,9 @@ owner_help = f"""
 **Profile:** Profile And Other Cmds
 commands:
 
-1) .setname <Profile Name>
-2) .setbio <coustom Bio>
-3) .setpic <reply to media>
+1) .setname {Profile Name}
+2) .setbio {coustom Bio}
+3) .setpic {reply to media}
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -220,7 +219,7 @@ help_menu = f"""
 ‣`inviteall` : Get all inviting commands
 ‣`broadcast` : Get all globally commands
 
-✘**Type** .help <category> **to get all syntax in that category and its usage**
+✘**Type** .help {category} **to get all syntax in that category and its usage**
 ✘**Example**: `.help replyraid`
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
