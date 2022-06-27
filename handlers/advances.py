@@ -63,8 +63,8 @@ async def pornspam(xspam: Client, e: Message):
               await asyncio.sleep(0.4)
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], [".", "!", "/"]))
-@Client.on_message(filters.me & filters.command(["raid"], ["."]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["ping"], [".", "!", "/"]))
+@Client.on_message(filters.me & filters.command(["ping"], ["."]))
 async def oahgfg(xspam: Client, e: Message):
       await e.reply_text(f"╭━━━╮╱╱╭━╮╭━╮\n┃╭━╮┃╱╱╰╮╰╯╭╯\n┃╰━╯┣━━╮╰╮╭╯╭━━╮\n┃╭╮╭┫┃━┫╭╯╰╮┃╭╮┃\n┃┃┃╰┫┃━╋╯╭╮╰┫╰╯┃\n╰╯╰━┻━━┻━╯╰━┻━━╯\n═══════════════════\n   **Zᴀɪᴅ UꜱᴇʀBᴏᴛ**   \n═══════════════════")
 
