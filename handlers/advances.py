@@ -217,7 +217,8 @@ help_menu = f"""
 ‣`leave` : Get leave commands and its usage
 ‣`userbot` : Get all userbot commands
 ‣`replyraid` : Get all replyraids commands
-‣`inviteall` : Get all replyraids commands
+‣`inviteall` : Get all inviting commands
+‣`broadcast` : Get all globally commands
 
 ✘**Type** .help <category> **to get all syntax in that category and its usage**
 ✘**Example**: `.help replyraid`
