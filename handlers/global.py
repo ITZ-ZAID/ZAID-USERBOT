@@ -236,6 +236,8 @@ async def watch(client: Client, message: Message):
         return
     elif int(user) in SUDO_USERS:
         return
+    if int(message.chat.id) in GROUP:
+        return
     if await zaidub_info(user):
         try:
             await message.reply_text(zaid)
@@ -279,7 +281,7 @@ async def give_glist(client: Client, message: Message):
     await edit_or_send_as_file(oof, glist, client, "GbanList", "Gban-List")
 
 
-@Client.on_message(filters.me & filters.command("gcast", ["."]))
+@Client.on_message(filters.me & filters.command("gcasst", ["."]))
 async def gbroadcast(client: Client, message: Message):
     msg_ = await message.edit_text("`Processing..`")
     failed = 0
