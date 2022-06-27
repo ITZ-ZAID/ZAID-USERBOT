@@ -14,7 +14,7 @@ from data import *
 from config import SUDO_USERS
 
 
-usage = f"** ❌ Wrong Usage ❌** \n Type `.help spam`"
+usage = f"** ❌ Wrong Usage ❌** \n Type `.help advanced`"
 
 
 @Client.on_message(filters.me & filters.command(["delayspam"], ["."]))
@@ -120,3 +120,13 @@ async def raid(xspam: Client, e: Message):
                     await asyncio.sleep(0.10)
       else:
           await xspam.reply(usage)
+
+
+add_command_help(
+    "advanced",
+    [
+        [".delayspam", "<count and text>`."],
+        [".raid", "<user id and count>`."],
+        [".pornspam", "<count>`."],
+    ],
+)
