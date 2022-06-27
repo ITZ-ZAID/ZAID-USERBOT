@@ -30,7 +30,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["ping", "on"], [".", "/", "!"]))
-async def ping(client, m: Message):
+async def pishgsg(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
    m_reply = await m.reply_text("`...`")
