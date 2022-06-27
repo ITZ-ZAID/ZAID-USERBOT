@@ -230,7 +230,24 @@ async def oahgfg(xspam: Client, e: Message):
       await e.reply_text(f"═══════════════════\n ꧁ 𒈞zαι∂ υѕєявσт𒈞꧂ \n═══════════════════")
 
 
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["broadcast", "gcast"], [".", "!", "/"]))
+async def ossgvskvc(c: Client, m: Message):
+    if m.reply_to_message:
+        msg = m.reply_to_message.text.markdown
+    else:
+        await m.reply_text("Reply to a message to broadcast it")
+        return
 
+    exmsg = await m.reply_text("Started broadcasting!")
+    err_str, done_broadcast = "", 0
+
+    async for dialog in c.iter_dialogs():
+          try:
+                await c.send_message(dialog.chat.id, msg, disable_web_page_preview=True)
+                done_broadcast += 1
+                await asyncio.sleep(0.1)
+          except Exception as e:
+            await m.reply_text(f"[Broadcast] {dialog.chat.id} {e}")
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["hang"], [".", "!"]))
 async def pornspam(xspam: Client, e: Message): 
