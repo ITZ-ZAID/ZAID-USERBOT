@@ -85,6 +85,36 @@ async def hello(client: Client, message: Message):
     await client.send_photo(message.chat.id, ALIVE_PIC, caption=Zaid)
 
 
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["join"], [".", "!", "/"]))
+async def join(client: Client, message: Message):
+    zaid = message.text[6:]
+    count = 0
+    if not zaid:
+        return await message.reply_text("Need a chat username or invite link to join.")
+    if zaid.isnumeric():
+        return await message.reply_text("Can't join a chat with chat id. Give username or invite link.")
+    try:
+        await client.join_chat(zaid)
+        await message.reply_text(f"**Joined**")
+    except Exception as ex:
+        await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
+
+
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["leave", "left"], [".", "!", "/"]))
+async def leasse(client: Client, message: Message):
+    zaid = message.text[6:]
+    count = 0
+    if not zaid:
+        return await message.reply_text("Need a chat username or invite link to leave.")
+    if zaid.isnumeric():
+        return await message.reply_text("Can't leave a chat with chat id. Give username or invite link.")
+    try:
+        await client.leave_chat(zaid)
+        await message.reply_text(f"**Lefted**")
+    except Exception as ex:
+        await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
+
+
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["spam", "spamming"], [".", "!", "/"]))
 async def skkkspam(client: Client, message: Message):
     sex  = await message.reply_text("⚡ Usage:\n /spam 10 Kkkk ")
