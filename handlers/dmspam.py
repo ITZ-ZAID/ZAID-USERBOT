@@ -94,7 +94,7 @@ async def dmspam(spam: Client, e: Message):
                     await spam.send_message(id, msg)
                     await asyncio.sleep(0.10)
       else:
-          await e.reply_text("Usage: .dmspam <count then username>")
+          await e.reply_text("Usage: .dmspam count then username")
 
 
 
