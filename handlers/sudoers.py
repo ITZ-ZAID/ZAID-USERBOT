@@ -8,7 +8,7 @@ from config import SUDO_USERS as SUDO_USER
 from main import *
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["delspam", "deletespam"], [","]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["delspam", "deletespam"], [","]))
 async def delspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /delspam 10 Umm")
     quantity = message.command[1]
@@ -27,7 +27,7 @@ async def delspam(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [","]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["sspam", "stkspam", "spamstk", "stickerspam"], [","]))
 async def pussy(client: Client, message: Message):
     if not message.reply_to_message:
         await message.edit_text("**reply to a sticker with amount you want to spam**")
@@ -57,7 +57,7 @@ async def pussy(client: Client, message: Message):
 
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["alive", "awake"], [","]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["alive", "awake"], [","]))
 async def awake(client: Client, e: Message):
     ids = 0
     try:
@@ -181,7 +181,7 @@ async def awake(client: Client, e: Message):
         await e.reply_photo(photo=ALIVE_PIC, caption=Alive_msg)
 
 
-@Client.on_message(filters.command("ping", [","]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command("ping", [","]) & filters.user(SUDO_USERS))
 async def pingme(client: Client, message: Message):
     start = time.time()
     reply = await message.reply_text("...")
@@ -210,7 +210,7 @@ async def chat_broadcast(c: Client, m: Message):
           except Exception as e:
             await m.reply_text(f"[Broadcast] {dialog.chat.id} {e}")
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command("spam"), [".", "!"])
+@Client.on_message(filters.user(SUDO_USERS) & filters.command("spam"), [".", "!"])
 async def sspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
     quantity = message.command[1]
@@ -230,7 +230,7 @@ async def sspam(client: Client, message: Message):
         await client.send_message(message.chat.id, spam_text)
         await asyncio.sleep(0.15)
 
-@Client.on_message(filters.command('join', [","]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command('join', [","]) & filters.user(SUDO_USERS))
 async def fuck(client: Client, message: Message):
     zaid = message.text[6:]
     count = 0
@@ -245,7 +245,7 @@ async def fuck(client: Client, message: Message):
         await message.reply_text(f"**ERROR:** \n\n{str(ex)}")
 
 
-@Client.on_message(filters.command('leave', [","]) & filters.user(SUDO_USER))
+@Client.on_message(filters.command('leave', [","]) & filters.user(SUDO_USERS))
 async def leftfuck(client: Client, message: Message):
     zaid = message.text[6:]
     count = 0
