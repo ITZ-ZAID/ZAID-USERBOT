@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from time import time
 from datetime import datetime
-from config import SUDO_USERS
+from main import SUDO_USERS
 
 # System Uptime
 START_TIME = datetime.utcnow()
