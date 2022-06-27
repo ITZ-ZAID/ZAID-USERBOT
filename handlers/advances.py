@@ -90,7 +90,9 @@ syntax:
 ✘ **Hang:** Hang Message Spam
 syntax:
 ‣ .hang {counts}
-
+✘ **Eye:** Eye Abuse editings
+syntax:
+‣ `.eye`
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
