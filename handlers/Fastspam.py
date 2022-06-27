@@ -12,7 +12,7 @@ import re
 from random import choice
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from data import *
+from handlers.cache.data import *
 
 
 usage = f"** ❌ Wrong Usage ❌** \n Type `.help delayspam`"
