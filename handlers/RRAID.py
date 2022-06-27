@@ -22,7 +22,7 @@ from pyrogram.types import (
     InputTextMessageContent,
     Message)
 from helpers.SQL.rraid import zaidub_info, rzaid, runzaid
-from handlers.cache.data import RAID
+from handlers.cache.data import *
 from main import SUDO_USERS
 
 
