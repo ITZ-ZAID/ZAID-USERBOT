@@ -102,7 +102,7 @@ usage = f"** ❌ Wrong Usage ❌** \n Type `.help spam`"
 
 
 
-
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["spam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["spam"], ["."]))
 async def spam(xspam: Client, e: Message): 
     Zaid = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
@@ -129,7 +129,7 @@ async def spam(xspam: Client, e: Message):
 
 
 
-
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["fastspam", "fspam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["fspam", "fastspam"], ["."]))
 async def spam(xspam: Client, e: Message):
     warn = await e.reply_text("**Note:** Don't Blame to @ZaidUserBot If IDs Get ban -!")
@@ -155,6 +155,7 @@ async def spam(xspam: Client, e: Message):
     else:
         await xspam.reply(usage)
 
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["hang"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["hang"], ["."]))
 async def pornspam(xspam: Client, e: Message): 
     counts = e.command[1]
