@@ -60,7 +60,7 @@ async def dmraid(xspam: Client, e: Message):
 async def dmspam(spam: Client, e: Message):
       text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
       Zaid = text[1:]
-      if len(Zakd) == 2:
+      if len(Zaid) == 2:
           msg = str(Zaid[1])
           ok = await spam.get_users(text[0])
           id = ok.id
