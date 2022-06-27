@@ -134,7 +134,7 @@ leave_help = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖
 **✘ Leave Cmds •**
 
-‣ `.leave` {group Username or chat user id}
+‣ `.leave` "group Username or chat user id"
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
 ➖➖➖➖➖➖➖➖➖➖➖➖
@@ -221,7 +221,7 @@ help_menu = f"""
 ‣`inviteall` : Get all inviting commands
 ‣`broadcast` : Get all globally commands
 
-✘**Type** .help {category} **to get all syntax in that category and its usage**
+✘**Type** .help "category" **to get all syntax in that category and its usage**
 ✘**Example**: `.help replyraid`
 
 **꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**
