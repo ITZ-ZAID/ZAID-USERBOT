@@ -7,7 +7,7 @@ import asyncio
 
 
 @Client.on_message(filters.commad("plane", ["."]) & filters.me)
-async def plane(client: Client, message: Message)
+async def plane(client: Client, message: Message):
     await message.edit("✈-------------")
     await message.edit("-✈------------")
     await message.edit("--✈-----------")
