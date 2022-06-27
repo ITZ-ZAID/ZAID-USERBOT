@@ -91,7 +91,8 @@ async def skkkspam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
-
+    if re.search(Owners.lower(), msg.lower()):
+        return await e.reply("**Sorry !!**")
     if int(message.chat.id) in GROUP:
         await sex.edit("<b>Sorry Kid!! You Can't Spam In My Creator Groups</b>") 
         return
