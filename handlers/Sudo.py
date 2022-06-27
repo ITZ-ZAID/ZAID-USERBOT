@@ -5,7 +5,7 @@ import asyncio
 import time
 from pyrogram import filters, Client
 from config import SUDO_USERS as SUDO_USER
-
+from main import bot
 
 ZAID_Help = f"🔥 Zᴀɪᴅ Sᴜᴅᴏ Uꜱᴇʀꜱ Cᴍᴅꜱ 🔥\n\n"
 ZAID_Help += f"`.banall - To banall in a chat\n `.dm` To Do Private Message\n\n"
