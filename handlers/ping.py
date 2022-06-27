@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by Rexoma@Github, < https://github.com/Rexoma >.
-#
-# This file is part of < https://github.com/Rexoma/SpamBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/Rexoma/SpamBot/blob/main/LICENSE >
-#
-# All rights reserved.
-
 import os
 import sys
 import asyncio
@@ -15,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from time import time
 from datetime import datetime
-from config import SUDO_USER
+from config import SUDO_USERS
 
 # System Uptime
 START_TIME = datetime.utcnow()
@@ -38,7 +29,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(filters.user(SUDO_USER) & filters.command(["ping", "on"], [".", "/", "!"]))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["ping", "on"], [".", "/", "!"]))
 async def ping(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
