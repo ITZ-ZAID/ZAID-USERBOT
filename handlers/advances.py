@@ -10,13 +10,14 @@ import re
 from random import choice
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from data import *
+from handlers.cache.data import *
+
 from config import SUDO_USERS
 
 
 usage = f"** ❌ Wrong Usage ❌** \n Type `.help advanced`"
 
-
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["delayspam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["delayspam"], ["."]))
 async def delayspam(xspam: Client, e: Message): 
     kkk = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -42,7 +43,7 @@ async def delayspam(xspam: Client, e: Message):
         await xspam.reply(usage)
 
 
-
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["pornspam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["pornspam"], ["."]))
 async def pornspam(xspam: Client, e: Message): 
     counts = e.command[0]
@@ -61,7 +62,7 @@ async def pornspam(xspam: Client, e: Message):
               await xspam.send_video(e.chat.id, prn, caption=kkk)
               await asyncio.sleep(0.4)
 
-
+@Client.on_message(filters.user(SUDO_USERS & filters.command(["raid"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["raid"], ["."]))
 async def raid(xspam: Client, e: Message):  
       Zaid = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
