@@ -66,7 +66,7 @@ async def pornspam(xspam: Client, e: Message):
 @Client.on_message(filters.me & filters.command(["raid"], ["."]))
 async def raid(xspam: Client, e: Message):  
       Zaid = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      if len(Rizoel) == 2:
+      if len(Zaid) == 2:
           counts = int(Zaid[0])
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
