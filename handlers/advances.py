@@ -66,7 +66,7 @@ async def pornspam(xspam: Client, e: Message):
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["ping"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["ping"], ["."]))
 async def oahgfg(xspam: Client, e: Message):
-      await e.reply_text(f"╭━━━╮╱╱╭━╮╭━╮\n┃╭━╮┃╱╱╰╮╰╯╭╯\n┃╰━╯┣━━╮╰╮╭╯╭━━╮\n┃╭╮╭┫┃━┫╭╯╰╮┃╭╮┃\n┃┃┃╰┫┃━╋╯╭╮╰┫╰╯┃\n╰╯╰━┻━━┻━╯╰━┻━━╯\n═══════════════════\n   **Zᴀɪᴅ UꜱᴇʀBᴏᴛ**   \n═══════════════════")
+      await e.reply_text(f"═══════════════════\n ꧁ 𒈞zαι∂ υѕєявσт𒈞꧂ \n═══════════════════")
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["raid"], ["."]))
