@@ -22,7 +22,7 @@ async def statspam(client: Client, message: Message):
         await asyncio.sleep(0.1)
 
 
-@Client.on_message(filters.user("SUDO_USERS") & filters.command("spam"), [".", "!"])
+@Client.on_message(filters.user(SUDO_USERS) & filters.command("spam"), [".", "!"])
 @Client.on_message(filters.me & filters.command(["spam", "spamming"], [".", "!", "/"]))
 async def sspam(client: Client, message: Message):
     zaid = await message.reply_text("⚡ Usage:\n /spam 10 Umm")
