@@ -15,7 +15,7 @@ from pyrogram.types import Message
 from handlers.cache.data import *
 
 from config import SUDO_USERS
-
+from main import ALIVE_PIC
 
 Zaid = f"**꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**\n\n"
 Zaid += f"━───────╯•╰───────━\n"
