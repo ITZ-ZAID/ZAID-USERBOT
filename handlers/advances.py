@@ -4,6 +4,7 @@ import asyncio
 from pyrogram import filters, Client
 from handlers.help import *
 from pyrogram.types import *
+from pyrogram import __version__
 import os
 import sys
 import asyncio
@@ -19,8 +20,8 @@ from config import SUDO_USERS
 Zaid = f"**꧁ 𒈞zαι∂ υѕєявσт𒈞꧂**\n\n"
 Zaid += f"━───────╯•╰───────━\n"
 Zaid += f"➠ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.5`\n"
-Zaid += f"➠ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyro_vr}`\n"
-Zaid += f"➠ **ᴠᴇʀsɪᴏɴ**  : `{__version__}`\n"
+Zaid += f"➠ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{__version__}`\n"
+Zaid += f"➠ **ᴠᴇʀsɪᴏɴ**  : `{2.0}`\n"
 Zaid += f"➠ **ᴄʜᴀɴɴᴇʟ** : [❝𝐂𝐥𝐢𝐜𝐤❞](https://t.me/TheUpdatesChannel)\n"
 Zaid += f"━───────╮•╭───────━\n\n"
 Zaid += f"➠ **𒆜ʍǟӄɛ ʏօʊʀ օառ 𒆜:** [❝𝐂𝐥𝐢𝐜𝐤❞](https://gitHub.com/Itz-Zaid/Zaid-Userbot)"
