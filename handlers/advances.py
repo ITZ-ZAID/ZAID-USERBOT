@@ -80,7 +80,7 @@ async def oahgfg(xspam: Client, e: Message):
       await e.reply_text(f"═══════════════════\n ꧁ 𒈞zαι∂ υѕєявσт𒈞꧂ \n═══════════════════")
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command("alive"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command("alive"), [".", "!"])
 async def hello(client: Client, message: Message):
     buttons = [
            [
