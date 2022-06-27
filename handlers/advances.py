@@ -136,7 +136,7 @@ async def skkkspam(client: Client, message: Message):
         return
 
     for _ in range(quantity):
-        await sex .delete()
+        await sex.delete()
         await client.send_message(message.chat.id, spam_text)
         await asyncio.sleep(0.15)
 
