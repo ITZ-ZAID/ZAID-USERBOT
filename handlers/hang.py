@@ -9,7 +9,6 @@ import sys
 import asyncio
 import re
 from random import choice
-from config import SUDO_USERS
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from handlers.cache.data import *
@@ -18,7 +17,6 @@ from handlers.cache.data import *
 usage = f"** ❌ Wrong Usage ❌** \n Type `.help hang`"
 
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["hang"], [".", "!"]))
 @Client.on_message(filters.me & filters.command(["hang"], ["."]))
 async def pornspam(xspam: Client, e: Message): 
     counts = e.command[1]
