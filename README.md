@@ -84,7 +84,7 @@
 - Click on the **More Button** present at top right corner .
 - Click on the **View Logs** button from the drop down menu.
 - You check your logs there!
-- Click on save button there at bottom to save your logs and forward it to us on [@Bot_Support](https://t.me/Superior_Support) if you face any problem
+- Click on save button there at bottom to save your logs and forward it to us on [@TheSupportChat](https://t.me/TheSupportChat) if you face any problem
 
 </details>
 
