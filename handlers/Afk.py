@@ -15,7 +15,7 @@ To exit from afk status, send anything to anywhere, exclude PM and saved message
 """
 
 import time
-from pyrogram import filters
+from pyrogram import filters, Client
 import asyncio
 
 from main import LOG_GROUP
