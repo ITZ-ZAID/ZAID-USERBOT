@@ -1,16 +1,3 @@
-import time
-
-from pyrogram import filters, Client
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from helpers.SQL import DB_AVAILABLE
-from helpers.msg_types import Types, get_message_type
-from helpers.parser import mention_markdown, escape_markdown
-from pyrogram.types import Message
-
-from helpers.SQL.afk_db import set_afk, get_afk
-from main import Owner
-from handlers.help import add_command_help
-
 """
 Set yourself to afk.
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
