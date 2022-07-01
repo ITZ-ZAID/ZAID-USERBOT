@@ -1,33 +1,44 @@
-from helpers.mongo import cli as db
+from helpers.mongo import cli
 import asyncio
 
-usersdb = db.users
+collection = cli["Zaid"]["afk"]
 
 
-async def is_afk(user_id: int) -> bool:
-    user = await usersdb.find_one({"user_id": user_id})
-    if not user:
-        return False, {}
-    return True, user["reason"]
+async def set_afk(afk_status, afk_since, reason):
+    doc = {"_id": 1, "afk_status": afk_status}
+    r = await collection.find_one({"_id": 1})
+    if r:
+        await collection.update_one(
+            {"_id": 1},
+            {
+                "$set": {
+                    "afk_status": afk_status,
+                    "afk_since": afk_since,
+                    "reason": reason,
+                }
+            },
+        )
+    else:
+        await collection.insert_one(doc)
 
 
-async def add_afk(user_id: int, mode):
-    await usersdb.update_one(
-        {"user_id": user_id}, {"$set": {"reason": mode}}, upsert=True
+async def set_unafk():
+    await collection.update_one(
+        {"_id": 1}, {"$set": {"afk_status": False, "afk_since": None, "reason": None}}
     )
 
 
-async def remove_afk(user_id: int):
-    user = await usersdb.find_one({"user_id": user_id})
-    if user:
-        return await usersdb.delete_one({"user_id": user_id})
+async def get_afk_status():
+    result = await collection.find_one({"_id": 1})
+    if not result:
+        return False
+    else:
+        status = result["afk_status"]
+        return status
 
 
-async def get_afk_users() -> list:
-    users = usersdb.find({"user_id": {"$gt": 0}})
-    if not users:
-        return []
-    users_list = []
-    for user in await users.to_list(length=1000000000):
-        users_list.append(user)
-    return users_list
+async def afk_stuff():
+    result = await collection.find_one({"_id": 1})
+    afk_since = result["afk_since"]
+    reason = result["reason"]
+    return afk_since, reason
