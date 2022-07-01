@@ -20,7 +20,6 @@ from helpers.mongo.rraid import *
 from helpers.pyrohelper import get_arg
 from helpers.adminhelpers import CheckAdmin
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["replyraid", "rraid"], [".", "!"]))
 @Client.on_message(filters.command("replyraid", ["."]) & filters.me)
 async def gban(app: Client, message):
     Zaid = await message.reply_text("**Processing**")
@@ -49,7 +48,6 @@ async def gban(app: Client, message):
     await rraid_user(get_user.id)
     await Zaid.edit(f"**Successfully Reply Raid Started {get_user.first_name}!**")
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["dreplyraid", "drraid"], [".", "!"]))
 @Client.on_message(filters.command("dreplyraid", ["."]) & filters.me)
 async def gbam(app: Client, message):
     reply = message.reply_to_message
