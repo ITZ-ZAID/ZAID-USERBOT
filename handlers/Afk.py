@@ -23,7 +23,7 @@ from helpers.pyrohelper import get_arg
 import helpers.mongo.afkdb as Zaid
 from helpers.pyrohelper import user_afk
 from helpers.utils import get_message_type, Types
-
+from handlers.help import *
 LOG_CHAT = LOG_GROUP
 import asyncio
 import time
