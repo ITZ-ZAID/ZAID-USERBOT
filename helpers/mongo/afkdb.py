@@ -22,7 +22,7 @@ async def set_afk(afk_status, afk_since, reason):
         await collection.insert_one(doc)
 
 
-async def set_unafk()
+async def set_unafk():
     await collection.update_one(
         {"_id": 1}, {"$set": {"afk_status": False, "afk_since": None, "reason": None}}
     )
