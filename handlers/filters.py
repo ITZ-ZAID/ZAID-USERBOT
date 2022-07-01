@@ -1,7 +1,6 @@
 import re
 
 from pyrogram import filters, Client
-from Zaid import app, CMD_HELP
 from config import PREFIX, LOG_GROUP as LOG_CHAT
 from helpers.pyrohelper import get_arg
 from helpers.mongo.filtersdb import (
