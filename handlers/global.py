@@ -18,7 +18,7 @@ async def gmute(app: Client, message):
             return
     get_user = await app.get_users(user)
     await gmute_user(get_user.id)
-    await message.edit(f"**Successfully Taped {get_user.first_name}, This User Mouth 👄!**")
+    await message.edit(f"**Successfully Taped {get_user.first_name}, This users mouth!**")
 
 
 @Client.on_message(filters.command("ungmute", ["."]) & filters.me)
@@ -43,11 +43,11 @@ async def gban(app: Client, message):
     else:
         user = get_arg(message)
         if not user:
-            await message.edit("**Whome should I gmute?**")
+            await message.edit("**Whome should I gban?**")
             return
     get_user = await app.get_users(user)
     await gban_user(get_user.id)
-    await message.edit(f"**Successfully Taped {get_user.first_name}, This User Mouth 👄!**")
+    await message.edit(f"**Successfully Gbanned {get_user.first_name}!**")
 
 
 @Client.on_message(filters.command("ungban", ["."]) & filters.me)
@@ -58,11 +58,11 @@ async def gbam(app: Client, message):
     else:
         user = get_arg(message)
         if not user:
-            await message.edit("**Whome should I ungmute?**")
+            await message.edit("**Whome should I ungban?**")
             return
     get_user = await app.get_users(user)
     await ungban_user(get_user.id)
-    await message.edit(f"**Unmuted {get_user.first_name}, enjoy!**")
+    await message.edit(f"**Ungbanned {get_user.first_name}, enjoy!**")
 
 
 @Client.on_message(filters.group & filters.incoming)
