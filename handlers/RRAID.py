@@ -21,7 +21,8 @@ from helpers.mongo.rraid import *
 from helpers.pyrohelper import get_arg
 from helpers.adminhelpers import CheckAdmin
 
-@Client.on_message(filters.command("gban", ["."]) & filters.me)
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["replyraid", "rraid"], [".", "!"]))
+@Client.on_message(filters.command("replyraid", ["."]) & filters.me)
 async def gban(app: Client, message):
     reply = message.reply_to_message
     if reply:
@@ -48,8 +49,8 @@ async def gban(app: Client, message):
     await rraid_user(get_user.id)
     await message.edit(f"**Successfully Gbanned {get_user.first_name}!**")
 
-
-@Client.on_message(filters.command("ungban", ["."]) & filters.me)
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["dreplyraid", "drraid"], [".", "!"]))
+@Client.on_message(filters.command("dreplyraid", ["."]) & filters.me)
 async def gbam(app: Client, message):
     reply = message.reply_to_message
     if reply:
