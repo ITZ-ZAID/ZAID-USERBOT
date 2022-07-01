@@ -228,16 +228,6 @@ help_menu = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
-""" 
-Dear Kangers Don't Kang This Code.
-This Code Maded By Meh First On Telegram
-I have Spent My Lots of Time on That to make
-It successfull.
-So Uh Are Still Thinking To kang?
-Don't kang Without Creadits
-© https://github.com/ITZ-ZAID/ZAID-USERBOT and @Timesisnotwaiting
-"""
-
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["delayspam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["delayspam"], ["."]))
@@ -363,6 +353,7 @@ async def skkkspam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
+    msg = str(Zaid[1])
     if re.search(Owners.lower(), msg.lower()):
         return await e.reply("**Sorry !!**")
     if int(message.chat.id) in GROUP:
