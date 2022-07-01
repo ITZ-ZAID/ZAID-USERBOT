@@ -19,7 +19,6 @@ from pyrogram import filters, Client
 import asyncio
 
 from main import LOG_GROUP
-from config import PREFIX, LOG_CHAT
 from helpers.pyrohelper import get_arg
 import helpers.mongo.afkdb as Zaid
 from helpers.pyrohelper import user_afk
