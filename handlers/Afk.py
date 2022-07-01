@@ -74,8 +74,7 @@ async def afk(app: Client, message):
 @Client.on_message(filters.mentioned & ~filters.bot & filters.create(user_afk), group=11)
 async def afk_mentioned(app: Client, message):
     global MENTIONED
-    afk_time, reason = await Zaid.afk_stuff()
-    afk_since = get_readable_time(time.time() - afk_time)
+    reason = await Zaid.afk_stuff()
     if "-" in str(message.chat.id):
         cid = str(message.chat.id)[4:]
     else:
@@ -86,10 +85,10 @@ async def afk_mentioned(app: Client, message):
     AFK_RESTIRECT[cid] = int(time.time()) + DELAY_TIME
     if reason:
         await message.reply(
-            f"**I'm AFK right now (since {afk_since})\nReason:** __{reason}__"
+            f"**I'm AFK right now\nReason:** __{reason}__"
         )
     else:
-        await message.reply(f"**I'm AFK right now (since {afk_since})**")
+        await message.reply(f"**I'm AFK right now**")
 
         _, message_type = get_message_type(message)
         if message_type == Types.TEXT:
