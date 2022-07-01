@@ -511,7 +511,7 @@ async def check_and_del(app: Client, message):
         return
     message_id = message.message_id
     try:
-        await message.reply_text("{random.choice(RAID)}")
+        await message.reply_text(f"{random.choice(RAID)}")
     except:
         pass
 
