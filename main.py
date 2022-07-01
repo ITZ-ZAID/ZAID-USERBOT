@@ -15,7 +15,6 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 API_ID = API_ID
 API_HASH = API_HASH 
-LOG_GROUP = LOG_GROUP
 SUDO_USERS = SUDO_USERS
 DB_URL = DB_URL
 
@@ -42,11 +41,12 @@ if MONGO_DB:
 else: 
     MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
-if LOG_GROUP:
-    Owner = LOG_GROUP
-else:
-    Owner = 777000
 
+if LOG_CHAT:
+    LOG_GROUP = LOG_GROUP
+else:
+    LOG_GROUP = 777000
+Owner = LOG_GROUP
 
 if STRING_SESSION1:
     bot1 = Client(session_name= STRING_SESSION1, api_id = API_ID, api_hash = API_HASH , plugins=dict(root="handlers"))
