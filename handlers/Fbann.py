@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from helpers.basic import edit_or_reply, get_text
 from pyrogram.errors import FloodWait
-from helpers.mongo.feds_db import (
+from helpers.SQL.fban_db import (
     add_fed,
     get_all_feds,
     is_fed_in_db,
