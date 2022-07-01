@@ -475,9 +475,6 @@ async def gban(app: Client, message):
     if get_user.id == mee.id:
         await Zaid.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
         return
-    if await get_rraid_users(get_user.id):
-        await Zaid.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
-        return
     if int(get_user.id) in VERIFIED_USERS:
         await Zaid.edit("Chal Chal baap Ko mat sikha")
         return
