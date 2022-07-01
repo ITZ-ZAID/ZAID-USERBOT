@@ -3,7 +3,7 @@ from helpers.mongo import cli
 collection = cli["Zaid"]["rraid"]
 
 
-async def gmute_user(chat):
+async def rraid_user(chat):
     doc = {"_id": "Rraid", "users": [chat]}
     r = await collection.find_one({"_id": "Rraid"})
     if r:
@@ -12,7 +12,7 @@ async def gmute_user(chat):
         await collection.insert_one(doc)
 
 
-async def get_gmuted_users():
+async def get_rraid_users():
     results = await collection.find_one({"_id": "Rraid"})
     if results:
         return results["users"]
@@ -20,5 +20,5 @@ async def get_gmuted_users():
         return []
 
 
-async def ungmute_user(chat):
+async def unrraid_user(chat):
     await collection.update_one({"_id": "Rraid"}, {"$pull": {"users": chat}})
