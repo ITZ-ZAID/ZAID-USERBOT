@@ -8,14 +8,13 @@ Don't kang Without Creadits
 © https://github.com/ITZ-ZAID/ZAID-USERBOT and @Timesisnotwaiting
 """
 
-"""
 from pyrogram import filters
 
 from typing import Tuple
 from handlers.help import *
 import random
 from handlers.cache.data import *
-from main import SUDO_USERS
+from config import SUDO_USERS
 from pyrogram import filters, Client
 from helpers.mongo.rraid import *
 from helpers.pyrohelper import get_arg
@@ -88,4 +87,3 @@ add_command_help(
         [".dreplyraid", "To Disable ReplyRaid."],
     ],
 )
-"""
