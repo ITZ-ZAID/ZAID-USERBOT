@@ -21,7 +21,7 @@ def subtract_time(start, end):
     return str(subtracted)
 
 
-@Clienf.on_message(
+@Client.on_message(
     ((filters.group & filters.mentioned) | filters.private) & ~filters.me & ~filters.service, group=3
 )
 async def collect_afk_messages(UserBot: Client, message: Message):
