@@ -29,106 +29,181 @@ import asyncio
 import time
 from datetime import datetime
 
-def get_readable_time(seconds: int) -> str:
-    count = 0
-    ping_time = ""
-    time_list = []
-    time_suffix_list = ["s", "m", "h", "days"]
+import time
 
-    while count < 4:
-        count += 1
-        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
-        if seconds == 0 and remainder == 0:
-            break
-        time_list.append(int(result))
-        seconds = int(remainder)
+from pyrogram import filters
+from pyrogram.types import Message
 
-    for x in range(len(time_list)):
-        time_list[x] = str(time_list[x]) + time_suffix_list[x]
-    if len(time_list) == 4:
-        ping_time += time_list.pop() + ", "
-
-    time_list.reverse()
-    ping_time += ":".join(time_list)
-
-    return ping_time
+from helpers.mongo.afkdb import add_afk, is_afk, remove_afk
+from helpers.yukki import get_readable_time, put_cleanmode
 
 
-MENTIONED = []
-AFK_RESTIRECT = {}
-DELAY_TIME = 60
-
-
-@Client.on_message(filters.command("afk", ["."]) & filters.me)
-async def afk(app: Client, message):
-    afk_time = int(time.time())
-    arg = get_arg(message)
-    if not arg:
-        reason = None
-    else:
-        reason = arg
-    await Zaid.set_afk(True, afk_time, reason)
-    await message.edit("**I'm goin' AFK**")
-
-
-@Client.on_message(filters.mentioned & ~filters.bot & filters.create(user_afk), group=11)
-async def afk_mentioned(app: Client, message):
-    global MENTIONED
-    reason = await Zaid.afk_stuff()
-    if "-" in str(message.chat.id):
-        cid = str(message.chat.id)[4:]
-    else:
-        cid = str(message.chat.id)
-
-    if cid in list(AFK_RESTIRECT) and int(AFK_RESTIRECT[cid]) >= int(time.time()):
+@Client.on_message(filters.command(["afk", f"afk@{botname}"]) & ~filters.edited)
+async def active_afk(app: Client, message: Message):
+    if message.sender_chat:
         return
-    AFK_RESTIRECT[cid] = int(time.time()) + DELAY_TIME
-    if reason:
-        await message.reply(
-            f"**I'm AFK right now\nReason:** __{reason}__"
+    user_id = message.from_user.id
+    verifier, reasondb = await is_afk(user_id)
+    if verifier:
+        await remove_afk(user_id)
+        try:
+            afktype = reasondb["type"]
+            timeafk = reasondb["time"]
+            data = reasondb["data"]
+            reasonafk = reasondb["reason"]
+            seenago = get_readable_time((int(time.time() - timeafk)))
+            if afktype == "text":
+                send = await message.reply_text(
+                    f"**{message.from_user.first_name}** is back online and was away for {seenago}",
+                    disable_web_page_preview=True,
+                )
+            if afktype == "text_reason":
+                send = await message.reply_text(
+                    f"**{message.from_user.first_name}** is back online and was away for {seenago}\n\nReason: `{reasonafk}`",
+                    disable_web_page_preview=True,
+                )
+            if afktype == "animation":
+                if str(reasonafk) == "None":
+                    send =  await message.reply_animation(
+                        data,
+                        caption=f"**{message.from_user.first_name}** is back online and was away for {seenago}",
+                    )
+                else:
+                    send = await message.reply_animation(
+                        data,
+                        caption=f"**{message.from_user.first_name}** is back online and was away for {seenago}\n\nReason: `{reasonafk}",
+                    )
+            if afktype == "photo":
+                if str(reasonafk) == "None":
+                    send = await message.reply_photo(
+                        photo=f"downloads/{user_id}.jpg",
+                        caption=f"**{message.from_user.first_name}** is back online and was away for {seenago}",
+                    )
+                else:
+                    send = await message.reply_photo(
+                        photo=f"downloads/{user_id}.jpg",
+                        caption=f"**{message.from_user.first_name}** is back online and was away for {seenago}\n\nReason: `{reasonafk}`",
+                    )
+        except Exception as e:
+            send =  await message.reply_text(
+                f"**{message.from_user.first_name}** is back online",
+                disable_web_page_preview=True,
+            )
+        await put_cleanmode(message.chat.id, send.message_id)
+        return
+    if len(message.command) == 1 and not message.reply_to_message:
+        details = {
+            "type": "text",
+            "time": time.time(),
+            "data": None,
+            "reason": None,
+        }
+    elif len(message.command) > 1 and not message.reply_to_message:
+        _reason = (message.text.split(None, 1)[1].strip())[:100]
+        details = {
+            "type": "text_reason",
+            "time": time.time(),
+            "data": None,
+            "reason": _reason,
+        }
+    elif (
+        len(message.command) == 1
+        and message.reply_to_message.animation
+    ):
+        _data = message.reply_to_message.animation.file_id
+        details = {
+            "type": "animation",
+            "time": time.time(),
+            "data": _data,
+            "reason": None,
+        }
+    elif (
+        len(message.command) > 1
+        and message.reply_to_message.animation
+    ):
+        _data = message.reply_to_message.animation.file_id
+        _reason = (message.text.split(None, 1)[1].strip())[:100]
+        details = {
+            "type": "animation",
+            "time": time.time(),
+            "data": _data,
+            "reason": _reason,
+        }
+    elif len(message.command) == 1 and message.reply_to_message.photo:
+        await app.download_media(
+            message.reply_to_message, file_name=f"{user_id}.jpg"
         )
-    else:
-        await message.reply(f"**I'm AFK right now**")
-
-        _, message_type = get_message_type(message)
-        if message_type == Types.TEXT:
-            text = message.text or message.caption
-        else:
-            text = message_type.name
-
-        MENTIONED.append(
-            {
-                "user": message.from_user.first_name,
-                "user_id": message.from_user.id,
-                "chat": message.chat.title,
-                "chat_id": cid,
-                "text": text,
-                "message_id": message.message_id,
+        details = {
+            "type": "photo",
+            "time": time.time(),
+            "data": None,
+            "reason": None,
+        }
+    elif len(message.command) > 1 and message.reply_to_message.photo:
+        await app.download_media(
+            message.reply_to_message, file_name=f"{user_id}.jpg"
+        )
+        _reason = message.text.split(None, 1)[1].strip()
+        details = {
+            "type": "photo",
+            "time": time.time(),
+            "data": None,
+            "reason": _reason,
+        }
+    elif (
+        len(message.command) == 1 and message.reply_to_message.sticker
+    ):
+        if message.reply_to_message.sticker.is_animated:
+            details = {
+                "type": "text",
+                "time": time.time(),
+                "data": None,
+                "reason": None,
             }
-        )
+        else:
+            await app.download_media(
+                message.reply_to_message, file_name=f"{user_id}.jpg"
+            )
+            details = {
+                "type": "photo",
+                "time": time.time(),
+                "data": None,
+                "reason": None,
+            }
+    elif (
+        len(message.command) > 1 and message.reply_to_message.sticker
+    ):
+        _reason = (message.text.split(None, 1)[1].strip())[:100]
+        if message.reply_to_message.sticker.is_animated:
+            details = {
+                "type": "text_reason",
+                "time": time.time(),
+                "data": None,
+                "reason": _reason,
+            }
+        else:
+            await app.download_media(
+                message.reply_to_message, file_name=f"{user_id}.jpg"
+            )
+            details = {
+                "type": "photo",
+                "time": time.time(),
+                "data": None,
+                "reason": _reason,
+            }
+    else:
+        details = {
+            "type": "text",
+            "time": time.time(),
+            "data": None,
+            "reason": None,
+        }
 
-
-@Client.on_message(filters.create(user_afk) & filters.outgoing)
-async def auto_unafk(app: Client, message):
-    await Zaid.set_unafk()
-    unafk_message = await app.send_message(message.chat.id, "**I'm no longer AFK**")
-    global MENTIONED
-    text = "**Total {} mentioned you**\n".format(len(MENTIONED))
-    for x in MENTIONED:
-        msg_text = x["text"]
-        if len(msg_text) >= 11:
-            msg_text = "{}...".format(x["text"])
-        text += "- [{}](https://t.me/c/{}/{}) ({}): {}\n".format(
-            x["user"],
-            x["chat_id"],
-            x["message_id"],
-            x["chat"],
-            msg_text,
-        )
-        await app.send_message(LOG_CHAT, text)
-        MENTIONED = []
-    await asyncio.sleep(2)
-    await unafk_message.delete()
+    await add_afk(user_id, details)
+    send = await message.reply_text(
+        f"{message.from_user.first_name} is now afk!"
+    )
+    await put_cleanmode(message.chat.id, send.message_id)
 
 add_command_help(
     "afk",
