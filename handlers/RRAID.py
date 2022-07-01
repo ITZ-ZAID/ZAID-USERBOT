@@ -80,7 +80,6 @@ async def check_and_del(app: Client, message):
         await message.reply_text("{random.choice(RAID)}")
     except:
         pass
-"""
 
 add_command_help(
     "replyraid",
@@ -89,3 +88,4 @@ add_command_help(
         [".dreplyraid", "To Disable ReplyRaid."],
     ],
 )
+"""
