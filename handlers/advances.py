@@ -228,53 +228,6 @@ help_menu = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
-
-from helpers.mongo.rraid import *
-from helpers.pyrohelper import get_arg
-from helpers.adminhelpers import CheckAdmin
-
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["replyraid", "rraid"], [".", "!"]))
-async def gban(app: Client, message):
-    Zaid = await message.reply_text("**Processing**")
-    reply = message.reply_to_message
-    if reply:
-        user = reply.from_user["id"]
-    else:
-        user = get_arg(message)
-        if not user:
-            await Zaid.edit("**Whome should I replyraid?**")
-            return
-    get_user = await app.get_users(user)
-    mee= await app.get_me()
-    if get_user.id == mee.id:
-        await Zaid.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
-        return
-    if await zaidub_info(get_user.id):
-        await Zaid.edit("`Who So Noob? Reply Raid Already Activated on that User:/`")
-        return
-    if int(get_user.id) in VERIFIED_USERS:
-        await Zaid.edit("Chal Chal baap Ko mat sikha")
-        return
-    elif int(get_user.id) in SUDO_USERS:
-        await Zaid.edit("Abe Lawde that guy part of my devs.")
-        return
-    await rraid_user(get_user.id)
-    await Zaid.edit(f"**Successfully Reply Raid Started {get_user.first_name}!**")
-
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["dreplyraid", "drraid"], [".", "!"]))
-async def gbam(app: Client, message):
-    reply = message.reply_to_message
-    if reply:
-        user = reply.from_user["id"]
-    else:
-        user = get_arg(message)
-        if not user:
-            await message.reply_text("**Whome should I dreplyraid?**")
-            return
-    get_user = await app.get_users(user)
-    await unrraid_user(get_user.id)
-    await message.reply_text(f"**Reply Raid has Been Removed {get_user.first_name}, enjoy!**")
-
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["delayspam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["delayspam"], ["."]))
 async def delayspam(xspam: Client, e: Message): 
