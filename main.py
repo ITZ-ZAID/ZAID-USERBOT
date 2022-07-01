@@ -43,7 +43,7 @@ else:
 
 
 if LOG_CHAT:
-    LOG_GROUP = LOG_GROUP
+    LOG_GROUP = LOG_CHAT
 else:
     LOG_GROUP = 777000
 Owner = LOG_GROUP
