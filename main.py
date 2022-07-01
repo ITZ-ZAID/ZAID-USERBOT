@@ -17,7 +17,7 @@ API_ID = API_ID
 API_HASH = API_HASH 
 SUDO_USERS = SUDO_USERS
 DB_URL = DB_URL
-
+cleanmode = {}
 
 if not STRING_SESSION1:
     logging.error("No String Session Found! Exiting!")
