@@ -404,11 +404,10 @@ async def raid(xspam: Client, e: Message):
                     await xspam.send_message(e.chat.id, msg)
                     await asyncio.sleep(0.10)
       elif e.reply_to_message:
-          #msg_id = e.reply_to_message.message_id
+          msg_id = e.reply_to_message.message_id
           counts = int(Zaid[0])
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          #RiZoeL = xspam.get_messages(e.chat.id, msg_id)
           user_id = e.reply_to_message.from_user.id
           ok = await xspam.get_users(user_id)
           id = ok.id
@@ -503,6 +502,8 @@ async def gbam(app: Client, message):
 @Client.on_message(filters.group & filters.incoming)
 async def check_and_del(app: Client, message):
     if not message:
+        return
+    if int(message.chat.id) in GROUP:
         return
     try:
         if not message.from_user.id in (await get_rraid_users()):
