@@ -8,7 +8,7 @@ Don't kang Without Creadits
 © https://github.com/ITZ-ZAID/ZAID-USERBOT and @Timesisnotwaiting
 """
 
-
+"""
 from pyrogram import filters
 
 from typing import Tuple
@@ -80,6 +80,7 @@ async def check_and_del(app: Client, message):
         await message.reply_text("{random.choice(RAID)}")
     except:
         pass
+"""
 
 add_command_help(
     "replyraid",
