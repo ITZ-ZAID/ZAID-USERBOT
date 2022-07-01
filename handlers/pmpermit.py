@@ -10,18 +10,6 @@ ALLOWED = []
 USERS_AND_WARNS = {}
 
 
-@Client.on_message(filters.command("pmguard", ["."]) & filters.me)
-async def pmguard(client, message):
-    arg = get_arg(message)
-    if not arg:
-        await message.edit("**I only understand on or off**")
-        return
-    if arg == "off":
-        await Zaid.set_pm(False)
-        await message.edit("**PM Guard Deactivated**")
-    if arg == "on":
-        await Zaid.set_pm(True)
-        await message.edit("**PM Guard Activated**")
 
 
 @Client.on_message(filters.command("setlimit", ["."]) & filters.me)
