@@ -24,13 +24,14 @@ from helpers.adminhelpers import CheckAdmin
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["replyraid", "rraid"], [".", "!"]))
 @Client.on_message(filters.command("replyraid", ["."]) & filters.me)
 async def gban(app: Client, message):
+    Zaid = await message.reply_text("**Processing**")
     reply = message.reply_to_message
     if reply:
         user = reply.from_user["id"]
     else:
         user = get_arg(message)
         if not user:
-            await message.edit("**Whome should I gban?**")
+            await Zaid.edit("**Whome should I replyraid?**")
             return
     get_user = await app.get_users(user)
     mee= await app.get_me()
@@ -47,7 +48,7 @@ async def gban(app: Client, message):
         await Zaid.edit("Abe Lawde that guy part of my devs.")
         return
     await rraid_user(get_user.id)
-    await message.edit(f"**Successfully Gbanned {get_user.first_name}!**")
+    await Zaid.edit(f"**Successfully Reply Raid Started {get_user.first_name}!**")
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["dreplyraid", "drraid"], [".", "!"]))
 @Client.on_message(filters.command("dreplyraid", ["."]) & filters.me)
@@ -58,11 +59,11 @@ async def gbam(app: Client, message):
     else:
         user = get_arg(message)
         if not user:
-            await message.edit("**Whome should I ungban?**")
+            await message.reply_text("**Whome should I dreplyraid?**")
             return
     get_user = await app.get_users(user)
     await unrraid_user(get_user.id)
-    await message.edit(f"**Ungbanned {get_user.first_name}, enjoy!**")
+    await message.reply_text(f"**Reply Raid has Been Removed {get_user.first_name}, enjoy!**")
 
 
 @Client.on_message(filters.group & filters.incoming)
