@@ -54,7 +54,7 @@ async def pytrans_tr(_, message: Message):
 """
     if len(tred_txt) > 4096:
       await tr_msg.edit("`Wah!! Translated Text So Long Tho!, Give me a minute, I'm sending it as a file!`")
-      tr_txt_file = open("translated_NEXAUB.txt", "w+")
+      tr_txt_file = open("translated.txt", "w+")
       tr_txt_file.write(tred_txt)
       tr_txt_file.close()
       await tr_msg.reply_document("ptranslated_NEXAUB.txt")
