@@ -27,6 +27,10 @@ if not API_ID:
     logging.error("No Api-ID Found! Exiting!")
     quit(1)
 
+if not MONGO_DB:
+    logging.error("No MongoDB Found! Exiting!")
+    quit(1)
+
 if not API_HASH:
     logging.error("No ApiHash Found! Exiting!")
     quit(1)
@@ -35,12 +39,6 @@ if ALIVE_IMG:
     ALIVE_PIC = ALIVE_IMG
 else: 
     ALIVE_PIC = 'https://telegra.ph/file/077f0e0eb681938c6d85f.jpg'
-
-if MONGO_DB:
-    MONGO_DB = MONGO_DB
-else: 
-    MONGO_DB = "mongodb+srv://Zaid:Zaid@cluster0.4bszo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
 
 if LOG_CHAT:
     LOG_GROUP = LOG_CHAT
