@@ -8,6 +8,28 @@ import pymongo
 cli = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DB)
 SPAMBOT = "ZAID"
 
+
+class Database:
+    def get(self, module: str, variable: str, default=None):
+        """Get value from database"""
+        raise NotImplementedError
+
+    def set(self, module: str, variable: str, value):
+        """Set key in database"""
+        raise NotImplementedError
+
+    def remove(self, module: str, variable: str):
+        """Remove key from database"""
+        raise NotImplementedError
+
+    def get_collection(self, module: str) -> dict:
+        """Get database for selected module"""
+        raise NotImplementedError
+
+    def close(self):
+        """Close the database"""
+        raise NotImplementedError
+
 class MongoDatabase(Database):
     def __init__(self, url, name):
         self._client = pymongo.MongoClient(url)
