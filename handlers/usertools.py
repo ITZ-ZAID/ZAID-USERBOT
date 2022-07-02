@@ -5,7 +5,6 @@ from pyrogram import filters, Client
 from pyrogram.raw import functions
 from pyrogram.types import Message
 
-from helpers.SQL.cloner_db import backup_indentity, restore_identity
 from handlers.help import add_command_help
 
 profile_photo = "handlers/cache/pfp.jpg"
