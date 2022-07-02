@@ -209,7 +209,7 @@
             "required": true
         },
         "MONGO_DB": {
-            "description": "Enter Your Mongo Database Url! This Is helpful for gban fban etc stuffs",
+            "description": "Enter Your Mongo Database Url from https://www.mongodb.com/! This Is helpful for gban fban etc stuffs",
             "required": true
         },
         "LOG_GROUP": {
