@@ -1,241 +1,220 @@
 from typing import Tuple
 from handlers.help import *
-import io
 import os
-import random
-import time
-from pyrogram.types import Message
+import math
+import asyncio
+import shutil
+
 from PIL import Image
-from pyrogram import emoji, filters, Client
+from pyrogram.types import Message
+from pyrogram.errors import StickersetInvalid, YouBlockedUser
 from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
-from pyrogram.errors import YouBlockedUser, StickersetInvalid
-from helpers.pyrohelper import get_args
+
+from helpers.pyrohelp import get_arg, convert_to_image
 
 
-@Client.on_message(filters.command(["kang", "steal"], ["."]) & filters.me)
-async def kang(app: Client, message):
-    user = await app.get_me()
-    replied = message.reply_to_message
-    photo = None
-    emoji_ = None
-    is_anim = False
-    resize = False
-    if replied and replied.media:
-        if replied.photo:
-            resize = True
-        elif replied.document and "image" in replied.document.mime_type:
-            resize = True
-        elif replied.document and "tgsticker" in replied.document.mime_type:
-            is_anim = True
-        elif replied.sticker:
-            if not replied.sticker.file_name:
-                await message.edit("`Sticker has no Name!`")
-                return
-            emoji_ = replied.sticker.emoji
-            is_anim = replied.sticker.is_animated
-            if not replied.sticker.file_name.endswith(".tgs"):
-                resize = True
-        else:
-            await message.edit("`Unsupported File!`")
-            return
-        await message.edit(f"`{random.choice(KANGING_STR)}`")
-        photo = await app.download_media(message=replied)
-    else:
-        await message.edit("`I can't kang that...`")
-        return
-    if photo:
-        args = get_args(message)
-        pack = 1
-        if len(args) == 2:
-            emoji_, pack = args
-        elif len(args) == 1:
-            if args[0].isnumeric():
-                pack = int(args[0])
-            else:
-                emoji_ = args[0]
 
-        if emoji_ and emoji_ not in (
-            getattr(emoji, a) for a in dir(emoji) if not a.startswith("_")
-        ):
-            emoji_ = None
-        if not emoji_:
-            emoji_ = "🤔"
-
-        u_name = user.username
-        if u_name:
-            u_name = "@" + u_name
-        else:
-            u_name = user.first_name or user.id
-        packname = f"a{user.id}_by_zect_{pack}"
-        custom_packnick = f"{u_name}'s kang pack"
-        packnick = f"{custom_packnick} Vol.{pack}"
-        cmd = "/newpack"
-        if resize:
-            photo = resize_photo(photo)
-        if is_anim:
-            packname += "_anim"
-            packnick += " (Animated)"
-            cmd = "/newanimated"
-        exist = False
-        try:
-            exist = await app.send(
-                GetStickerSet(stickerset=InputStickerSetShortName(short_name=packname), hash=0)
-            )
-        except StickersetInvalid:
-            pass
-        if exist is not False:
-            try:
-                await app.send_message("Stickers", "/addsticker")
-            except YouBlockedUser:
-                await message.edit("first **unblock** @Stickers")
-                return
-            await app.send_message("Stickers", packname)
-            limit = "50" if is_anim else "120"
-            while limit in await get_response(message):
-                pack += 1
-                packname = f"a{user.id}_by_zect_{pack}"
-                packnick = f"{custom_packnick} Vol.{pack}"
-                if is_anim:
-                    packname += "_anim"
-                    packnick += " (Animated)"
-                await message.edit(
-                    "`Switching to Pack " + str(pack) + " due to insufficient space`"
-                )
-                await app.send_message("Stickers", packname)
-                if await get_response(message) == "Invalid pack selected":
-                    await app.send_message("Stickers", cmd)
-                    await get_response(message)
-                    await app.send_message("Stickers", packnick)
-                    await get_response(message)
-                    await app.send_document("Stickers", photo)
-                    await get_response(message)
-                    await app.send_message("Stickers", emoji_)
-                    await get_response(message)
-                    await app.send_message("Stickers", "/publish")
-                    if is_anim:
-                        await get_response(message)
-                        await app.send_message(
-                            "Stickers", f"<{packnick}>", parse_mode=None
-                        )
-                    await get_response(message)
-                    await app.send_message("Stickers", "/skip")
-                    await get_response(message)
-                    await app.send_message("Stickers", packname)
-                    out = f"[kanged](t.me/addstickers/{packname})"
-                    await message.edit(
-                        f"**Sticker** {out} __in a Different Pack__**!**"
-                    )
-                    return
-            await app.send_document("Stickers", photo)
-            time.sleep(0.2)
-            rsp = await get_response(message)
-            if "Sorry, the file type is invalid." in rsp:
-                await message.edit(
-                    "`Failed to add sticker, use` @Stickers "
-                    "`bot to add the sticker manually.`"
-                )
-                return
-            await app.send_message("Stickers", emoji_)
-            await get_response(message)
-            await app.send_message("Stickers", "/done")
-        else:
-            await message.edit("`Brewing a new Pack...`")
-            try:
-                await app.send_message("Stickers", cmd)
-            except YouBlockedUser:
-                await message.edit("first **unblock** @Stickers")
-                return
-            await app.send_message("Stickers", packnick)
-            await get_response(message)
-            await app.send_document("Stickers", photo)
-            await get_response(message)
-            rsp = await get_response(message)
-            if "Sorry, the file type is invalid." in rsp:
-                await message.edit(
-                    "`Failed to add sticker, use` @Stickers "
-                    "`bot to add the sticker manually.`"
-                )
-                return
-            await app.send_message("Stickers", emoji_)
-            await get_response(message)
-            await app.send_message("Stickers", "/publish")
-            if is_anim:
-                await get_response(message)
-                await app.send_message("Stickers", f"<{packnick}>", parse_mode=None)
-            await get_response(message)
-            await app.send_message("Stickers", "/skip")
-            await get_response(message)
-            await app.send_message("Stickers", packname)
-        out = f"[kanged](t.me/addstickers/{packname})"
-        await message.edit(f"**Sticker** {out}**!**")
-        await app.read_history("Stickers")
-        if os.path.exists(str(photo)):
-            os.remove(photo)
 
 
 @Client.on_message(filters.command("packinfo", ["."]) & filters.me)
-async def sticker_pack_info_(app: Client, message: Message):
-    replied = message.reply_to_message
-    if not replied:
-        await message.edit("`I can't fetch info from nothing, can I ?!`")
+async def packinfo(client: Client, message):
+    pablo = await message.edit("Processing...")
+    if not message.reply_to_message:
+        await pablo.edit("`Please Reply to a Sticker!`")
         return
-    if not replied.sticker:
-        await message.edit("`Reply to a sticker to get the pack details`")
+    if not message.reply_to_message.sticker:
+        return await pablo.edit("`Please Reply to a Sticker!`")
+    if not message.reply_to_message.sticker.set_name:
+        await pablo.delete()
         return
-    await message.edit("`Fetching details of the sticker pack, please wait..`")
-    get_stickerset = await app.send(
+    stickerset = await client.send(
         GetStickerSet(
-            stickerset=InputStickerSetShortName(short_name=replied.sticker.set_name)
+            stickerset=InputStickerSetShortName(
+                short_name=message.reply_to_message.sticker.set_name
+            ),
+            hash=0
         )
     )
-    pack_emojis = []
-    for document_sticker in get_stickerset.packs:
-        if document_sticker.emoticon not in pack_emojis:
-            pack_emojis.append(document_sticker.emoticon)
-    out_str = (
-        f"**Sticker Title:** `{get_stickerset.set.title}\n`"
-        f"**Sticker Short Name:** `{get_stickerset.set.short_name}`\n"
-        f"**Archived:** `{get_stickerset.set.archived}`\n"
-        f"**Official:** `{get_stickerset.set.official}`\n"
-        f"**Masks:** `{get_stickerset.set.masks}`\n"
-        f"**Animated:** `{get_stickerset.set.animated}`\n"
-        f"**Stickers In Pack:** `{get_stickerset.set.count}`\n"
-        f"**Emojis In Pack:**\n{' '.join(pack_emojis)}"
-    )
-    await message.edit(out_str)
+    emojis = []
+    for stucker in stickerset.packs:
+        if stucker.emoticon not in emojis:
+            emojis.append(stucker.emoticon)
+    output = f"""**Sticker Pack Title **: `{stickerset.set.title}`
+**Sticker Pack Short Name:** `{stickerset.set.short_name}`
+**Stickers Count:** `{stickerset.set.count}`
+**Archived:** `{stickerset.set.archived}`
+**Official:** `{stickerset.set.official}`
+**Masks:** `{stickerset.set.masks}`
+**Animated:** `{stickerset.set.animated}`
+**Emojis In Pack:** `{' '.join(emojis)}`
+"""
+    await pablo.edit(output)
 
 
-def resize_photo(photo: str) -> io.BytesIO:
-    """Resize the given photo to 512x512"""
-    image = Image.open(photo)
-    maxsize = 512
-    scale = maxsize / max(image.width, image.height)
-    new_size = (int(image.width * scale), int(image.height * scale))
-    image = image.resize(new_size, Image.LANCZOS)
-    resized_photo = io.BytesIO()
-    resized_photo.name = "sticker.png"
-    image.save(resized_photo, "PNG")
-    os.remove(photo)
-    return resized_photo
+@Client.on_message(filters.command("kang", ["."]) & filters.me)
+async def kang_stick(NEXAUB: Client, message: Message):
+    kang_msg = await e_or_r(nexaub_message=message, msg_text="`Kanging This Sticker to My Pack...`")
+    if not message.reply_to_message:
+        return await kang_msg.edit("`Please Reply to a Sticker or a image!`")
+#     if not message.reply_to_message.sticker:
+#         return await kang_msg.edit("`Please Reply to a Sticker!`")
+    a_emoji = get_arg(message)
+    pack = 1
+    nm = message.from_user.username
+    packname = f"@{nm} Kang Pack {pack}"
+    packshortname = f"NEXAUB_{message.from_user.id}_{pack}"
+    emoji = "🤔"
+    try:
+        a_emoji = a_emoji.strip()
+        if not a_emoji.isalpha():
+            if not a_emoji.isnumeric():
+                emoji = a_emoji
+        else:
+            emoji = "🤔"
+    except:
+        emoji = "🤔"
+    exist = None
+    is_anim = False
+    if message.reply_to_message.sticker:
+        if not a_emoji:
+            emoji = message.reply_to_message.sticker.emoji or "🤔"
+        is_anim = message.reply_to_message.sticker.is_animated
+        if is_anim:
+            packshortname += "_animated"
+            packname += " Animated"
+        if message.reply_to_message.sticker.mime_type == "application/x-tgsticker":
+            file_name = await message.reply_to_message.download("AnimatedSticker.tgs")
+        else:
+            cool = await convert_to_image(message, NEXAUB)
+            if not cool:
+                return await kang_msg.edit("**Error:** `Unsupported Media`")
+            file_name = resize_image(cool)
+    elif message.reply_to_message.document:
+        if message.reply_to_message.document.mime_type == "application/x-tgsticker":
+            is_anim = True
+            packshortname += "_animated"
+            packname += " Animated"
+            file_name = await message.reply_to_message.download("AnimatedSticker.tgs")
+    else:
+        cool = await convert_to_image(message, NEXAUB)
+        if not cool:
+            return await kang_msg.edit("**Error:** `Unsupported Media`")
+        file_name = resize_image(cool)
+    try:
+        exist = await NEXAUB.send(
+            GetStickerSet(
+                stickerset=InputStickerSetShortName(
+                    short_name=packshortname
+                ),
+                hash=0
+            )
+        )
+    except StickersetInvalid:
+        pass
+    if exist:
+        try:
+            await NEXAUB.send_message("Stickers", "/addsticker")
+        except YouBlockedUser:
+            await NEXAUB.edit("`Unblocking @Stickers ...`")
+            await NEXAUB.unblock_user("Stickers")
+            await NEXAUB.send_message("Stickers", "/addsticker")
+        await NEXAUB.send_message("Stickers", packshortname)
+        await asyncio.sleep(0.2)
+        limit = "50" if is_anim else "120"
+        messi = (await NEXAUB.get_history("Stickers", 1))[0]
+        while limit in messi.text:
+            pack += 1
+            prev_pack = int(pack) - 1
+            await kang_msg.edit(f"He he, Kang Pack Number `{prev_pack}` is Full Of Stickers! Now Switching to `{pack}` Pack!")
+            packname = f"@{nm} Kang Pack {pack}"
+            packshortname = f"NEXAUB_{message.from_user.id}_{pack}"
+            if is_anim:
+                packshortname += "_animated"
+                packname += " Animated"
+            await NEXAUB.send_message("Stickers", packshortname)
+            await asyncio.sleep(0.2)
+            messi = (await NEXAUB.get_history("Stickers", 1))[0]
+            if messi.text == "Invalid pack selected.":
+                if is_anim:
+                    await NEXAUB.send_message("Stickers", "/newanimated")
+                else:
+                    await NEXAUB.send_message("Stickers", "/newpack")
+                await asyncio.sleep(0.5)
+                await NEXAUB.send_message("Stickers", packname)
+                await asyncio.sleep(0.2)
+                await NEXAUB.send_document("Stickers", file_name)
+                await asyncio.sleep(1)
+                await NEXAUB.send_message("Stickers", emoji)
+                await asyncio.sleep(0.8)
+                await NEXAUB.send_message("Stickers", "/publish")
+                if is_anim:
+                    await NEXAUB.send_message("Stickers", f"<{packname}>")
+                await NEXAUB.send_message("Stickers", "/skip")
+                await asyncio.sleep(0.5)
+                await NEXAUB.send_message("Stickers", packshortname)
+                return await kang_msg.edit("**Sticker Kanged!** \n\n**Emoji:** {} \n**Pack:** [Here](https://t.me/addstickers/{})".format(emoji, packshortname))
+        await NEXAUB.send_document("Stickers", file_name)
+        await asyncio.sleep(1)
+        await NEXAUB.send_message("Stickers", emoji)
+        await asyncio.sleep(0.5)
+        await NEXAUB.send_message("Stickers", "/done")
+        await kang_msg.edit("**Sticker Kanged!** \n\n**Emoji:** {} \n**Pack:** [Here](https://t.me/addstickers/{})".format(emoji, packshortname))
+    else:
+        if is_anim:
+            await NEXAUB.send_message("Stickers", "/newanimated")
+        else:
+            await NEXAUB.send_message("Stickers", "/newpack")
+        await NEXAUB.send_message("Stickers", packname)
+        await asyncio.sleep(0.2)
+        await NEXAUB.send_document("Stickers", file_name)
+        await asyncio.sleep(1)
+        await NEXAUB.send_message("Stickers", emoji)
+        await asyncio.sleep(0.5)
+        await NEXAUB.send_message("Stickers", "/publish")
+        await asyncio.sleep(0.5)
+        if is_anim:
+            await NEXAUB.send_message("Stickers", f"<{packname}>")
+        await NEXAUB.send_message("Stickers", "/skip")
+        await asyncio.sleep(0.5)
+        await NEXAUB.send_message("Stickers", packshortname)
+        await kang_msg.edit("**Sticker Kanged!** \n\n**Emoji:** {} \n**Pack:** [Here](https://t.me/addstickers/{})".format(emoji, packshortname))
+        try:
+            if os.path.exists("Kanged_Sticker_NEXAUB.png"):
+                os.remove("Kanged_Sticker_NEXAUB.png")
+            downname = "./Downloads"
+            if os.path.isdir(downname):
+                shutil.rmtree(downname)
+        except:
+            print("Can't remove downloaded sticker files")
+            return
 
 
-async def get_response(message):
-    return [x async for x in Client.get_history("Stickers", 1)[0]]
-
-
-KANGING_STR = (
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ",
-)
+def resize_image(image):
+    im = Image.open(image)
+    maxsize = (512, 512)
+    if (im.width and im.height) < 512:
+        size1 = im.width
+        size2 = im.height
+        if im.width > im.height:
+            scale = 512 / size1
+            size1new = 512
+            size2new = size2 * scale
+        else:
+            scale = 512 / size2
+            size1new = size1 * scale
+            size2new = 512
+        size1new = math.floor(size1new)
+        size2new = math.floor(size2new)
+        sizenew = (size1new, size2new)
+        im = im.resize(sizenew)
+    else:
+        im.thumbnail(maxsize)
+    file_name = "Kanged_Sticker_NEXAUB.png"
+    im.save(file_name, "PNG")
+    if os.path.exists(image):
+        os.remove(image)
+    return file_name
 
 
 
