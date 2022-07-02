@@ -220,7 +220,7 @@ def resize_photo(photo: str) -> io.BytesIO:
     return resized_photo
 
 
-async def get_response(message):
+async def get_response(app: Client, message):
     return [x async for x in app.iter_history("Stickers", limit=1)][0].text
 
 
