@@ -1,5 +1,5 @@
 import motor.motor_asyncio
-from main import MONGO_DB
+from config import MONGO_DB
 import json
 import threading
 import dns.resolver
