@@ -81,3 +81,15 @@ async def setwelcome(app: Client, message):
     msg_id = frwd.message_id
     await Zaid.save_welcome(str(message.chat.id), msg_id)
     await message.edit("**Welcome message has been saved.**")
+
+
+from handlers.help import *
+
+
+add_command_help(
+    "welcome",
+    [
+        [".clearwelcome", " -> Disables welcome message in the chat."],
+        [".setwelcome [keyword]", " -> Sets a custom welcome message."],
+    ],
+)
