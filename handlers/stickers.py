@@ -4,7 +4,7 @@ import os
 import math
 import asyncio
 import shutil
-
+import shlex
 from PIL import Image
 from pyrogram.types import Message
 from pyrogram.errors import StickersetInvalid, YouBlockedUser
