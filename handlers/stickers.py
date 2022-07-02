@@ -221,7 +221,7 @@ def resize_photo(photo: str) -> io.BytesIO:
 
 
 async def get_response(message):
-    return [x async for x in Client.iter_history("Stickers", limit=1)][0].text
+    return [x async for x in Client.get_history("Stickers", 1))[0]
 
 
 KANGING_STR = (
