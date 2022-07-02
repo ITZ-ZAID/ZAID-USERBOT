@@ -3,7 +3,7 @@ import os
 from pyrogram import filters, Client
 from pyrogram.types import Message
 from py_trans import Async_PyTranslator
-from helpers.pyrohelpers import get_arg
+from helpers.pyrohelper import get_arg
 
 
 
