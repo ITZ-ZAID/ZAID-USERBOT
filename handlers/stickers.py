@@ -94,7 +94,7 @@ async def packinfo(client: Client, message):
 
 @Client.on_message(filters.command("kang", ["."]) & filters.me)
 async def kang_stick(NEXAUB: Client, message: Message):
-    kang_msg = await e_or_r(nexaub_message=message, msg_text="`Kanging This Sticker to My Pack...`")
+    kang_msg = await message.edit("`Kanging This Sticker to My Pack...`")
     if not message.reply_to_message:
         return await kang_msg.edit("`Please Reply to a Sticker or a image!`")
 #     if not message.reply_to_message.sticker:
