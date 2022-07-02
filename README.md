@@ -129,6 +129,7 @@ Zaid@Debian~ $ python3 main.py
 ```
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
+- Zect Userbot
 - Seden Userbot
 - Friday
 - Nana
