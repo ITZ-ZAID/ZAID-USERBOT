@@ -135,3 +135,19 @@ async def del_all_filters(client: Client, message):
         return
     await filters_del(int(message.chat.id))
     await pablo.edit("**Deleted All The Filters Successfully!!**")
+
+
+from handlers.help import *
+
+
+add_command_help(
+    "filters",
+    [
+        [".filters", " -> List all active filters in current chat.."],
+        [".filter [keyword]", " -> Saves a filter."],
+        [".stop [keyword]", "-> Stops a filter."],
+        [".clearall", " -> Deletes all the saved notes."],
+        [".stopall", " -> Removes all the filters in the chat."],
+
+    ],
+)
