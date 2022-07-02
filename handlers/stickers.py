@@ -11,7 +11,7 @@ from pyrogram.errors import StickersetInvalid, YouBlockedUser
 from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 
-from helpers.pyrohelp import get_arg
+from helpers.pyrohelper import get_arg
 
 
 async def convert_to_image(message, client) -> Union[None, str]:
