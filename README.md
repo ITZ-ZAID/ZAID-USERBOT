@@ -21,7 +21,7 @@
 - PyroGram Session
 - Dummy account
 - Python 3.8+ or 3.7
-- Mongo Db
+- [Mongo Db](https://youtu.be/mnvjt_a5JYA)
 
 #
 
