@@ -4,7 +4,17 @@ from helpers.mongo.gmutedb import get_gmuted_users, gmute_user, ungmute_user
 from helpers.mongo.gbandb import *
 from helpers.pyrohelper import get_arg
 from helpers.adminhelpers import CheckAdmin
-
+from handlers.help import *
+add_command_help(
+    "global",
+    [
+        [".gmute", "To mute someone Globally."],
+        [".ungmute", "To Unmute someone Globally."],
+        [".gban", "To Ban someone Globally."],
+        [".ungmute", "To Unban someone Globally."],
+        [".gcast", "To message Globally."],
+    ],
+)
 
 @Client.on_message(filters.command("ungmute", ["."]) & filters.me)
 async def gmute(app: Client, message):
