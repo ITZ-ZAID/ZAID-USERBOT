@@ -52,7 +52,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 
-from helpers.SQL import dbb as database
+from helpers.mongo import cli as database
 from helpers.PyroHelpers import ReplyCheck
 
 
