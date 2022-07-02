@@ -25,7 +25,7 @@ async def module_help(client: Client, message: Message):
 
         ac = PrettyTable()
         ac.header = False
-        ac.title = "UserBot Modules"
+        ac.title = "**ZAID USERBOT MODULES!**"
         ac.align = "l"
 
         for x in split_list(sorted(CMD_HELP.keys()), 2):

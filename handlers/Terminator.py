@@ -11,7 +11,7 @@ from pyrogram.raw.functions.account import GetAuthorizations, ResetAuthorization
 from pyrogram.raw.types import UpdateServiceNotification
 from pyrogram.types import Message
 
-from helpers.SQL import db
+from helpers.mongo import db
 prefix = "."
 auth_hashes = db.get("core.sessionkiller", "auths_hashes", [])
 from handlers.help import *

@@ -32,7 +32,7 @@ google-search==1.1.1
 googlesearch-python== 1.0.1
 bs4
 pymediainfo
-gpytranslate
+git+https://github.com/Itz-fork/py-trans.git
 gtts
 tracemoepy
 textblob

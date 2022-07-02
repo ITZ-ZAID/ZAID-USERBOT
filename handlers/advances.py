@@ -228,6 +228,7 @@ help_menu = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖
 """
 
+
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["delayspam"], [".", "!", "/"]))
 @Client.on_message(filters.me & filters.command(["delayspam"], ["."]))
 async def delayspam(xspam: Client, e: Message): 
@@ -352,6 +353,7 @@ async def skkkspam(client: Client, message: Message):
     quantity = message.command[1]
     spam_text = ' '.join(message.command[2:])
     quantity = int(quantity)
+    msg = str(Zaid[1])
     if re.search(Owners.lower(), msg.lower()):
         return await e.reply("**Sorry !!**")
     if int(message.chat.id) in GROUP:
@@ -402,11 +404,10 @@ async def raid(xspam: Client, e: Message):
                     await xspam.send_message(e.chat.id, msg)
                     await asyncio.sleep(0.10)
       elif e.reply_to_message:
-          #msg_id = e.reply_to_message.message_id
+          msg_id = e.reply_to_message.message_id
           counts = int(Zaid[0])
           if int(e.chat.id) in GROUP:
                return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          #RiZoeL = xspam.get_messages(e.chat.id, msg_id)
           user_id = e.reply_to_message.from_user.id
           ok = await xspam.get_users(user_id)
           id = ok.id
@@ -439,5 +440,86 @@ add_command_help(
         [".delayspam", "<count and text>`."],
         [".raid", "<user id and count>`."],
         [".pornspam", "<count>`."],
+    ],
+)
+
+
+
+from pyrogram import filters
+
+from typing import Tuple
+from handlers.help import *
+import random
+from handlers.cache.data import *
+from config import SUDO_USERS
+from pyrogram import filters, Client
+from helpers.mongo.rraid import *
+from helpers.pyrohelper import get_arg
+from helpers.adminhelpers import CheckAdmin
+
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["replyraid", "rraid"], [".", "!"]))
+@Client.on_message(filters.command("replyraid", ["."]) & filters.me)
+async def gban(app: Client, message):
+    Zaid = await message.reply_text("**Processing**")
+    reply = message.reply_to_message
+    if reply:
+        user = reply.from_user["id"]
+    else:
+        user = get_arg(message)
+        if not user:
+            await Zaid.edit("**Whome should I replyraid?**")
+            return
+    get_user = await app.get_users(user)
+    mee= await app.get_me()
+    if get_user.id == mee.id:
+        await Zaid.edit("`Jaa Na Lawde Kahe Dimag Kha rha? Khudpe Raid kyu laga rha?`")
+        return
+    if int(get_user.id) in VERIFIED_USERS:
+        await Zaid.edit("Chal Chal baap Ko mat sikha")
+        return
+    elif int(get_user.id) in SUDO_USERS:
+        await Zaid.edit("Abe Lawde that guy part of my devs.")
+        return
+    await rraid_user(get_user.id)
+    await Zaid.edit(f"**Successfully Reply Raid Started {get_user.first_name}!**")
+
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["dreplyraid", "drraid"], [".", "!"]))
+@Client.on_message(filters.command("dreplyraid", ["."]) & filters.me)
+async def gbam(app: Client, message):
+    reply = message.reply_to_message
+    if reply:
+        user = reply.from_user["id"]
+    else:
+        user = get_arg(message)
+        if not user:
+            await message.reply_text("**Whome should I dreplyraid?**")
+            return
+    get_user = await app.get_users(user)
+    await unrraid_user(get_user.id)
+    await message.reply_text(f"**Reply Raid has Been Removed {get_user.first_name}, enjoy!**")
+
+
+@Client.on_message(filters.group & filters.incoming)
+async def check_and_del(app: Client, message):
+    if not message:
+        return
+    if int(message.chat.id) in GROUP:
+        return
+    try:
+        if not message.from_user.id in (await get_rraid_users()):
+            return
+    except AttributeError:
+        return
+    message_id = message.message_id
+    try:
+        await message.reply_text(f"{random.choice(RAID)}")
+    except:
+        pass
+
+add_command_help(
+    "replyraid",
+    [
+        [".replyraid", "Reply To User\n To Raid on Someone."],
+        [".dreplyraid", "To Disable ReplyRaid."],
     ],
 )
