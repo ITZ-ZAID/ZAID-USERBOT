@@ -106,7 +106,7 @@ async def packinfo(client: Client, message):
     await pablo.edit(output)
 
 
-@Client.on_message(filters.command("kang", ["."]) & filters.me)
+@Client.on_message(filters.command(["kang", "steal"], ["."]) & filters.me)
 async def kang_stick(app: Client, message: Message):
     kang_msg = await message.edit("`Kanging This Sticker to My Pack...`")
     if not message.reply_to_message:
