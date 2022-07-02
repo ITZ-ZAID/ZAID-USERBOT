@@ -49,7 +49,7 @@
 
 ##
 <p align="center">𝐇𝐨𝐬𝐭𝐢𝐧𝐠 𝐔𝐬𝐢𝐧𝐠 ZaidUserBot</p>
-Want Host for a Demo? Just Use [@ZaidUserBot](https://t.me/ZaidUserBot) To Host In seconds!
+Want Host for a Demo? Just Use @[ZaidUserBot](https://t.me/ZaidUserBot) To Host In seconds!
 Watch Tutorial!
 <p align="center"><a href="https://youtu.be/uFYUAc89cSU"> <img src="https://img.shields.io/badge/ZaidUserBot%20Deploy-red?style=for-the-badge&logo=youtube" width="220" height="38.45"/></a></p>
 
