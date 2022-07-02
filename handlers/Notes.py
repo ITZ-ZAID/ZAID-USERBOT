@@ -3,7 +3,7 @@ from pyrogram import filters, Client
 from helpers.pyrohelper import get_arg
 import helpers.mongo.notesdb as Zaid
 from main import LOG_GROUP
-
+from handlers.help import *
 
 LOG_CHAT = LOG_GROUP
 
@@ -82,3 +82,15 @@ async def notes(client, message):
 async def clearall(client, message):
     await Zaid.rm_all()
     await message.edit("**Removed all saved notes**")
+
+add_command_help(
+    "notes",
+    [
+        [".save", " -> Save a new note. Must be used in reply with one parameter (note name)."],
+        [".get", " -> Gets the note specified."],
+        [".clear", "-> Deletes a note, specified by note name."],
+        [".clearall", " -> Deletes all the saved notes."],
+        [".notes", " -> List the saved notes."],
+
+    ],
+)
