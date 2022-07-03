@@ -39,7 +39,7 @@
 
 - **Spamming!**
 - **You Can deploy Upto 50 Clients At a Same Time**
-- **Almost 70 Plugins There adding more Plugins Soon**
+- **Almost 90+ Plugins There adding more Plugins Soon**
 - **Id Safety Specially For Fake accounts**
 
 ##
