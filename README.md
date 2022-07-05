@@ -113,11 +113,11 @@ Zaid@Debian~ $ apt-get -y install git gcc python3-dev
 Zaid@Debian~ $ git clone https://github.com/ITZ-ZAID/ZAID-USERBOT
 Zaid@Debian~ $ cd ZAID-USERBOT
 Zaid@Debian~ $ pip3 install -U-r requirements.txt
-Zaid@Debian~ $ nano config.py
+Zaid@Debian~ $ cp sample.env .env
 ```
 
 <h3 align="center">
-    Edit <b>config.py</b> with your own values and Run Bot
+   Edit <b>.env</b> with your own values and Run Bot
 </h3>
 
 ```console
