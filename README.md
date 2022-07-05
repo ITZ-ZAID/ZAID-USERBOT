@@ -107,6 +107,7 @@ Watch Tutorial!
 
 <p align="center"><a href="https://railway.app/new/template?template=https://github.com/ITS-ZAID/Railway-Deploy&envs=STRING_SESSION5,STRING_SESSION4,STRING_SESSION3,STRING_SESSION2,STRING_SESSION1,DATABASE_URL,API_ID,API_HASH,SUDO_USERS,MONGO_DB"> <img src="https://img.shields.io/badge/Deploy%20To%20Railway-black?style=for-the-badge&logo=railway" width="220" height="38.45"/></a></p>
 
+## VPS/Locally deploy!
 ```console
 Zaid@Debian~ $ apt-get -y update
 Zaid@Debian~ $ apt-get -y install git gcc python3-dev
