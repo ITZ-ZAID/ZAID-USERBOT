@@ -26,7 +26,7 @@ pymongo
 psutil
 heroku3
 gitpython
-emoji
+emoji==1.7
 google==3.0.0
 google-search==1.1.1
 googlesearch-python== 1.0.1
