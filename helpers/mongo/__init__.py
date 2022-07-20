@@ -5,9 +5,9 @@ import threading
 import dns.resolver
 import pymongo
 
-cli = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DB)
-SPAMBOT = "ZAID"
-
+mongo_dbb = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DB)
+SPAMBOT = "ZAIDUSERBOT"
+cli = mongo_dbb["ZAIDUSERBOT"]
 
 class Database:
     def get(self, module: str, variable: str, default=None):
