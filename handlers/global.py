@@ -171,7 +171,7 @@ async def give_glist(client, message):
 
 
 
-@Client.on_message(filters.incoming & ~filters.me)
+@Client.on_message(filters.incoming)
 async def watch(client, message):
     if not message:
         return
