@@ -1,1 +1,1 @@
-worker: bash zaid
+worker: bash start
