@@ -53,7 +53,7 @@ def get_user(message: Message, text: str) -> [int, str, None]:
             reason_ = asplit[1]
     return user_s, reason_
 
-async def edit_or_reply(message, text, parse_mode="md"):)
+async def edit_or_reply(message, text, parse_mode="md")
     """Edit Message If Its From Self, Else Reply To Message, (Only Works For Sudo's)"""
     if not message:
         return await message.edit(text, parse_mode=parse_mode)
