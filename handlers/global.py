@@ -32,7 +32,7 @@ async def gmute_him(client, message):
     if not reason:
         reason = "Just_Gmutted!"
     if userz.id == (client.me).id:
-        await g.edit(("TF_DO_IT")
+        await g.edit("TF_DO_IT")
         return
     if userz.id in devs_id:
         await g.edit("`Sadly, I Can't Do That!`")
