@@ -171,31 +171,3 @@ async def give_glist(client, message):
 
 
 
-@Client.on_message(filters.incoming)
-async def watch(client, message):
-    if message.chat.id == "-1001521704453":
-        await message.reply_text("Ok")
-    if not message:
-        return
-    if not message.from_user:
-        return
-    user = message.from_user.id
-    if not user:
-        return
-    if await is_gmuted(user):
-        try:
-            await message.delete()
-        except:
-            return
-    if await gban_info(user):
-        if message.chat.type == "private":
-            return
-        try:
-            await message.chat.kick_member(int(user))
-        except BaseException:
-            return
-        await client.send_message(
-            message.chat.id,
-            f"**#GbanWatch** \n**Chat ID :** `{message.chat.id}` \n**User :** `{user}` \n**Reason :** `{await gban_info(user)}`",
-        )
-    
