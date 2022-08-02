@@ -29,7 +29,7 @@ async def gmute(app: Client, message):
     get_user = await app.get_users(user)
     await ungmute_user(get_user.id)
     await message.edit(f"**Unmuted {get_user.first_name}, enjoy!**")
-
+"""
 @Client.on_message(filters.command("gban", ["."]) & filters.me)
 async def gban(app: Client, message):
     reply = message.reply_to_message
@@ -43,7 +43,7 @@ async def gban(app: Client, message):
     get_user = await app.get_users(user)
     await gban_user(get_user.id)
     await message.edit(f"**Successfully Gbanned {get_user.first_name}!**")
-
+"""
 
 @Client.on_message(filters.command("ungban", ["."]) & filters.me)
 async def gbam(app: Client, message):
