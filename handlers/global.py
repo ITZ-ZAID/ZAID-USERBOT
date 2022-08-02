@@ -17,7 +17,6 @@ from config import SUDO_USERS as AFS
 
 @Client.on_message(filters.command("gmute") & filters.me)
 async def gmute_him(client, message):
-    engine = message.Engine
     g = await message.reply_text("PROCESSING")
     text_ = get_text(message)
     user, reason = get_user(message, text_)
@@ -50,8 +49,6 @@ async def gmute_him(client, message):
 
 @Client.on_message(filters.command("ungmute") & filters.me)
 async def gmute_him(client, message):
-    AFS = await sudo_list()
-    engine = message.Engine
     ug = await message.reply_text("PROCESSING")
     text_ = get_text(message)
     user_ = get_user(message, text_)[0]
@@ -79,7 +76,6 @@ async def gmute_him(client, message):
 
 @Client.on_message(filters.command("gban") & filters.me)
 async def gbun_him(client, message):
-    engine = message.Engine
     gbun = await message.reply_text("PROCESSING")
     text_ = get_text(message)
     user, reason = get_user(message, text_)
@@ -160,6 +156,20 @@ async def ungbun_him(client, message):
     ungbanned = f"**#Un_GBanned** \n**User :** [{userz.first_name}](tg://user?id={userz.id}) \n**Affected Chats :** `{chat_len-failed}`"
     await ungbun.edit(ungbanned)
 
+@Client.on_message(filters.command("gbanlist") & filters.me)
+async def give_glist(client, message):
+    oof = "**#GBanList** \n\n"
+    glist = await message.reply_text("PROCESSING")
+    list_ = await gban_list()
+    if len(list_) == 0:
+        await glist.edit("`No User is Gbanned Till Now!`")
+        return
+    for lit in list_:
+        oof += f"**User :** `{lit['user']}` \n**Reason :** `{lit['reason']}` \n\n"
+    await edit_or_send_as_file(oof, glist, client, "GbanList", "Gban-List")
+
+
+
 
 @Client.on_message(filters.incoming & ~filters.me)
 async def watch(client, message):
@@ -187,16 +197,3 @@ async def watch(client, message):
             f"**#GbanWatch** \n**Chat ID :** `{message.chat.id}` \n**User :** `{user}` \n**Reason :** `{await gban_info(user)}`",
         )
     
-@Client.on_message(filters.command("gbanlist") & filters.me)
-async def give_glist(client, message):
-    oof = "**#GBanList** \n\n"
-    glist = await message.reply_text("PROCESSING")
-    list_ = await gban_list()
-    if len(list_) == 0:
-        await glist.edit("`No User is Gbanned Till Now!`")
-        return
-    for lit in list_:
-        oof += f"**User :** `{lit['user']}` \n**Reason :** `{lit['reason']}` \n\n"
-    await edit_or_send_as_file(oof, glist, client, "GbanList", "Gban-List")
-
-
