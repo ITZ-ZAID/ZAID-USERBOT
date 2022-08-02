@@ -83,12 +83,10 @@ async def filter_s(client: Client, message):
             return
         try:
             await message.chat.ban_member(user)
+            await message.reply_text(f"👮🏼 **Gbanned** user detected.")
         except ChatAdminRequired:
             print(f"can't remove gbanned user from chat: {message.chat.id}")
             return
-        await message.reply_text(
-            f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
-        )
     al_fil = await all_filters(int(message.chat.id))
     if not al_fil:
         return
