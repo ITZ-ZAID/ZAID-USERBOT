@@ -15,7 +15,7 @@ from handlers import devs_id
 from config import SUDO_USERS as AFS
 
 
-@Client.on_message(filters.command("gmute") & filters.me)
+@Client.on_message(filters.command("gmute", ["."]) & filters.me)
 async def gmute_him(client, message):
     g = await message.reply_text("PROCESSING")
     text_ = get_text(message)
@@ -47,7 +47,7 @@ async def gmute_him(client, message):
     await g.edit(gmu)
 
 
-@Client.on_message(filters.command("ungmute") & filters.me)
+@Client.on_message(filters.command("ungmute", ["."]) & filters.me)
 async def gmute_him(client, message):
     ug = await message.reply_text("PROCESSING")
     text_ = get_text(message)
@@ -74,14 +74,14 @@ async def gmute_him(client, message):
     await ug.edit(ugmu)
 
 
-@Client.on_message(filters.command("gban") & filters.me)
+@Client.on_message(filters.command("gban", ["."]) & filters.me)
 async def gbun_him(client, message):
     gbun = await message.reply_text("PROCESSING")
     text_ = get_text(message)
     user, reason = get_user(message, text_)
     failed = 0
     if not user:
-        await gbun.edit(engine.get_string("REPLY_TO_USER").format("gban"))
+        await gbun.edit("REPLY_TO_USER")
         return
     try:
         userz = await client.get_users(user)
@@ -120,7 +120,7 @@ async def gbun_him(client, message):
 
 
 
-@Client.on_message(filters.command("ungban") & filters.me)
+@Client.on_message(filters.command("ungban", ["."]) & filters.me)
 async def ungbun_him(client, message):
     ungbun = await message.reply_text("PROCESSING")
     text_ = get_text(message)
@@ -156,7 +156,7 @@ async def ungbun_him(client, message):
     ungbanned = f"**#Un_GBanned** \n**User :** [{userz.first_name}](tg://user?id={userz.id}) \n**Affected Chats :** `{chat_len-failed}`"
     await ungbun.edit(ungbanned)
 
-@Client.on_message(filters.command("gbanlist") & filters.me)
+@Client.on_message(filters.command("gbanlist", ["."]) & filters.me)
 async def give_glist(client, message):
     oof = "**#GBanList** \n\n"
     glist = await message.reply_text("PROCESSING")
