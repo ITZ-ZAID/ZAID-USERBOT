@@ -72,7 +72,8 @@ async def check_and_del(app: Client, message):
     message_id = message.message_id
     try:
         await app.delete_messages(message.chat.id, message_id)
-    except:
+    except Exception as e:
+        print(str(e))
         pass
 
 @Client.on_message(filters.group & filters.incoming)
@@ -86,5 +87,6 @@ async def check_and_del(app: Client, message):
         return
     try:
         await app.kick_chat_member(chat_id=message.chat.id, user_id=message.from_user.id)
-    except:
+    except Exception as e:
+        print(str(e))
         pass
