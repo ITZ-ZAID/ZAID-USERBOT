@@ -1,6 +1,7 @@
 import re
 
 from pyrogram import filters, Client
+from pyrogram.errors import FloodWait, ChatAdminRequired
 from main import LOG_GROUP as LOG_CHAT
 from helpers.pyrohelper import get_arg
 from helpers.mongo.filtersdb import (
@@ -81,12 +82,12 @@ async def filter_s(client: Client, message):
         if message.chat.type == "private":
             return
         try:
-            await message.chat.kick_member(int(user))
-        except BaseException:
+            await message.chat.ban_member(user)
+        except ChatAdminRequired:
+            print(f"can't remove gbanned user from chat: {message.chat.id}")
             return
-        await client.send_message(
-            message.chat.id,
-            f"**#GbanWatch** \n**Chat ID :** `{message.chat.id}` \n**User :** `{user}` \n**Reason :** `{await gban_info(user)}`",
+        await message.reply_text(
+            f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
         )
     al_fil = await all_filters(int(message.chat.id))
     if not al_fil:
