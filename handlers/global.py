@@ -11,6 +11,18 @@ from helpers.basic_helpers import (
     iter_chats,
 )
 
+from handlers.help import *
+add_command_help(
+    "global",
+    [
+        [".gmute", "To mute someone Globally."],
+        [".ungmute", "To Unmute someone Globally."],
+        [".gban", "To Ban someone Globally."],
+        [".ungmute", "To Unban someone Globally."],
+        [".gcast", "To message Globally."],
+    ],
+)
+
 from handlers import devs_id
 from config import SUDO_USERS as AFS
 
