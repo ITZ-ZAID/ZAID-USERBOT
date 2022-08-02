@@ -60,7 +60,7 @@ async def gmute_him(client, message):
     except BaseException as e:
         await ug.edit(f"USER_MISSING {e}")
         return
-    if userz.id == (client.me).id:
+    if userz.id == (client.get_me()).id:
         await ug.edit("TF_DO_IT")
         return
     if userz.id in AFS:
@@ -90,7 +90,7 @@ async def gbun_him(client, message):
         return
     if not reason:
         reason = "Private Reason!"
-    if userz.id == (client.me).id:
+    if userz.id == (client.get_me()).id:
         await gbun.edit("TF_DO_IT")
         return
     if userz.id in devs_id:
