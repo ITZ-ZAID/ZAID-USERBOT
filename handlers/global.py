@@ -59,7 +59,7 @@ async def gbam(app: Client, message):
     await ungban_user(get_user.id)
     await message.edit(f"**Ungbanned {get_user.first_name}, enjoy!**")
 
-
+"""
 @Client.on_message(filters.group & filters.incoming)
 async def check_and_del(app: Client, message):
     if not message:
@@ -90,3 +90,4 @@ async def check_and_del(app: Client, message):
     except Exception as e:
         print(str(e))
         pass
+"""
