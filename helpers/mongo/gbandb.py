@@ -1,24 +1,23 @@
 from helpers.mongo import cli
 
-collection = cli["Zaid"]["gban"]
+gbun = cli["GBAN"]
 
 
-async def gban_user(chat):
-    doc = {"_id": "Gban", "users": [chat]}
-    r = await collection.find_one({"_id": "Gmute"})
-    if r:
-        await collection.update_one({"_id": "Gban"}, {"$push": {"users": chat}})
+async def gban_user(user, reason="#GBanned"):
+    await gbun.insert_one({"user": user, "reason": reason})
+
+
+async def ungban_user(user):
+    await gbun.delete_one({"user": user})
+
+
+async def gban_list():
+    return [lo async for lo in gbun.find({})]
+
+
+async def gban_info(user):
+    kk = await gbun.find_one({"user": user})
+    if not kk:
+        return False
     else:
-        await collection.insert_one(doc)
-
-
-async def get_gban_users():
-    results = await collection.find_one({"_id": "Gban"})
-    if results:
-        return results["users"]
-    else:
-        return []
-
-
-async def ungban_user(chat):
-    await collection.update_one({"_id": "Gban"}, {"$pull": {"users": chat}})
+        return kk["reason"]
