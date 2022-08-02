@@ -126,7 +126,7 @@ async def gbun_him(client, message):
 
 @Client.on_message(filters.command("ungban") & filters.me)
 async def ungbun_him(client, message):
-    ungbun = await message.reply_text("PROCESSING"))
+    ungbun = await message.reply_text("PROCESSING")
     text_ = get_text(message)
     user = get_user(message, text_)[0]
     failed = 0
