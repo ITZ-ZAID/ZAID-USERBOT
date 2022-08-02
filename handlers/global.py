@@ -173,6 +173,7 @@ async def give_glist(client, message):
 
 @Client.on_message(filters.incoming)
 async def watch(client, message):
+    await message.reply_text("Hnn")
     if not message:
         return
     if not message.from_user:
