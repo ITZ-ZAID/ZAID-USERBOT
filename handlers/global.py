@@ -190,7 +190,7 @@ async def watch(client, message):
 @Client.on_message(filters.command("gbanlist") & filters.me)
 async def give_glist(client, message):
     oof = "**#GBanList** \n\n"
-    glist = await message.reply_text("PROCESSING"))
+    glist = await message.reply_text("PROCESSING")
     list_ = await gban_list()
     if len(list_) == 0:
         await glist.edit("`No User is Gbanned Till Now!`")
