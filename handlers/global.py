@@ -14,7 +14,7 @@ from helpers.basic_helpers import (
 from handlers import devs_id
 from config import SUDO_USERS as AFS
 
-
+"""
 @Client.on_message(filters.command("gmute", ["."]) & filters.me)
 async def gmute_him(client, message):
     g = await message.reply_text("PROCESSING")
@@ -45,7 +45,7 @@ async def gmute_him(client, message):
     await gmute(userz.id, reason)
     gmu = f"**#Gmutted** \n**User :** `{userz.id}` \n**Reason :** `{reason}`"
     await g.edit(gmu)
-
+"""
 
 @Client.on_message(filters.command("ungmute", ["."]) & filters.me)
 async def gmute_him(client, message):
@@ -102,20 +102,9 @@ async def gbun_him(client, message):
     if await gban_info(userz.id):
         await gbun.edit("`Re-Gban? Seriously? :/`")
         return
-    await gbun.edit("`Please, Wait Fectching Your Chats!`")
-    chat_dict = await iter_chats(client)
-    chat_len = len(chat_dict)
-    if not chat_dict:
-        gbun.edit("`You Have No Chats! So Sad`")
-        return
-    await gbun.edit("Gbanning Started")
-    for ujwal in chat_dict:
-        try:
-            await client.kick_chat_member(ujwal, int(userz.id))
-        except:
-            failed += 1
+    await gbun.edit("`Please, Wait Fectching Your Users Details!`")
     await gban_user(userz.id, reason)
-    gbanned = f"**#GBanned** \n**User :** [{userz.first_name}](tg://user?id={userz.id}) \n**Reason :** `{reason}` \n**Affected Chats :** `{chat_len-failed}`"
+    gbanned = f"**#GBanned** \n**User :** [{userz.first_name}](tg://user?id={userz.id}) \n**Reason :** `{reason}`"
     await gbun.edit(gbanned)
 
 
@@ -140,20 +129,9 @@ async def ungbun_him(client, message):
     if not await gban_info(userz.id):
         await ungbun.edit("`Un-Gban A Ungbanned User? Seriously? :/`")
         return
-    await ungbun.edit("`Please, Wait Fectching Your Chats!`")
-    chat_dict = await iter_chats(client)
-    chat_len = len(chat_dict)
-    if not chat_dict:
-        ungbun.edit("`You Have No Chats! So Sad`")
-        return
-    await ungbun.edit("`Starting Un-GBans Now!`")
-    for ujwal in chat_dict:
-        try:
-            await client.unban_chat_member(ujwal, int(userz.id))
-        except:
-            failed += 1
+    await ungbun.edit("`Please, Wait Fectching Your Users Details!`")
     await ungban_user(userz.id)
-    ungbanned = f"**#Un_GBanned** \n**User :** [{userz.first_name}](tg://user?id={userz.id}) \n**Affected Chats :** `{chat_len-failed}`"
+    ungbanned = f"**#Un_GBanned** \n**User :** [{userz.first_name}](tg://user?id={userz.id})"
     await ungbun.edit(ungbanned)
 
 @Client.on_message(filters.command("gbanlist", ["."]) & filters.me)
