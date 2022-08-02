@@ -70,6 +70,23 @@ async def filter_s(client: Client, message):
     is_m = False
     if not owo:
         return
+    user = message.from_user.id
+    if await is_gmuted(user):
+        try:
+            await message.delete()
+        except:
+            return
+    if await gban_info(user):
+        if message.chat.type == "private":
+            return
+        try:
+            await message.chat.kick_member(int(user))
+        except BaseException:
+            return
+        await client.send_message(
+            message.chat.id,
+            f"**#GbanWatch** \n**Chat ID :** `{message.chat.id}` \n**User :** `{user}` \n**Reason :** `{await gban_info(user)}`",
+        )
     al_fil = await all_filters(int(message.chat.id))
     if not al_fil:
         return
