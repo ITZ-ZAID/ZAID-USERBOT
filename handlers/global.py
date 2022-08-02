@@ -131,7 +131,7 @@ async def ungbun_him(client, message):
     user = get_user(message, text_)[0]
     failed = 0
     if not user:
-        await ungbun.edit(("Reply to a user")
+        await ungbun.edit("Reply to a user")
         return
     try:
         userz = await client.get_users(user)
