@@ -101,4 +101,4 @@ async def reply_pm(app: Client, message):
     await app.block_user(message.chat.id)
     USERS_AND_WARNS.update({user: 0})
     if LOG_GROUP:
-        await app.send_message(LOG_GROUP, "New Message 🏷️\n\nfrom:- {message.from_user.id}\n\nMessage:- {message.text}")
+        await app.send_message(LOG_GROUP, f"New Message 🏷️\n\nfrom:- {message.from_user.id}\n\nMessage:- {message.text}")
