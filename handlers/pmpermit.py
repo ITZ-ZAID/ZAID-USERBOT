@@ -4,7 +4,7 @@ import asyncio
 from pyrogram.methods import messages
 from helpers.pyrohelper import get_arg, denied_users
 import helpers.mongo.pmpermitdb as Zaid
-from config import LOG_GROUP
+from config import LOG_CHAT as LOG_GROUP
 FLOOD_CTRL = 0
 ALLOWED = []
 USERS_AND_WARNS = {}
