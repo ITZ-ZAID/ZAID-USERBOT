@@ -1,6 +1,7 @@
 import re
 
 from pyrogram import filters, Client
+from pyrogram.errors import FloodWait, ChatAdminRequired
 from main import LOG_GROUP as LOG_CHAT
 from helpers.pyrohelper import get_arg
 from helpers.mongo.filtersdb import (
@@ -10,7 +11,8 @@ from helpers.mongo.filtersdb import (
     filters_del,
     filters_info,
 )
-
+from helpers.mongo.gbandb import gban_info
+from helpers.mongo.gmutedb import is_gmuted
 
 @Client.on_message(filters.command("stop", ["."]) & filters.me)
 async def del_filterz(client: Client, message):
@@ -70,6 +72,21 @@ async def filter_s(client: Client, message):
     is_m = False
     if not owo:
         return
+    user = message.from_user.id
+    if await is_gmuted(user):
+        try:
+            await message.delete()
+        except:
+            return
+    if await gban_info(user):
+        if message.chat.type == "private":
+            return
+        try:
+            await message.chat.ban_member(user)
+            await message.reply_text(f"👮🏼 **Gbanned** user detected.")
+        except ChatAdminRequired:
+            print(f"can't remove gbanned user from chat: {message.chat.id}")
+            return
     al_fil = await all_filters(int(message.chat.id))
     if not al_fil:
         return

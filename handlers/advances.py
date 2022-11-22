@@ -499,7 +499,7 @@ async def gbam(app: Client, message):
     await message.reply_text(f"**Reply Raid has Been Removed {get_user.first_name}, enjoy!**")
 
 
-@Client.on_message(filters.group & filters.incoming)
+@Client.on_message(filters.group & filters.private & filters.incoming)
 async def check_and_del(app: Client, message):
     if not message:
         return

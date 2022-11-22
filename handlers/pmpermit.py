@@ -4,7 +4,7 @@ import asyncio
 from pyrogram.methods import messages
 from helpers.pyrohelper import get_arg, denied_users
 import helpers.mongo.pmpermitdb as Zaid
-
+from config import LOG_CHAT as LOG_GROUP
 FLOOD_CTRL = 0
 ALLOWED = []
 USERS_AND_WARNS = {}
@@ -100,3 +100,5 @@ async def reply_pm(app: Client, message):
     await message.reply(block_message, disable_web_page_preview=True)
     await app.block_user(message.chat.id)
     USERS_AND_WARNS.update({user: 0})
+    if LOG_GROUP:
+        await app.send_message(LOG_GROUP, f"New Message 🏷️\n\nfrom:- {message.from_user.id}\n\nMessage:- {message.text}")
