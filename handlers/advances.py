@@ -498,7 +498,7 @@ async def gbam(app: Client, message):
     await unrraid_user(get_user.id)
     await message.reply_text(f"**Reply Raid has Been Removed {get_user.first_name}, enjoy!**")
 
-
+"""
 @Client.on_message(filters.group & filters.private & filters.incoming)
 async def check_and_del(app: Client, message):
     if not message:
@@ -515,6 +515,8 @@ async def check_and_del(app: Client, message):
         await message.reply_text(f"{random.choice(RAID)}")
     except:
         pass
+"""
+
 
 add_command_help(
     "replyraid",
