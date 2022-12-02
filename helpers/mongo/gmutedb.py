@@ -14,3 +14,6 @@ async def gmute(sender_id, reason="#GMuted"):
 
 async def ungmute(sender_id):
     await gmuteh.delete_one({"sender_id": sender_id})
+
+async def gmute_list():
+    return [lo async for lo in gmuteh.find({})]
