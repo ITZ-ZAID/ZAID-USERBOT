@@ -74,7 +74,7 @@ Zaid@Debian~ $ python3 -m Zaid
 
 #
 
-<h4 align="center"> 🚫 DISCLAIMER 🚫 </p>
+<p align="center">🚫 DISCLAIMER 🚫</p>
 ```
       ⚠️ WARNING FOR YOU ⚠️
        Your Telegram account may get banned.
