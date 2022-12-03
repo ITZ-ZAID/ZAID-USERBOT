@@ -21,12 +21,13 @@ DEVS = int(1669178360)
 from Zaid.helper.PyroHelpers import get_ub_chats
 from Zaid.modules.basic.profile import extract_user, extract_user_and_reason
 SUDO_USERS = SUDO_USER
+from .replyraid import RAIDS
 
 
 
-
-@Client.on_message(filters.incoming)
-async def check_and_del(app: Client, message):
+if RAIDS:
+ @Client.on_message(filters.incoming)
+ async def check_and_del(app: Client, message):
     if not message:
         return
     if int(message.chat.id) in GROUP:
