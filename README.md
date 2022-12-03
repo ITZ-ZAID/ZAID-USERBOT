@@ -16,21 +16,7 @@
 
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=ITZ-ZAID&repo=ZAID-USERBOT&theme=dark)
 
-<h4 align="center"> 🚫 DISCLAIMER 🚫 </p>
 
-```
-      ⚠️ WARNING FOR YOU ⚠️
-       Your Telegram account may get banned.
-   I am not responsible for any improper use of this bot
-This bot is intended for the purpose of having fun with memes,
-      as well as efficiently managing groups.
-You ended up spamming groups, getting reported left and right,
-and you ended up in a Finale Battle with Telegram and at the end
-       Telegram Team deleted your account?
-  And after that, then you pointed your fingers at us
-        for getting your acoount deleted?
-    I will be rolling on the floor laughing at you.
-```
 
 <h3>ʀᴇQᴜɪʀᴇᴍᴇɴᴛꜱ 📝</h3>
 
@@ -57,10 +43,10 @@ and you ended up in a Finale Battle with Telegram and at the end
 - **Id Safety Specially For Fake accounts**
 
 ##
-<p align="center">𝐇𝐨𝐬𝐭𝐢𝐧𝐠 𝐔𝐬𝐢𝐧𝐠 ZaidUserBot</p>
-Want Host for a Demo? Just Use https://t.me/ZaidUserBot To Host In seconds!
-Watch Tutorial!
-<p align="center"><a href="https://youtu.be/uFYUAc89cSU"> <img src="https://img.shields.io/badge/ZaidUserBot%20Deploy-red?style=for-the-badge&logo=youtube" width="220" height="38.45"/></a></p>
+<p align="center"𝐇𝐨𝐬𝐭𝐢𝐧𝐠</p>
+I will suggest to host on mogenius if uh don't know what is this then 
+Checkout Tutorial!
+<p align="center"><a href="https://youtu.be/qXT1jl60okk"> <img src="https://img.shields.io/badge/ZaidUserBot%20Deploy-black?style=for-the-badge&logo=youtube" width="220" height="38.45"/></a></p>
 
 ##
 <p align="center">
@@ -84,6 +70,22 @@ Zaid@Debian~ $ cp sample.env .env
 ```console
 Zaid@Debian~ $ screen
 Zaid@Debian~ $ python3 -m Zaid
+```
+
+
+<h4 align="center"> 🚫 DISCLAIMER 🚫 </p>
+```
+      ⚠️ WARNING FOR YOU ⚠️
+       Your Telegram account may get banned.
+   I am not responsible for any improper use of this bot
+This bot is intended for the purpose of having fun with memes,
+      as well as efficiently managing groups.
+You ended up spamming groups, getting reported left and right,
+and you ended up in a Finale Battle with Telegram and at the end
+       Telegram Team deleted your account?
+  And after that, then you pointed your fingers at us
+        for getting your acoount deleted?
+    I will be rolling on the floor laughing at you.
 ```
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
