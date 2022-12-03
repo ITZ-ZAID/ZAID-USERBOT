@@ -85,7 +85,7 @@ Zaid@Debian~ $ cp sample.env .env
 
 ```console
 Zaid@Debian~ $ screen
-Zaid@Debian~ $ python3 main.py
+Zaid@Debian~ $ python3 -m Zaid
 ```
 
 ### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
