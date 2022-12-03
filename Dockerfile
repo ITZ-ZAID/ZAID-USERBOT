@@ -8,10 +8,8 @@ ARG USER=root
 USER $USER
 RUN python3 -m venv venv
 WORKDIR /app
-COPY requirements.txt ./requirements.txt
+COPY . .
 RUN pip3 install -r requirements.txt
-COPY start.sh start.sh
-COPY app.py app.py
 EXPOSE 5000
 RUN chmod +x /app/start.sh
 ENTRYPOINT ["./start.sh"]
