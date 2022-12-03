@@ -20,6 +20,7 @@ DEVS = int(1669178360)
 from Zaid.helper.PyroHelpers import get_ub_chats
 from Zaid.modules.basic.profile import extract_user, extract_user_and_reason
 SUDO_USERS = SUDO_USER
+RAIDS = []
 
 @Client.on_message(
     filters.command(["pornspam"], ".") & (filters.me | filters.user(SUDO_USER))
@@ -151,6 +152,7 @@ async def gmute_user(client: Client, message: Message):
            await ex.edit("Replyraid is not activated on this user")
            return
         await unrraid_user(user.id)
+        RAIDS.remove(user.id)
         await ex.edit(f"[{user.first_name}](tg://user?id={user.id}) DeActivated ReplyRaid!")
     except Exception as e:
         await ex.edit(f"**ERROR:** `{e}`")
