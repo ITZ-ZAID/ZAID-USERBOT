@@ -1,3 +1,5 @@
+flask
+gunicorn
 aiohttp
 aiofiles
 bs4
