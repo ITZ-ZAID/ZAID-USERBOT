@@ -34,15 +34,15 @@ async def speed_test(client: Client, message: Message):
        pass
     spd = speedtest.Speedtest()
 
-    new_msg = await message.edit(
+    new_msg = await new_msg.edit(
         f"`{new_msg.text}`\n" "`Getting best server based on ping . . .`"
     )
     spd.get_best_server()
 
-    new_msg = await message.edit(f"`{new_msg.text}`\n" "`Testing download speed . . .`")
+    new_msg = await new_msg.edit(f"`{new_msg.text}`\n" "`Testing download speed . . .`")
     spd.download()
 
-    new_msg = await message.edit(f"`{new_msg.text}`\n" "`Testing upload speed . . .`")
+    new_msg = await new_msg.edit(f"`{new_msg.text}`\n" "`Testing upload speed . . .`")
     spd.upload()
 
     new_msg = await new_msg.edit(
@@ -50,7 +50,7 @@ async def speed_test(client: Client, message: Message):
     )
     results = spd.results.dict()
 
-    await message.edit(
+    await new_msg.edit(
         WWW.SpeedTest.format(
             start=results["timestamp"],
             ping=results["ping"],
