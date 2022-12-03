@@ -75,7 +75,8 @@ Zaid@Debian~ $ python3 -m Zaid
 #
 
 <p align="center">🚫 DISCLAIMER 🚫</p>
-```
+
+```console
       ⚠️ WARNING FOR YOU ⚠️
        Your Telegram account may get banned.
    I am not responsible for any improper use of this bot
