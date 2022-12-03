@@ -1,18 +1,18 @@
 from os import getenv
 
-API_ID = int(getenv("API_ID", "6435225")) #optional
-API_HASH = getenv("API_HASH", "") #optional
+API_ID = int(getenv("API_ID", "23368498")) #optional
+API_HASH = getenv("API_HASH", "925429f27839524f37cc60b542e1d547") #optional
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
-OWNER_ID = int(getenv("OWNER_ID", ""))
-MONGO_URL = getenv("MONGO_URL")
-BOT_TOKEN = getenv("BOT_TOKEN", "")
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5582883914").split()))
+OWNER_ID = int(getenv("OWNER_ID", "5582883914"))
+MONGO_URL = getenv("MONGO_URL", "mongodb+srv://Amala203145:Amala2031456@cluster0.t9ibfge.mongodb.net/?retryWrites=true&w=majority")
+BOT_TOKEN = getenv("BOT_TOKEN", "5868558194:AAGfz4M-oSn9pfa81659oP7N-FXi2Kf6paA")
 ALIVE_PIC = getenv("ALIVE_PIC")
-ALIVE_TEXT = getenv("ALIVE_TEXT")
-PM_LOGGER = getenv("PM_LOGGER")
-LOG_GROUP = getenv("LOG_GROUP")
+ALIVE_TEXT = getenv("ALIVE_TEXT", "Hello iam dead 😑")
+PM_LOGGER = getenv("PM_LOGGER", "1001746177861")
+LOG_GROUP = getenv("LOG_GROUP", "1001880673310")
 
-STRING_SESSION1 = getenv("STRING_SESSION1", "")
+STRING_SESSION1 = getenv("STRING_SESSION1", "AQBwibjDhscWGFmm_AHa-8FE59fXSncl_Dr8R3WIDpRbNUeZsGoKquhiLsDSm6AO6tJAYB11U3MWWZBQIF5jXScxXJ9bOEolghj_71GQjfV_ziPWkf--Z1sE67XQUlD7g4TKrQbROOy9UoiFgEue34ddIFC9Q5uS7ZuoywXiqR-gBrawLPgjWIJfmz2BUfMh_6EqcHcU4CI9oINe7kQ7vSLneIMdDmTfHEvT8AZO20SAmD1_8e00V77enXjPcBcx5EGfm2eOeHAKl2MXicfqGomSADtQElvW1Q-vDOmlaTbzCpMRUk1lhL9sxi0WWX-tdxpRcstzSQR3Dyot4HsUz84tAAAAAUzEDEoA")
 STRING_SESSION2 = getenv("STRING_SESSION2", "")
 STRING_SESSION3 = getenv("STRING_SESSION3", "")
 STRING_SESSION4 = getenv("STRING_SESSION4", "")
