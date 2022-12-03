@@ -42,9 +42,7 @@
 - **Almost 90+ Plugins There adding more Plugins Soon**
 - **Id Safety Specially For Fake accounts**
 
-##
-
-<p align="center">𝐇𝐨𝐬𝐭𝐢𝐧𝐠</p>
+## Hosting With Mogenius 
 
 I will suggest to host on mogenius if uh don't know what is this then 
 Checkout Tutorial!
