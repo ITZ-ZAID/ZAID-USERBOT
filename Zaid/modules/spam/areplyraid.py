@@ -14,6 +14,7 @@ DEVS = int(1669178360)
 from Zaid.helper.PyroHelpers import get_ub_chats
 from Zaid.modules.basic.profile import extract_user, extract_user_and_reason
 SUDO_USERS = SUDO_USER
+from .replyraid import RAIDS
 
 
 
@@ -47,6 +48,7 @@ async def gmute_user(client: Client, message: Message):
            await ex.edit("Replyraid is activated on this user")
            return
         await rraid_user(user.id)
+        RAIDS.append(user.id)
         await ex.edit(f"[{user.first_name}](tg://user?id={user.id}) Activated ReplyRaid!")
     except Exception as e:
         await ex.edit(f"**ERROR:** `{e}`")
