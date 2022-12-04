@@ -264,7 +264,7 @@ async def updatees(client: Client, message: Message):
     if await is_heroku():
         if HAPP is None:
             return await message.edit_text(
-                "Pastikan HEROKU_API_KEY dan HEROKU_APP_NAME anda dikonfigurasi dengan benar di config vars heroku",
+                "Make sure your HEROKU_API_KEY and HEROKU_APP_NAME are configured correctly in heroku config vars",
             )
     response = await message.edit_text("Checking for available updates...")
     try:
