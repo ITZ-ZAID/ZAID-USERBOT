@@ -35,7 +35,7 @@
 
 ## Deploy With Scalingo 
 
-Note: This Code Based On Telethon So You need [Telethon String Session](https://telethon.netlify.app/) And A bot token from @botfather Or Before hosting uh need to fill all config
+Note: This Code Based On Pyrogram So You need [Pyrogram v2 String Session](https://replit.com/@Itz-zaid/pyrogram) And A bot token from @botfather Or Before hosting uh need to fill all config
 
 
 <p align="center"><a href="https://my.scalingo.com/deploy?template=https://github.com/ITZ-ZAID/Zaid-UserBot"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
