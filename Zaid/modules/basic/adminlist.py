@@ -73,14 +73,14 @@ async def adminlist(client: Client, message: Message):
 
 @Client.on_message(filters.command(["kickdel", "zombies"], ".") & filters.me)
 async def kickdel_cmd(client: Client, message: Message):
-    Man = await edit_or_reply(message, "<b>Kicking deleted accounts...</b>")
+    ex = await edit_or_reply(message, "<b>Kicking deleted accounts...</b>")
     # noinspection PyTypeChecker
     values = [
         await message.chat.ban_member(user.user.id, int(time()) + 31)
-        for member in await message.chat.get_members()
+        for member in (await message.chat.get_members())
         if member.user.is_deleted
     ]
-    await Man.edit(f"<b>Successfully kicked {len(values)} deleted account(s)</b>")
+    await ex.edit(f"<b>Successfully kicked {len(values)} deleted account(s)</b>")
 
 
 @Client.on_message(
