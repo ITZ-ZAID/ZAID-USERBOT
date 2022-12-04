@@ -132,7 +132,7 @@ async def report_admin(client: Client, message: Message):
         )
 
 
-@Client.on_message(filters.me & filters.command(["everyone", "tagall"], "."))
+@Client.on_message(filters.me & filters.command(["everyone", "mentionall"], "."))
 async def tag_all_users(client: Client, message: Message):
     await message.delete()
     if len(message.text.split()) >= 2:
@@ -195,7 +195,7 @@ add_command_help(
         [f".admins", "Get chats Admins list."],
         [f".kickdel or .zombies", "To Kick deleted Accounts."],
         [
-            f".everyone `or` .tagall",
+            f".everyone `or` .mentionall",
             "to mention Everyone ",
         ],
         [
