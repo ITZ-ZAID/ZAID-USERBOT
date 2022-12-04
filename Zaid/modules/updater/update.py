@@ -263,11 +263,10 @@ async def upstream(client: Client, message: Message):
 async def updatees(client: Client, message: Message):
     if await is_heroku():
         if HAPP is None:
-            return await edit_or_reply(
-                message,
+            return await message.edit_text(
                 "Pastikan HEROKU_API_KEY dan HEROKU_APP_NAME anda dikonfigurasi dengan benar di config vars heroku",
             )
-    response = await edit_or_reply(message, "Checking for available updates...")
+    response = await message.edit_text("Checking for available updates...")
     try:
         repo = Repo()
     except GitCommandError:
