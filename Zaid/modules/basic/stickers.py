@@ -452,7 +452,7 @@ async def cb_sticker(client: Client, message: Message):
 async def tinying(client: Client, message: Message):
     reply = message.reply_to_message
     if not (reply and (reply.media)):
-        return await message.edit_text("**Silahkan Balas Ke Pesan Sticker!**")
+        return await message.edit_text("**Please Reply To Sticker Message!**")
     tex = await message.edit_text("`Processing . . .`")
     ik = await client.download_media(reply)
     im1 = Image.open("cache/blank.png")
