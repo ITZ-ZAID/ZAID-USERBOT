@@ -33,6 +33,13 @@
 - **Almost 90+ Plugins There adding more Plugins Soon**
 - **Id Safety Specially For Fake accounts**
 
+## Deploy With Scalingo 
+
+Note: This Code Based On Telethon So You need [Telethon String Session](https://telethon.netlify.app/) And A bot token from @botfather Or Before hosting uh need to fill all config
+
+
+<p align="center"><a href="https://my.scalingo.com/deploy?template=https://github.com/ITZ-ZAID/Zaid-UserBot"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
+
 ## Hosting With Mogenius 
 
 I will suggest to host on mogenius if uh don't know what is this then 
