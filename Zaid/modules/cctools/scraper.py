@@ -44,7 +44,7 @@ async def cc_scraper(c, m):
     await e3.edit(f"`Scrapping from {_chat}. \nHold your Horses...`")
     _get = lambda m: getattr(m, "text", 0) or getattr(m, "caption", 0)
     _getcc = lambda m: findall("\d{16}\|\d{2,4}\|\d{2,4}\|\d{2,4}", m)
-    async for x in c.get_chat_history(chat, limit=limit):
+    async for x in c.get_chat_history(_chat, limit=limit):
         text = _get(x)
         if text and _getcc(text):
             txt += "\n".join(cc) + "\n"
