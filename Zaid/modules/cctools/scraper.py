@@ -47,7 +47,7 @@ async def cc_scraper(c, m):
     async for x in c.get_chat_history(_chat, limit=limit):
         text = _get(x)
         if text and _getcc(text):
-            txt += "\n".join(cc) + "\n"
+            txt += "\n".join(text) + "\n"
         else:
             skp += 1
  
