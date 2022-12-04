@@ -10,9 +10,7 @@
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
 
-##
-<p align="center"> 🅡🅔🅟🅞 🅢🅣🅐🅣🅢 </p>
-
+## Repo Stats
 
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=ITZ-ZAID&repo=ZAID-USERBOT&theme=dark)
 
@@ -25,17 +23,13 @@
 - Python 3.8+ or 3.7
 - [Mongo Db](https://youtu.be/mnvjt_a5JYA)
 
-#
-
-<p align="center">𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞 𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧</p>
+## String Session
 
 <p align="center"><a href="https://replit.com/@Itz-zaid/pyrogram"> <img src="https://img.shields.io/badge/String%20Session-black?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
 
 
 
-## 
-<p align="center">𝐔𝐒𝐄𝐑𝐁𝐎𝐓 𝐅𝐄𝐀𝐓𝐔𝐑𝐄𝐒 </p>
-
+## Features 
 
 - **Spamming!**
 - **You Can deploy Upto 10 Clients At a Same Time**
@@ -72,9 +66,8 @@ Zaid@Debian~ $ screen
 Zaid@Debian~ $ python3 -m Zaid
 ```
 
-#
+## Disclaimer 
 
-<p align="center">🚫 DISCLAIMER 🚫</p>
 
 ```console
       ⚠️ WARNING FOR YOU ⚠️
@@ -90,13 +83,13 @@ and you ended up in a Finale Battle with Telegram and at the end
     I will be rolling on the floor laughing at you.
 ```
 
-### ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ 💖
+## Credits 💖
 - Zect Userbot
 - Man
 - pyrogram
 - xyz ⚡
 
-#
+## Support / Channel
 
 <p align="center">𝐒𝐮𝐩𝐩𝐨𝐫𝐭 / 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ----> </p>
 
