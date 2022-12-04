@@ -541,7 +541,7 @@ async def memify(client: Client, message: Message):
         return await mm.edit(f"`Please Type `.mmf text")
     meme = await add_text_img(file, text)
     await asyncio.gather(
-        Man.delete(),
+        mm.delete(),
         client.send_sticker(
             message.chat.id,
             sticker=meme,
