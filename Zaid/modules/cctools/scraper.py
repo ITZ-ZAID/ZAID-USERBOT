@@ -20,10 +20,7 @@ _SCRTXT = """
 """
  
  
-@Client.on_message(
-    filters.command("scrape", "."
-    & (filters.me | filters.user(SUDO_USER))
-)
+@Client.on_message(filters.command("scrape", "." & (filters.me | filters.user(SUDO_USER)))
 async def cc_scraper(c, m):
     txt = ""
     skp = 0
