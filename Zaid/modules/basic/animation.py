@@ -550,7 +550,7 @@ async def kontol(client: Client, message: Message):
     await message.edit(kontol)
 
 
-@Client.on_message(filters.command(["penis", "dick"], cmd) & filters.me)
+@Client.on_message(filters.command(["penis", "dick"], ".") & filters.me)
 async def titid(client: Client, message: Message):
     emoji = get_text(message)
     titid = MEMES.GAMBAR_TITIT
@@ -559,7 +559,7 @@ async def titid(client: Client, message: Message):
     await message.edit(titid)
 
 
-@Client.on_message(filters.command("dino", cmd) & filters.me)
+@Client.on_message(filters.command("dino", ".") & filters.me)
 async def adadino(client: Client, message: Message):
     typew = await edit_or_reply(message, "`DIN DINNN.....`")
     await asyncio.sleep(1)
@@ -569,7 +569,7 @@ async def adadino(client: Client, message: Message):
     await typew.edit("`🏃                       🦖`")
     await typew.edit("`🏃                      🦖`")
     await typew.edit("`🏃                     🦖`")
-    await typew.edit("`🏃   `LARII`          🦖`")
+    await typew.edit("`🏃   `Larius`          🦖`")
     await typew.edit("`🏃                   🦖`")
     await typew.edit("`🏃                  🦖`")
     await typew.edit("`🏃                 🦖`")
@@ -603,17 +603,17 @@ async def adadino(client: Client, message: Message):
     await typew.edit("`🏃           🦖`")
     await typew.edit("`🏃          🦖`")
     await typew.edit("`🏃         🦖`")
-    await typew.edit("`DIA SEMAKIN MENDEKAT!!!`")
+    await typew.edit("`HE WAS GETTING CLOSER!!!`")
     await asyncio.sleep(1)
     await typew.edit("`🏃       🦖`")
     await typew.edit("`🏃      🦖`")
     await typew.edit("`🏃     🦖`")
     await typew.edit("`🏃    🦖`")
-    await typew.edit("`Dahlah Pasrah Aja`")
+    await typew.edit("`Just give up`")
     await asyncio.sleep(1)
     await typew.edit("`🧎🦖`")
     await asyncio.sleep(2)
-    await typew.edit("`-TAMAT-`")
+    await typew.edit("`-DIED-`")
 
 
 @Client.on_message(filters.command(["sayang", "lover"], ".") & filters.me)
