@@ -4,8 +4,10 @@ aiohttp
 aiofiles
 bs4
 googlesearch-python== 1.0.1
+gitpython
 humanize
 httpx
+heroku3
 requests
 motor==3.0.0
 opencv-python-headless
