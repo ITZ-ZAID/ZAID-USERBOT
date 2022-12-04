@@ -171,7 +171,7 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
-@Client.on_message(filters.command(["tikel", "kang"], ".") & filters.me)
+@Client.on_message(filters.command(["tikel", "kang", "steal"], ".") & filters.me)
 async def kang(client: Client, message: Message):
     user = client.me
     replied = message.reply_to_message
@@ -528,7 +528,7 @@ async def tinying(client: Client, message: Message):
 @Client.on_message(filters.command(["mmf", "memify"], ".") & filters.me)
 async def memify(client: Client, message: Message):
     if not message.reply_to_message_id:
-        await edit_or_reply(message, "**Balas ke pesan foto atau sticker!**")
+        await message.edit_text("**Plz reply to an sticker!**")
         return
     reply_message = message.reply_to_message
     if not reply_message.media:
