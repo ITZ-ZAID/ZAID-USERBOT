@@ -315,7 +315,7 @@ async def updatees(client: Client, message: Message):
 add_command_help(
     "update",
     [
-        ["update", "Untuk melihat list pembaruan terbaru dari PyroMan-Userbot."],
-        ["update deploy", "Untuk mengupdate userbot."],
+        ["update", "To see a list of the latest updates from Zaid-Userbot."],
+        ["update deploy", "To update userbot."],
     ],
 )
