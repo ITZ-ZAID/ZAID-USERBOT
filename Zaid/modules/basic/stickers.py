@@ -514,7 +514,7 @@ async def tinying(client: Client, message: Message):
         file = "o.webp"
         os.remove("k.png")
     await asyncio.gather(
-        Man.delete(),
+        tex.delete(),
         client.send_sticker(
             message.chat.id,
             sticker=file,
