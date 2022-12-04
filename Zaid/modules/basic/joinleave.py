@@ -12,7 +12,7 @@ async def join(client: Client, message: Message):
     g = await message.reply_text("`Processing...`")
     try:
         await client.join_chat(tex)
-        await xxnx.edit(f"**Successfully Joined Chat ID** `{tex}`")
+        await g.edit(f"**Successfully Joined Chat ID** `{tex}`")
     except Exception as ex:
         await g.edit(f"**ERROR:** \n\n{str(ex)}")
 
@@ -21,13 +21,13 @@ async def join(client: Client, message: Message):
     filters.command(["leave"], ".") & (filters.me | filters.user(SUDO_USER))
 )
 async def leave(client: Client, message: Message):
-    Man = message.command[1] if len(message.command) > 1 else message.chat.id
-    xxnx = await message.reply_text("`Processing...`")
+    xd = message.command[1] if len(message.command) > 1 else message.chat.id
+    xv = await message.reply_text("`Processing...`")
     try:
-        await xxnx.edit_text(f"{client.me.first_name} has left this group, bye!!")
-        await client.leave_chat(Man)
+        await xv.edit_text(f"{client.me.first_name} has left this group, bye!!")
+        await client.leave_chat(xd)
     except Exception as ex:
-        await xxnx.edit_text(f"**ERROR:** \n\n{str(ex)}")
+        await xv.edit_text(f"**ERROR:** \n\n{str(ex)}")
 
 
 @Client.on_message(
