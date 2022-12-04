@@ -7,7 +7,7 @@ from time import time
 import aiohttp
 import requests
 import asyncio
-import os
+from os import getenv
 import shlex
 import textwrap
 from typing import Tuple
@@ -23,8 +23,9 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import GIT_TOKEN, HEROKU_API_KEY, HEROKU_APP_NAME, REPO_URL, BRANCH
-
+from config import GIT_TOKEN, REPO_URL, BRANCH
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
 from Zaid.modules.help import add_command_help
 HAPP = None
