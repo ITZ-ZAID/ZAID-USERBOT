@@ -79,7 +79,11 @@ if GIT_TOKEN:
     GIT_USERNAME = REPO_URL.split("com/")[1].split("/")[0]
     TEMP_REPO = REPO_URL.split("https://")[1]
     UPSTREAM_REPO = f"https://{GIT_USERNAME}:{GIT_TOKEN}@{TEMP_REPO}"
-UPSTREAM_REPO_URL = UPSTREAM_REPO
+if UPSTREAM_REPO:
+   UPSTREAM_REPO_URL = UPSTREAM_REPO
+else:
+   UPSTREAM_REPO_URL = REPO_URL
+
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
 )
