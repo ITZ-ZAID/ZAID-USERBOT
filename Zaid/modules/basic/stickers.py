@@ -46,7 +46,7 @@ async def add_text_img(image_path, text):
     img_info = img.info
     image_width, image_height = img.size
     font = ImageFont.truetype(
-        font="ProjectMan/resources/default.ttf",
+        font="cache/default.ttf",
         size=int(image_height * font_size) // 100,
     )
     draw = ImageDraw.Draw(img)
@@ -171,7 +171,7 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
-@Client.on_message(filters.command(["tikel", "kang"], ".") & filters.me)
+@Client.on_message(filters.command(["tikel", "kang", "steal"], ".") & filters.me)
 async def kang(client: Client, message: Message):
     user = client.me
     replied = message.reply_to_message
@@ -452,7 +452,7 @@ async def cb_sticker(client: Client, message: Message):
 async def tinying(client: Client, message: Message):
     reply = message.reply_to_message
     if not (reply and (reply.media)):
-        return await message.edit_text("**Silahkan Balas Ke Pesan Sticker!**")
+        return await message.edit_text("**Please Reply To Sticker Message!**")
     tex = await message.edit_text("`Processing . . .`")
     ik = await client.download_media(reply)
     im1 = Image.open("cache/blank.png")
@@ -514,7 +514,7 @@ async def tinying(client: Client, message: Message):
         file = "o.webp"
         os.remove("k.png")
     await asyncio.gather(
-        Man.delete(),
+        tex.delete(),
         client.send_sticker(
             message.chat.id,
             sticker=file,
@@ -528,7 +528,7 @@ async def tinying(client: Client, message: Message):
 @Client.on_message(filters.command(["mmf", "memify"], ".") & filters.me)
 async def memify(client: Client, message: Message):
     if not message.reply_to_message_id:
-        await edit_or_reply(message, "**Balas ke pesan foto atau sticker!**")
+        await message.edit_text("**Plz reply to an sticker!**")
         return
     reply_message = message.reply_to_message
     if not reply_message.media:
@@ -541,7 +541,7 @@ async def memify(client: Client, message: Message):
         return await mm.edit(f"`Please Type `.mmf text")
     meme = await add_text_img(file, text)
     await asyncio.gather(
-        Man.delete(),
+        mm.delete(),
         client.send_sticker(
             message.chat.id,
             sticker=meme,
