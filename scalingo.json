@@ -1,0 +1,19 @@
+{
+    "name": "Zaid Userbot",
+    "description": "An first Telegram Userbot with multi Clients for Spamming or Mass.",
+    "keywords": ["telegram" "userbot", "Zaid", "pyrogram"],
+    "repository": "https://github.com/ITZ-ZAID/ZAID-USERBOT",
+  "stack": "container",
+    "env": {
+        "STRING_SESSION1": {
+            "description": "fill with the pyrogram session string from https://replit.com/@Itz-zaid/pyrogram",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "fill with your bot token get from @BotFather on telegram",
+            "required": true,
+            "value": ""
+        }
+
+    }
+  }
