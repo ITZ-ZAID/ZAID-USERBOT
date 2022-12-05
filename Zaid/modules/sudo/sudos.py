@@ -46,9 +46,40 @@ async def gmute_user(client: Client, message: Message):
 
     try:
         if user.id in SUDO_USER:
-            return await ex.edit("`User already gmuted`")
+            return await ex.edit("`User already in sudo`")
         SUDO_USER.append(user.id)
         await ex.edit(f"[{user.first_name}](tg://user?id={user.id}) Added To Sudo Users!")
+    
+    except Exception as e:
+        await ex.edit(f"**ERROR:** `{e}`")
+        return
+
+
+@Client.on_message(filters.command("rmsudo", ".") & filters.user(OWNER_ID))
+async def gmute_user(client: Client, message: Message):
+    args = await extract_user(message)
+    reply = message.reply_to_message
+    ex = await message.reply_text("`Processing...`")
+    if args:
+        try:
+            user = await client.get_users(args)
+        except Exception:
+            await ex.edit(f"`Please specify a valid user!`")
+            return
+    elif reply:
+        user_id = reply.from_user.id
+        user = await client.get_users(user_id)
+    else:
+        await ex.edit(f"`Please specify a valid user!`")
+        return
+    if user.id == client.me.id:
+        return await ex.edit("**Okay Sure.. 🐽**")
+
+    try:
+        if user.id in SUDO_USER:
+            return await ex.edit("`User is not a part of sudo`")
+        SUDO_USER.remove(user.id)
+        await ex.edit(f"[{user.first_name}](tg://user?id={user.id}) Removed To Sudo Users!")
     
     except Exception as e:
         await ex.edit(f"**ERROR:** `{e}`")
