@@ -15,7 +15,7 @@ pyrogram
 pymongo
 pymediainfo
 prettytable
-py-trans
+git+https://github.com/Itz-fork/py-trans.git
 reportlab
 svglib
 speedtest-cli==2.1.3
