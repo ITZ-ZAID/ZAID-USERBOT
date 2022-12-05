@@ -9,7 +9,7 @@ from pyrogram import filters, Client
 
 from Zaid import SUDO_USER
 from Zaid.helper.basic import eor
-from .help import add_command_help
+from Zaid.modules.help import add_command_help
 
 
 __XOR = []
