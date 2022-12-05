@@ -28,7 +28,7 @@ async def gbanlist(client: Client, message: Message):
 async def gmute_user(client: Client, message: Message):
     args = await extract_user(message)
     reply = message.reply_to_message
-    ex = await message.edit_text("`Processing...`")
+    ex = await message.reply_text("`Processing...`")
     if args:
         try:
             user = await client.get_users(args)
