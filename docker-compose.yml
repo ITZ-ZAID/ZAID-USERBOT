@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  web:
+    labels:
+      shipyard.route: '/'
+      shipyard.init: 'python manage.py db upgrade'
+      shipyard.route.rewrite: 'true'
+      shipyard.cloudsql.sidecar: 'true'
+    build:
+      context: '.'
+      dockerfile: 'docker/Dockerfile'
+    env_file:
+      - environments/local.env
+    environment:
+      DEV: ${DEV}
+    deploy:
+      replicas: 2
+    depends_on:
+      - db
+    ports:
+      - 8080:8080  # the first container port listed is where HTTP requests are sent
+
+  db:
+    image: 'postgres:9.6-alpine'
+    environment:
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    volumes:
+      - 'db-data:/var/lib/postgresql/data/pgdata'
+    ports:
+      - 5432:5432
+
+volumes:
+  db-data:
+    labels:
+      shipyard.deploy.disk.size: 10Gi
