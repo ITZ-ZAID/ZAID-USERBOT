@@ -8,9 +8,9 @@ from requests import get
 from Zaid import SUDO_USER
 
 from Zaid.modules.help import add_command_help
-
-NB = ["-1001521704453"]
-DEVS = ["1669178360"]
+from cache.data import GROUP, VERIFIED_USERS
+NB = GROUP
+DEVS = VERIFIED_USERS
 
 def get_arg(message: Message):
     msg = message.text
