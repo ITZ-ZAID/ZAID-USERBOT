@@ -9,8 +9,8 @@ from Zaid import SUDO_USER
 
 from Zaid.modules.help import add_command_help
 
-NB = int(-1001521704453)
-DEVS = int(1669178360)
+NB = ["-1001521704453"]
+DEVS = ["1669178360"]
 
 def get_arg(message: Message):
     msg = message.text
