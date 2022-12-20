@@ -1,4 +1,10 @@
+import os
 from os import getenv
+from dotenv import load_dotenv
+
+if os.path.exists("local.env"):
+    load_dotenv("local.env")
+
 
 API_ID = int(getenv("API_ID", "6435225")) #optional
 API_HASH = getenv("API_HASH", "") #optional
