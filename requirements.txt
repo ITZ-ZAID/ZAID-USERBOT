@@ -13,6 +13,7 @@ motor==3.0.0
 opencv-python-headless
 pyrogram
 pymongo
+python-dotenv
 pymediainfo
 prettytable
 git+https://github.com/Itz-fork/py-trans.git
