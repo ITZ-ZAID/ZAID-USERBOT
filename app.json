@@ -1,25 +1,28 @@
 {
     "name": "Zaid Userbot",
     "description": "An first Telegram Userbot with multi Clients for Spamming or Mass.",
-    "keywords": ["telegram" "userbot", "Zaid", "pyrogram"],
-    "repository": "https://github.com/ITZ-ZAID/ZAID-USERBOT",
+    "keywords": ["pyrogram", "userbot"],
+    "repository": "https://github.com/ITZ-ZAID/Zaid-Userbot",
   "stack": "container",
     "env": {
         "STRING_SESSION1": {
-            "description": "fill with the pyrogram session string from https://replit.com/@Itz-zaid/pyrogram",
+            "description": "fill with the telethon session string from https://replit.com/@Itz-zaid/Generator",
             "required": true
         },
         "MONGO_URL": {
-            "description": "an mongodb.com Database",
-            "required": true
+            "description": "Fill there an mongo database from mongodb.com",
+            "required": true,
+            "value": ""
         },
         "SUDO_USERS": {
-            "description": "Sudo list (user id)",
-            "required": true
+            "description": "Fill there your I'd go to @Zaid2_Robot pm and type /id",
+            "required": true,
+            "value": "TheUpdatesChannel"
         },
         "OWNER_ID": {
-            "description": "fill your I'd (can access all things)",
-            "required": true
+            "description": "Fill there your I'd go to @Zaid2_Robot pm and type /id",
+            "required": true,
+            "value": "1234567890"
         },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
