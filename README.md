@@ -51,10 +51,10 @@ Checkout Tutorial!
 ## VPS/Locally deploy!
 ```console
 Zaid@Debian~ $ apt-get -y update
-Zaid@Debian~ $ apt-get -y install git gcc python3-dev
+Zaid@Debian~ $ apt-get -y install git gcc python3-pip -y
 Zaid@Debian~ $ git clone https://github.com/ITZ-ZAID/ZAID-USERBOT
 Zaid@Debian~ $ cd ZAID-USERBOT
-Zaid@Debian~ $ pip3 install -U-r requirements.txt
+Zaid@Debian~ $ pip3 install -U -r requirements.txt
 Zaid@Debian~ $ cp sample.env .env
 ```
 
