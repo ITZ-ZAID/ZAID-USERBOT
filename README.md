@@ -56,6 +56,7 @@ Zaid@Debian~ $ git clone https://github.com/ITZ-ZAID/ZAID-USERBOT
 Zaid@Debian~ $ cd ZAID-USERBOT
 Zaid@Debian~ $ pip3 install -U -r requirements.txt
 Zaid@Debian~ $ cp sample.env .env
+Zaid@Debian~ $ nano .env
 ```
 
 <h3 align="center">
