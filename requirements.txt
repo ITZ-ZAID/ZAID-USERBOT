@@ -3,7 +3,7 @@ gunicorn
 aiohttp
 aiofiles
 bs4
-googlesearch-python== 1.0.1
+googlesearch-python==1.0.1
 gitpython
 humanize
 httpx
