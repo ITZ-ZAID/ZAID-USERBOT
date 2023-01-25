@@ -1,0 +1,19 @@
+services:
+  - type: web
+    plan: free
+    name: Zaid
+    env: python
+    buildCommand: pip install -U -r requirements.txt
+    startCommand: gunicorn app:app & python3 -m Zaid
+    repo: https://github.com/ITZ-ZAID/ZAID-USERBOT      
+    branch: master
+    envVars:
+      - key: API_ID 
+        sync: false
+      - key: API_HASH 
+        sync: false
+      - key: BOT_TOKEN 
+        sync: false
+      - key: STRING_SESSION1
+        sync: false    
+    autoDeploy: false
