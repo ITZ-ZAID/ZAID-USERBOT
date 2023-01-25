@@ -8,12 +8,14 @@ services:
     repo: https://github.com/ITZ-ZAID/ZAID-USERBOT      
     branch: master
     envVars:
-      - key: API_ID 
-        sync: false
-      - key: API_HASH 
+      - key: SUDO_USERS 
         sync: false
       - key: BOT_TOKEN 
         sync: false
+      - key: OWNER_ID 
+        sync: false
       - key: STRING_SESSION1
+        sync: false
+      - key: MONGO_URL
         sync: false    
     autoDeploy: false
