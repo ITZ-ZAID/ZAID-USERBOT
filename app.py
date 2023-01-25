@@ -1,9 +1,10 @@
-import os
 from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-   return 'Hello, World!'
+    return 'Welcome To Nia Chatbot basic'
 
-os.system("ls && nohup python3 -m Zaid &")
+
+if __name__ == "__main__":
+    app.run()
