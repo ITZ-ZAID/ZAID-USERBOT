@@ -41,6 +41,10 @@
 - **Id Safety Specially For Fake accounts**
 
 
+## Deploy To Render 
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ITZ-ZAID/ZAID-USERBOT)
+
 ## Hosting With Mogenius 
 
 I will suggest to host on mogenius if uh don't know what is this then 
