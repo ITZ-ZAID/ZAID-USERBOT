@@ -11,7 +11,7 @@ heroku3
 requests
 motor==3.0.0
 opencv-python-headless
-pyrogram
+Pyrogram==2.0.59
 pymongo
 python-dotenv
 pymediainfo
