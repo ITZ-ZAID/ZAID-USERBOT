@@ -1,4 +1,5 @@
-from Zaid import app
+from Zaid import app, API_ID, API_HASH
+from config import OWNER_ID
 from pyrogram import filters
 import os
 import re
@@ -13,7 +14,7 @@ async def start(client, message):
 
 
 # © By Itz-Zaid Your motherfucker if uh Don't gives credits.
-@app.on_message(filters.private & filters.command("clone"))
+@app.on_message(filters.user(OWNER_ID) & filters.command("clone"))
 async def clone(bot: app, msg: Message):
     chat = msg.chat
     text = await msg.reply("Usage:\n\n /clone session")
