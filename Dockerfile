@@ -1,15 +1,15 @@
-FROM debian:11
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get -y install \
-    python3 python3-dev python3-dev python3-pip python3-venv 
+FROM python:3.10-slim-buster
 
-RUN apt-get install git curl python3-pip ffmpeg -y
-ARG USER=root
-USER $USER
-RUN python3 -m venv venv
 WORKDIR /app
-COPY . .
+
+RUN apt-get -y update
+
+RUN apt-get -y install git gcc python3-dev
+
+COPY requirements.txt requirements.txt
+
 RUN pip3 install -r requirements.txt
-EXPOSE 5000
-RUN chmod +x /app/start.sh
-ENTRYPOINT ["./start.sh"]
+
+COPY . .
+
+CMD python3 -m Zaid
