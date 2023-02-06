@@ -17,7 +17,7 @@
         "SUDO_USERS": {
             "description": "Fill there your I'd go to @Zaid2_Robot pm and type /id",
             "required": true,
-            "value": "TheUpdatesChannel"
+            "value": "1234567890 1234567890"
         },
         "OWNER_ID": {
             "description": "Fill there your I'd go to @Zaid2_Robot pm and type /id",
