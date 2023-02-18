@@ -1,5 +1,5 @@
 flask
-gunicorn
+flask_restful
 aiohttp
 aiofiles
 bs4
