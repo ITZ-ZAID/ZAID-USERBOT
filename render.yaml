@@ -4,7 +4,7 @@ services:
     name: Zaid
     env: python
     buildCommand: pip install -U -r requirements.txt
-    startCommand: gunicorn app:app & python3 -m Zaid
+    startCommand: python3 server.py & python3 -m Zaid
     repo: https://github.com/ITZ-ZAID/ZAID-USERBOT      
     branch: master
     envVars:
