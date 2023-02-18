@@ -1,1 +1,1 @@
-worker: python3 -m Zaid
+web: bash start.sh
