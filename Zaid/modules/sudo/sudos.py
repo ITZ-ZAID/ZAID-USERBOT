@@ -76,7 +76,7 @@ async def gmute_user(client: Client, message: Message):
         return await ex.edit("**Okay Sure.. 🐽**")
 
     try:
-        if user.id in SUDO_USER:
+        if user.id not in SUDO_USER:
             return await ex.edit("`User is not a part of sudo`")
         SUDO_USER.remove(user.id)
         await ex.edit(f"[{user.first_name}](tg://user?id={user.id}) Removed To Sudo Users!")
