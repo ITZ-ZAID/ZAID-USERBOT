@@ -19,14 +19,14 @@ async def gban_info(user_id: int) -> bool:
 
 
 async def gban_user(user_id: int):
-    is_gbanned = await is_gbanned_user(user_id)
+    is_gbanned = await gban_info(user_id)
     if is_gbanned:
         return
     return await gbansdb.insert_one({"user_id": user_id})
 
 
 async def ungban_user(user_id: int):
-    is_gbanned = await is_gbanned_user(user_id)
+    is_gbanned = await gban_info(user_id)
     if not is_gbanned:
         return
     return await gbansdb.delete_one({"user_id": user_id})
