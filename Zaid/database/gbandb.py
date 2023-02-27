@@ -1,23 +1,32 @@
-from Zaid.database import cli
+from typing import Dict, List, Union
 
-gbun = cli["GBAN"]
+from Zaid.database import dbb as db
 
-
-async def gban_user(user, reason="#GBanned"):
-    await gbun.insert_one({"user": user, "reason": reason})
+gbansdb = db.gban
 
 
-async def ungban_user(user):
-    await gbun.delete_one({"user": user})
+async def gban_list() -> int:
+    users = gbansdb.find({"user_id": {"$gt": 0}})
+    users = await users.to_list(length=100000)
+    return len(users)
 
 
-async def gban_list():
-    return [lo async for lo in gbun.find({})]
-
-
-async def gban_info(user):
-    kk = await gbun.find_one({"user": user})
-    if not kk:
+async def gban_info(user_id: int) -> bool:
+    user = await gbansdb.find_one({"user_id": user_id})
+    if not user:
         return False
-    else:
-        return kk["reason"]
+    return True
+
+
+async def gban_user(user_id: int):
+    is_gbanned = await is_gbanned_user(user_id)
+    if is_gbanned:
+        return
+    return await gbansdb.insert_one({"user_id": user_id})
+
+
+async def ungban_user(user_id: int):
+    is_gbanned = await is_gbanned_user(user_id)
+    if not is_gbanned:
+        return
+    return await gbansdb.delete_one({"user_id": user_id})
