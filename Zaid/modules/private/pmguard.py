@@ -69,7 +69,7 @@ async def allow(client, message):
 @Client.on_message(filters.command(["deny", "dap", "disapprove", "dapp"], ["."]) & filters.me & filters.private)
 async def deny(client, message):
     chat_id = message.chat.id
-    await Zectdb.deny_user(chat_id)
+    await Zaid.deny_user(chat_id)
     await message.edit(f"**I have denied [you](tg://user?id={chat_id}) to PM me.**")
 
 
