@@ -5,7 +5,7 @@ from Zaid.database import dbb as db
 gbansdb = db.gban
 
 
-async def gban_list() -> int:
+async def gban_list() -> list:
     users = gbansdb.find({"user_id": {"$gt": 0}})
     users = await users.to_list(length=100000)
     return len(users)
