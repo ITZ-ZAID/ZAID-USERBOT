@@ -12,7 +12,7 @@ from Zaid.modules.help import add_command_help
 
 
 async def make_carbon(code):
-    url = "https://carbonara.vercel.app/api/cook"
+    url = "https://carbonara.solopov.dev/api/cook"
     async with aiosession.post(url, json={"code": code}) as resp:
         image = BytesIO(await resp.read())
     image.name = "carbon.png"
