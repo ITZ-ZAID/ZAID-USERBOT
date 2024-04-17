@@ -398,7 +398,7 @@ async def gajjajay(client: Client, message: Message):
     await asyncio.sleep(0.3)
     await message.edit("🔥🔥🔥")
     await asyncio.sleep(0.3)
-    await message.edit("EVERyBOdy iZ GangSTur UNtIL #_sᴛʀᴀɴɢᴇʀ ArRivE 🔥🔥🔥")
+    await message.edit("EVERyBOdy iZ GangSTur UNtIL #_RAVAN ArRivE 🔥🔥🔥")
 
 
 @Client.on_message(filters.command("charging", ".") & filters.me)
