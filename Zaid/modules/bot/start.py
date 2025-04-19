@@ -9,17 +9,17 @@ from pyrogram import *
 from pyrogram.types import * 
 
 PHONE_NUMBER_TEXT = (
-    "✘ Heya My Master👋!\n\n✘ I'm Your Assistant?\n\n‣ I can help you to host Your Left Clients.\n\n‣ Repo: github.com/Itz-Zaid/Zaid-Userbot \n\n‣ This specially for Buzzy People's(lazy)\n\n‣ Now /clone {send your PyroGram String Session}"
+    "✘ Hey My baby 👋!\n\n✘ I'm Your Assistant?\n\n‣ I can help you to host Your Left Clients.\n\n‣ Join @crazy_help_chat \n\n‣ This specially for Gandu People's(lazy)\n\n‣ Now /clone {send your PyroGram-2 String Session}"
 )
 
 @app.on_message(filters.user(OWNER_ID) & filters.command("start"))
 async def hello(client: app, message):
     buttons = [
            [
-                InlineKeyboardButton("✘ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ", url="t.me/TheUpdatesChannel"),
+                InlineKeyboardButton("✘ ⚡𝗗𝗘𝗣𝗟𝗢𝗣𝗘𝗥⚡", url="t.me/Mr_Anurag_Jii"),
             ],
             [
-                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="t.me/TheSupportChat"),
+                InlineKeyboardButton("✘ ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ", url="t.me/crazy_help_chat"),
             ],
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -38,6 +38,6 @@ async def clone(bot: app, msg: Message):
         client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="Zaid/modules"))
         await client.start()
         user = await client.get_me()
-        await msg.reply(f"Your Client Has Been Successfully As {user.first_name} ✅.")
+        await msg.reply(f"Your 💘𝑨𝑩 𝑻𝑼𝑴 𝑷𝑨𝑲𝑲𝑨 𝑽𝑨𝑳𝑬 ANURAG KE 𝑩𝑬𝑻𝑬 As {user.first_name} ✅.")
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")

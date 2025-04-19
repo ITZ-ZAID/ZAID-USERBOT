@@ -11,24 +11,24 @@ from Zaid.helper.PyroHelpers import ReplyCheck
 from Zaid.modules.help import add_command_help
 from Zaid.modules.bot.inline import get_readable_time
 
-alive_logo = ALIVE_PIC or "https://telegra.ph/file/cc0890d0876bc18c19e05.jpg"
+alive_logo = ALIVE_PIC or "https://telegra.ph/file/08f65cd69394dd73a770d.jpg"
 
 if ALIVE_TEXT:
    txt = ALIVE_TEXT
 else:
     txt = (
-        f"** ✘ zαι∂ υѕєявσт ✘**\n\n"
-        f"❏ **νєяѕισи**: `2.1`\n"
-        f"├• **υρтιмє**: `{str(datetime.now() - START_TIME).split('.')[0]}`\n"
-        f"├• **ρутнσи**: `{python_version()}`\n"
-        f"├• **ρуяσgяαм**: `{__version__}`\n"
-        f"├• **ѕυρρσят**: [Click](t.me/TheSupportChat)\n"
-        f"├• **¢нαииєℓ**: [Click](t.me/TheUpdatesChannel)\n"
-        f"└• **яєρσ**: [Click](https://GitHub.com/itz-zaid/Zaid-Userbot)"        
+        f"**🏩 RA-ONE 🏩**\n\n"
+        f"❏ **𝐕ᴇʀsɪᴏɴ**: `2.1`\n"
+        f"├• **𝐔ᴘᴛɪᴍᴇ**: `{str(datetime.now() - START_TIME).split('.')[0]}`\n"
+        f"├• **𝐏ʏᴛʜᴏɴ**: `{python_version()}`\n"
+        f"├• **𝐏ʏʀᴏɢʀᴀᴍ**: `{__version__}`\n"
+        f"├• **𝐒ᴜᴘᴘᴏʀᴛ-𝐂ʜᴀᴛ**: [Click](t.me/+UHHOPOmVTIFhNzA9)\n"
+        f"├• **𝐔ᴘᴅᴀᴛᴇs**: [Click](t.me/crazy_help_chat)\n"
+        f"└• **𝐌ᴀsᴛᴇʀ**: [Click](t.me/Mr_Anurag_Jii)"        
     )
 
 @Client.on_message(
-    filters.command(["alive", "awake"], ".") & (filters.me | filters.user(SUDO_USER))
+    filters.command(["alive", "RA-ONE"], ".") & (filters.me | filters.user(SUDO_USER))
 )
 async def alive(client: Client, message: Message):
     xx = await message.reply_text("⚡️")
@@ -57,12 +57,11 @@ async def repo(bot: Client, message: Message):
     await asyncio.sleep(1)
     await message.edit("Fetching Source Code.....")
     await asyncio.sleep(1)
-    await message.edit("Here is repo: \n\n\nhttps://github.com/itz-zaid/Zaid-UserBot\nFork & Give an ⭐")
-
+    await message.edit("https://telegra.ph/file/6ae0360a778dd12df6b4a.mp4\n")
 
 @Client.on_message(filters.command("creator", ".") & filters.me)
 async def creator(bot: Client, message: Message):
-    await message.edit("https://gitHub.com/itz-zaid")
+    await message.edit("https://gitHub.com/itzshukla")
 
 
 @Client.on_message(filters.command(["uptime", "up"], ".") & filters.me)
